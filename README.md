@@ -1,4 +1,4 @@
-# Hims & Hers Health (NYSE: HIMS) — Equity Analyst Dashboard
+# Hims & Hers Health (NYSE: HIMS) — Equity Analyst Dashboard 
 
 A single-page equity analyst dashboard for Hims & Hers Health, designed for institutional / sophisticated retail investors doing event-driven equity research.
 
