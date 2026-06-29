@@ -1,0 +1,37 @@
+name: Pull latest HIMS dashboard
+
+on:
+  schedule:
+    - cron: "30 7 * * 1"   # Mondays 07:30 UTC — 27 min after stock-analysis refresh
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Fetch latest dashboard from stock-analysis
+        env:
+          PUB_PAT: ${{ secrets.PUB_PAT }}
+        run: |
+          DATE="$(date -u +%Y-%m-%d)"
+          curl -fsSL \
+            -H "Authorization: Bearer ${PUB_PAT}" \
+            -H "Accept: application/vnd.github.raw+json" \
+            "https://api.github.com/repos/Oll128/stock-analysis/contents/.tmp/hims_analyst_dashboard_${DATE}.html" \
+            -o index.html
+          echo "Fetched dashboard for ${DATE} ($(wc -c < index.html) bytes)"
+
+      - name: Commit and push
+        run: |
+          DATE="$(date -u +%Y-%m-%d)"
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "dashboard: weekly refresh ${DATE}"
+          git push
