@@ -16,14 +16,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Fetch latest dashboard from stock-analysis
-        env:
-          PUB_PAT: ${{ secrets.PUB_PAT }}
         run: |
           DATE="$(date -u +%Y-%m-%d)"
           curl -fsSL \
-            -H "Authorization: Bearer ${PUB_PAT}" \
-            -H "Accept: application/vnd.github.raw+json" \
-            "https://api.github.com/repos/Oll128/stock-analysis/contents/.tmp/hims_analyst_dashboard_${DATE}.html" \
+            "https://raw.githubusercontent.com/Oll128/stock-analysis/main/.tmp/hims_analyst_dashboard_${DATE}.html" \
             -o index.html
           echo "Fetched dashboard for ${DATE} ($(wc -c < index.html) bytes)"
 
