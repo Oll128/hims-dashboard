@@ -19,19 +19,32 @@ jobs:
         env:
           PUB_PAT: ${{ secrets.PUB_PAT }}
         run: |
-          DATE="$(date -u +%Y-%m-%d)"
+          # Resolve the newest committed dashboard rather than assuming today's
+          # date. Manual re-runs happen on days without a same-day dashboard,
+          # so date-stamping the request to $(date) 404s (curl exits 22).
+          LATEST=$(curl -fsSL \
+            -H "Authorization: Bearer ${PUB_PAT}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/Oll128/stock-analysis/contents/.tmp" \
+            | python3 -c "import sys, json, re; names = [f['name'] for f in json.load(sys.stdin) if re.match(r'hims_analyst_dashboard_\d{4}-\d{2}-\d{2}\.html$', f['name'])]; print(sorted(names)[-1] if names else '')")
+          if [ -z "${LATEST}" ]; then
+            echo "No hims_analyst_dashboard_*.html found in stock-analysis/.tmp" >&2
+            exit 1
+          fi
+          DASH_DATE=$(echo "${LATEST}" | sed -E 's/.*_([0-9]{4}-[0-9]{2}-[0-9]{2})\.html/\1/')
+          echo "DASH_DATE=${DASH_DATE}" >> "${GITHUB_ENV}"
+          echo "Latest dashboard: ${LATEST}"
           curl -fsSL \
             -H "Authorization: Bearer ${PUB_PAT}" \
             -H "Accept: application/vnd.github.raw+json" \
-            "https://api.github.com/repos/Oll128/stock-analysis/contents/.tmp/hims_analyst_dashboard_${DATE}.html" \
+            "https://api.github.com/repos/Oll128/stock-analysis/contents/.tmp/${LATEST}" \
             -o index.html
-          echo "Fetched dashboard for ${DATE} ($(wc -c < index.html) bytes)"
+          echo "Fetched ${LATEST} ($(wc -c < index.html) bytes)"
 
       - name: Commit and push
         run: |
-          DATE="$(date -u +%Y-%m-%d)"
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html
-          git diff --cached --quiet || git commit -m "dashboard: weekly refresh ${DATE}"
+          git diff --cached --quiet || git commit -m "dashboard: weekly refresh ${DASH_DATE}"
           git push
