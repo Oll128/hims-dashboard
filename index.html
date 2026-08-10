@@ -1328,21 +1328,21 @@ a:hover { color: var(--ink-strong); }
       <div class="topbar-right">
         <div class="ts-cell">
           <div class="ts-cell-label mono">LAST</div>
-          <div class="ts-cell-value mono">$27.77</div>
+          <div class="ts-cell-value mono">$31.59</div>
         </div>
         <div class="ts-cell">
           <div class="ts-cell-label mono">DAY Δ</div>
-          <div class="ts-cell-value mono up">+$0.73 <span class="ts-cell-pct">+2.70%</span></div>
+          <div class="ts-cell-value mono up">+$1.93 <span class="ts-cell-pct">+6.51%</span></div>
         </div>
         <div class="ts-cell">
           <div class="ts-cell-label mono">MKT CAP</div>
-          <div class="ts-cell-value mono">$6.43B</div>
+          <div class="ts-cell-value mono">$7.31B</div>
         </div>
         <canvas id="topbarSpark" class="ts-spark" width="96" height="32"
-                data-series='[26.88, 25.65, 28.27, 29.14, 25.03, 24.14, 24.24, 25.05, 22.29, 22.44, 23.04, 24.01, 23.75, 23.85, 25.2, 25.38, 26.15, 27.76, 27.51, 27.51, 28.01, 26.19, 27.17, 28.98, 27.78, 28.87, 26.82, 30.17, 31.47, 31.89, 35.47, 33.54, 32.96, 32.7, 32.71, 33.94, 33.39, 34.67, 37.57, 36.8, 38.28, 36.17, 36.07, 35.45, 34.38, 34.38, 35.15, 37.17, 33.68, 32.84, 32.7, 32.73, 31.68, 32.74, 28.09, 30.24, 29.32, 25.0, 27.04, 27.77]' data-direction="up"></canvas>
+                data-series='[24.14, 24.24, 25.05, 22.29, 22.44, 23.04, 24.01, 23.75, 23.85, 25.2, 25.38, 26.15, 27.76, 27.51, 27.51, 28.01, 26.19, 27.17, 28.98, 27.78, 28.87, 26.82, 30.17, 31.47, 31.89, 35.47, 33.54, 32.96, 32.7, 32.71, 33.94, 33.39, 34.67, 37.57, 36.8, 38.28, 36.17, 36.07, 35.45, 34.38, 34.38, 35.15, 37.17, 33.68, 32.84, 32.7, 32.73, 31.68, 32.74, 28.09, 30.24, 29.32, 25.0, 27.04, 27.77, 30.82, 32.16, 31.65, 29.66, 31.59]' data-direction="up"></canvas>
         <div class="ts-cell ts-asof">
           <div class="ts-cell-label mono">AS OF</div>
-          <div class="ts-cell-value mono">2026-08-03</div>
+          <div class="ts-cell-value mono">2026-08-10</div>
         </div>
       </div>
     </header>
@@ -1425,26 +1425,26 @@ a:hover { color: var(--ink-strong); }
       
     <section class="pane active" id="section-weekly" data-section="weekly">
       
-      <div class="section-eyebrow mono">00 · WEEKLY UPDATE · WEEK OF AUG 3, 2026</div>
-      <h2 class="section-title">Comparison vs. Jul 27, 2026 snapshot</h2>
-      <p class="wk-headline-narrative">Spot moved -1.1% to $27.77. Fair value essentially held at $24.66. Implied upside now -11.2% (+1.0pp WoW). DCF assumptions unchanged (WACC held at 10.5%, terminal g held at 3.0%).</p>
+      <div class="section-eyebrow mono">00 · WEEKLY UPDATE · WEEK OF AUG 10, 2026</div>
+      <h2 class="section-title">Comparison vs. Aug 3, 2026 snapshot</h2>
+      <p class="wk-headline-narrative">Spot moved +13.8% to $31.59. Fair value essentially held at $24.66. Implied upside now -21.9% (-10.7pp WoW). DCF assumptions unchanged (WACC held at 10.5%, terminal g held at 3.0%).</p>
     
-      <div class="wk-grid"><button type="button" class="wk-tile" data-tile-key="spot" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Spot", "value": "$27.77", "summary": "Spot fell 1.1% to $27.77.", "math": "Market-driven: this is the yfinance close on the run date. Market cap moves 1:1 with spot since shares outstanding is held flat between weekly runs.", "drivers": ["Broad market context (S&P / sector \u2014 not currently tracked; future work).", "HIMS-specific news flow \u2014 see linked material events below.", "Sentiment / positioning around recent earnings, GLP-1 narrative, partner announcements."], "linked_events": [{"publisher": "Barrons.com", "title": "Here Comes the Next Wave of GLP-1s. They\u2019ll Treat a Lot More Than Obesity.", "url": "https://www.barrons.com/articles/glp-1-obesity-drugs-eli-lilly-novo-nordisk-stocks-19200dcc?siteid=yhoof2&yptr=yahoo", "age_days": 3}]}'><div class="wk-tile-label mono">SPOT</div><div class="wk-tile-value mono">$27.77</div><div class="wk-tile-chip"><span class="wow-chip down" title="vs Jul 27"><span class="wch-glyph">▼</span>$0.32 (-1.1%)<span class="wch-vs"> vs Jul 27</span></span></div></button><button type="button" class="wk-tile" data-tile-key="fair_value" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Fair value", "value": "$24.66", "summary": "Fair value essentially held at $24.66 (delta +0.00%). This is the expected behaviour: DCF inputs were carried forward.", "math": "Fair value = (\u03a3 PV-FCFFs + PV-Terminal \u2212 net debt) / shares outstanding. Inputs held this week: WACC held at 10.5%; terminal g held at 3.0%; revenue growth path unchanged; EBITDA margin path unchanged. The small residual delta comes from shares-outstanding rederivation (market_cap / spot): prior 231.5M \u2192 current 231.5M shares.", "drivers": ["DCF auto-update of assumptions (Treasury 10Y, beta, peer median refresh) \u2014 not yet wired; would surface here.", "Eucalyptus integration milestones \u2014 would shift FY27-28 growth path when material.", "FDA Cat-1 peptides regulatory developments \u2014 would shift margin assumption when material."], "linked_events": []}'><div class="wk-tile-label mono">FAIR VALUE</div><div class="wk-tile-value mono">$24.66</div><div class="wk-tile-chip"><span class="wow-chip flat" title="flat vs Jul 27"><span class="wch-glyph">─</span>flat</span></div></button><button type="button" class="wk-tile" data-tile-key="implied_upside" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Implied upside", "value": "-11.2%", "summary": "Implied upside is now -11.2% (compressed by 1.0pp WoW vs prior -12.2%).", "math": "Arithmetic: implied_upside = (fair_value \u2212 spot) / spot. With fair value held and spot down, the downside narrowed mechanically \u2014 no change to the analyst view.", "drivers": ["Function of the two metrics above. Watch spot for direction, fair value for the analyst-driven floor."], "linked_events": [{"publisher": "Barrons.com", "title": "Here Comes the Next Wave of GLP-1s. They\u2019ll Treat a Lot More Than Obesity.", "url": "https://www.barrons.com/articles/glp-1-obesity-drugs-eli-lilly-novo-nordisk-stocks-19200dcc?siteid=yhoof2&yptr=yahoo", "age_days": 3}]}'><div class="wk-tile-label mono">IMPLIED UPSIDE</div><div class="wk-tile-value mono">-11.2%</div><div class="wk-tile-chip"><span class="wow-chip up" title="vs Jul 27"><span class="wch-glyph">▲</span>+1.0pp<span class="wch-vs"> vs Jul 27</span></span></div></button><button type="button" class="wk-tile" data-tile-key="market_cap" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Market cap", "value": "$6.43B", "summary": "Market cap moved -1.1% to $6,428M.", "math": "Market cap = spot \u00d7 shares outstanding. Tracks spot 1:1 since the weekly job holds shares constant.", "drivers": ["Same as spot \u2014 see linked material events."], "linked_events": [{"publisher": "Barrons.com", "title": "Here Comes the Next Wave of GLP-1s. They\u2019ll Treat a Lot More Than Obesity.", "url": "https://www.barrons.com/articles/glp-1-obesity-drugs-eli-lilly-novo-nordisk-stocks-19200dcc?siteid=yhoof2&yptr=yahoo", "age_days": 3}]}'><div class="wk-tile-label mono">MARKET CAP</div><div class="wk-tile-value mono">$6.43B</div><div class="wk-tile-chip"><span class="wow-chip down" title="vs Jul 27"><span class="wch-glyph">▼</span>-1.1%<span class="wch-vs"> vs Jul 27</span></span></div></button><button type="button" class="wk-tile" data-tile-key="wacc" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "WACC", "value": "+10.5%", "summary": "WACC held at 10.5% (textbook bottom-up build would yield ~16.8%; overridden to 10.5% reflecting that high beta is partly idiosyncratic regulatory risk, sell-side practice of unlevering long-horizon DCFs).", "math": "WACC enters the DCF through the discount factor: PV-FCFF_t = FCFF_t / (1 + WACC)^t. A +100bp WACC move would compress PV-Terminal heavily because Terminal is ~81% of EV here.", "drivers": ["10Y Treasury yield refresh \u2014 not yet auto-pulled. Source: FRED DGS10. (Future tool.)", "HIMS beta refresh from yfinance \u2014 not yet auto-pulled.", "ERP refresh (Damodaran annual) \u2014 manual cadence."], "linked_events": []}'><div class="wk-tile-label mono">WACC</div><div class="wk-tile-value mono">+10.5%</div><div class="wk-tile-chip"><span class="wow-chip flat" title="held vs Jul 27"><span class="wch-glyph">─</span>held</span></div></button><button type="button" class="wk-tile" data-tile-key="terminal_g" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Terminal g", "value": "+3.0%", "summary": "Terminal growth held at 3.0%. Anchored to long-run nominal GDP-like rate.", "math": "Terminal value = FCFF_T+1 / (WACC \u2212 g). With WACC=10.5%, every 1pp of g adds materially to TV; TV is ~81% of EV so the sensitivity is high.", "drivers": ["Long-run structural view \u2014 moves rarely (sub-annual cadence).", "Would shift on a thesis-level change (e.g. saturation evidence in DTC weight-loss)."], "linked_events": []}'><div class="wk-tile-label mono">TERMINAL G</div><div class="wk-tile-value mono">+3.0%</div><div class="wk-tile-chip"><span class="wow-chip flat" title="held vs Jul 27"><span class="wch-glyph">─</span>held</span></div></button></div>
+      <div class="wk-grid"><button type="button" class="wk-tile" data-tile-key="spot" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Spot", "value": "$31.59", "summary": "Spot rose 13.8% to $31.59.", "math": "Market-driven: this is the yfinance close on the run date. Market cap moves 1:1 with spot since shares outstanding is held flat between weekly runs.", "drivers": ["Broad market context (S&P / sector \u2014 not currently tracked; future work).", "HIMS-specific news flow \u2014 see linked material events below.", "Sentiment / positioning around recent earnings, GLP-1 narrative, partner announcements."], "linked_events": [{"publisher": "MarketBeat", "title": "Eli Lilly and Company Q2 Earnings Call Highlights", "url": "https://www.marketbeat.com/instant-alerts/eli-lilly-and-company-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&amp;utm_medium=yahoofinance", "age_days": 1}, {"publisher": "MarketBeat", "title": "SharkNinja Q2 Earnings Call Highlights", "url": "https://www.marketbeat.com/instant-alerts/sharkninja-q2-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&utm_medium=yahoofinance", "age_days": 1}, {"publisher": "MarketBeat", "title": "Eli Lilly and Company Q2 Earnings Call Highlights", "url": "https://www.marketbeat.com/instant-alerts/eli-lilly-and-company-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&utm_medium=yahoofinance", "age_days": 2}, {"publisher": "MarketBeat", "title": "NRG Energy Q2 Earnings Call Highlights", "url": "https://www.marketbeat.com/instant-alerts/nrg-energy-q2-earnings-call-highlights-2026-08-05/?utm_source=yahoofinance&amp;utm_medium=yahoofinance", "age_days": 4}, {"publisher": "MarketBeat", "title": "Bearish Pressure Is Building Around These 3 Stocks", "url": "https://www.marketbeat.com/articles/bearish-pressure-is-building-around-these-3-stocks/?utm_source=yahoofinance&amp;utm_medium=yahoofinance", "age_days": 6}]}'><div class="wk-tile-label mono">SPOT</div><div class="wk-tile-value mono">$31.59</div><div class="wk-tile-chip"><span class="wow-chip up" title="vs Aug 3"><span class="wch-glyph">▲</span>+$3.82 (+13.8%)<span class="wch-vs"> vs Aug 3</span></span></div></button><button type="button" class="wk-tile" data-tile-key="fair_value" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Fair value", "value": "$24.66", "summary": "Fair value essentially held at $24.66 (delta +0.00%). This is the expected behaviour: DCF inputs were carried forward.", "math": "Fair value = (\u03a3 PV-FCFFs + PV-Terminal \u2212 net debt) / shares outstanding. Inputs held this week: WACC held at 10.5%; terminal g held at 3.0%; revenue growth path unchanged; EBITDA margin path unchanged. The small residual delta comes from shares-outstanding rederivation (market_cap / spot): prior 231.5M \u2192 current 231.5M shares.", "drivers": ["DCF auto-update of assumptions (Treasury 10Y, beta, peer median refresh) \u2014 not yet wired; would surface here.", "Eucalyptus integration milestones \u2014 would shift FY27-28 growth path when material.", "FDA Cat-1 peptides regulatory developments \u2014 would shift margin assumption when material."], "linked_events": []}'><div class="wk-tile-label mono">FAIR VALUE</div><div class="wk-tile-value mono">$24.66</div><div class="wk-tile-chip"><span class="wow-chip flat" title="flat vs Aug 3"><span class="wch-glyph">─</span>flat</span></div></button><button type="button" class="wk-tile" data-tile-key="implied_upside" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Implied upside", "value": "-21.9%", "summary": "Implied upside is now -21.9% (widened by 10.7pp WoW vs prior -11.2%).", "math": "Arithmetic: implied_upside = (fair_value \u2212 spot) / spot. With fair value held and spot down, the downside narrowed mechanically \u2014 no change to the analyst view.", "drivers": ["Function of the two metrics above. Watch spot for direction, fair value for the analyst-driven floor."], "linked_events": [{"publisher": "MarketBeat", "title": "Eli Lilly and Company Q2 Earnings Call Highlights", "url": "https://www.marketbeat.com/instant-alerts/eli-lilly-and-company-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&amp;utm_medium=yahoofinance", "age_days": 1}, {"publisher": "MarketBeat", "title": "SharkNinja Q2 Earnings Call Highlights", "url": "https://www.marketbeat.com/instant-alerts/sharkninja-q2-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&utm_medium=yahoofinance", "age_days": 1}, {"publisher": "MarketBeat", "title": "Eli Lilly and Company Q2 Earnings Call Highlights", "url": "https://www.marketbeat.com/instant-alerts/eli-lilly-and-company-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&utm_medium=yahoofinance", "age_days": 2}, {"publisher": "MarketBeat", "title": "NRG Energy Q2 Earnings Call Highlights", "url": "https://www.marketbeat.com/instant-alerts/nrg-energy-q2-earnings-call-highlights-2026-08-05/?utm_source=yahoofinance&amp;utm_medium=yahoofinance", "age_days": 4}, {"publisher": "MarketBeat", "title": "Bearish Pressure Is Building Around These 3 Stocks", "url": "https://www.marketbeat.com/articles/bearish-pressure-is-building-around-these-3-stocks/?utm_source=yahoofinance&amp;utm_medium=yahoofinance", "age_days": 6}]}'><div class="wk-tile-label mono">IMPLIED UPSIDE</div><div class="wk-tile-value mono">-21.9%</div><div class="wk-tile-chip"><span class="wow-chip down" title="vs Aug 3"><span class="wch-glyph">▼</span>-10.7pp<span class="wch-vs"> vs Aug 3</span></span></div></button><button type="button" class="wk-tile" data-tile-key="market_cap" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Market cap", "value": "$7.31B", "summary": "Market cap moved +13.8% to $7,312M.", "math": "Market cap = spot \u00d7 shares outstanding. Tracks spot 1:1 since the weekly job holds shares constant.", "drivers": ["Same as spot \u2014 see linked material events."], "linked_events": [{"publisher": "MarketBeat", "title": "Eli Lilly and Company Q2 Earnings Call Highlights", "url": "https://www.marketbeat.com/instant-alerts/eli-lilly-and-company-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&amp;utm_medium=yahoofinance", "age_days": 1}, {"publisher": "MarketBeat", "title": "SharkNinja Q2 Earnings Call Highlights", "url": "https://www.marketbeat.com/instant-alerts/sharkninja-q2-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&utm_medium=yahoofinance", "age_days": 1}, {"publisher": "MarketBeat", "title": "Eli Lilly and Company Q2 Earnings Call Highlights", "url": "https://www.marketbeat.com/instant-alerts/eli-lilly-and-company-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&utm_medium=yahoofinance", "age_days": 2}, {"publisher": "MarketBeat", "title": "NRG Energy Q2 Earnings Call Highlights", "url": "https://www.marketbeat.com/instant-alerts/nrg-energy-q2-earnings-call-highlights-2026-08-05/?utm_source=yahoofinance&amp;utm_medium=yahoofinance", "age_days": 4}, {"publisher": "MarketBeat", "title": "Bearish Pressure Is Building Around These 3 Stocks", "url": "https://www.marketbeat.com/articles/bearish-pressure-is-building-around-these-3-stocks/?utm_source=yahoofinance&amp;utm_medium=yahoofinance", "age_days": 6}]}'><div class="wk-tile-label mono">MARKET CAP</div><div class="wk-tile-value mono">$7.31B</div><div class="wk-tile-chip"><span class="wow-chip up" title="vs Aug 3"><span class="wch-glyph">▲</span>+13.8%<span class="wch-vs"> vs Aug 3</span></span></div></button><button type="button" class="wk-tile" data-tile-key="wacc" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "WACC", "value": "+10.5%", "summary": "WACC held at 10.5% (textbook bottom-up build would yield ~16.8%; overridden to 10.5% reflecting that high beta is partly idiosyncratic regulatory risk, sell-side practice of unlevering long-horizon DCFs).", "math": "WACC enters the DCF through the discount factor: PV-FCFF_t = FCFF_t / (1 + WACC)^t. A +100bp WACC move would compress PV-Terminal heavily because Terminal is ~81% of EV here.", "drivers": ["10Y Treasury yield refresh \u2014 not yet auto-pulled. Source: FRED DGS10. (Future tool.)", "HIMS beta refresh from yfinance \u2014 not yet auto-pulled.", "ERP refresh (Damodaran annual) \u2014 manual cadence."], "linked_events": []}'><div class="wk-tile-label mono">WACC</div><div class="wk-tile-value mono">+10.5%</div><div class="wk-tile-chip"><span class="wow-chip flat" title="held vs Aug 3"><span class="wch-glyph">─</span>held</span></div></button><button type="button" class="wk-tile" data-tile-key="terminal_g" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Terminal g", "value": "+3.0%", "summary": "Terminal growth held at 3.0%. Anchored to long-run nominal GDP-like rate.", "math": "Terminal value = FCFF_T+1 / (WACC \u2212 g). With WACC=10.5%, every 1pp of g adds materially to TV; TV is ~81% of EV so the sensitivity is high.", "drivers": ["Long-run structural view \u2014 moves rarely (sub-annual cadence).", "Would shift on a thesis-level change (e.g. saturation evidence in DTC weight-loss)."], "linked_events": []}'><div class="wk-tile-label mono">TERMINAL G</div><div class="wk-tile-value mono">+3.0%</div><div class="wk-tile-chip"><span class="wow-chip flat" title="held vs Aug 3"><span class="wch-glyph">─</span>held</span></div></button></div>
       <div class="wk-reveal" id="wk-reveal-panel" data-empty="true" aria-live="polite">Click a tile above to see why this metric moved — math relationship, contextual drivers, and linked material events.</div>
       
         <div class="wk-history">
-          <div class="block-title compact">Fair value &amp; spot — history of snapshots <span class="bt-sub mono">12 weekly points (and growing)</span></div>
+          <div class="block-title compact">Fair value &amp; spot — history of snapshots <span class="bt-sub mono">13 weekly points (and growing)</span></div>
           <div class="wk-chart-card">
             <canvas id="weeklyHistoryChart"
-                    data-fairvalue='[{"date": "2026-05-08", "value": 24.71}, {"date": "2026-05-29", "value": 24.66}, {"date": "2026-06-15", "value": 24.66}, {"date": "2026-06-22", "value": 24.66}, {"date": "2026-06-29", "value": 24.66}, {"date": "2026-07-06", "value": 24.66}, {"date": "2026-07-13", "value": 24.66}, {"date": "2026-07-20", "value": 24.66}, {"date": "2026-07-27", "value": 24.66}, {"date": "2026-08-03", "value": 24.66}]'
-                    data-spot='[{"date": "2026-04-16", "value": 26.99}, {"date": "2026-05-07", "value": 25.65}, {"date": "2026-05-08", "value": 28.27}, {"date": "2026-05-29", "value": 26.15}, {"date": "2026-06-15", "value": 26.82}, {"date": "2026-06-22", "value": 35.47}, {"date": "2026-06-29", "value": 33.39}, {"date": "2026-07-06", "value": 36.8}, {"date": "2026-07-13", "value": 34.38}, {"date": "2026-07-20", "value": 32.84}, {"date": "2026-07-27", "value": 28.09}, {"date": "2026-08-03", "value": 27.77}]'></canvas>
+                    data-fairvalue='[{"date": "2026-05-08", "value": 24.71}, {"date": "2026-05-29", "value": 24.66}, {"date": "2026-06-15", "value": 24.66}, {"date": "2026-06-22", "value": 24.66}, {"date": "2026-06-29", "value": 24.66}, {"date": "2026-07-06", "value": 24.66}, {"date": "2026-07-13", "value": 24.66}, {"date": "2026-07-20", "value": 24.66}, {"date": "2026-07-27", "value": 24.66}, {"date": "2026-08-03", "value": 24.66}, {"date": "2026-08-10", "value": 24.66}]'
+                    data-spot='[{"date": "2026-04-16", "value": 26.99}, {"date": "2026-05-07", "value": 25.65}, {"date": "2026-05-08", "value": 28.27}, {"date": "2026-05-29", "value": 26.15}, {"date": "2026-06-15", "value": 26.82}, {"date": "2026-06-22", "value": 35.47}, {"date": "2026-06-29", "value": 33.39}, {"date": "2026-07-06", "value": 36.8}, {"date": "2026-07-13", "value": 34.38}, {"date": "2026-07-20", "value": 32.84}, {"date": "2026-07-27", "value": 28.09}, {"date": "2026-08-03", "value": 27.77}, {"date": "2026-08-10", "value": 31.59}]'></canvas>
           </div>
-          <p class="wk-history-note">Only 12 snapshots exist today (this is the demo). Each subsequent weekly run adds one fair-value point and one spot point automatically.</p>
+          <p class="wk-history-note">Only 13 snapshots exist today (this is the demo). Each subsequent weekly run adds one fair-value point and one spot point automatically.</p>
         </div>
         
-      <div class="wk-changelog"><div class="block-title compact">Change log — every tracked metric, this week vs last</div><table class="data-table"><thead><tr><th class="mono">METRIC</th><th class="mono">LAST WEEK</th><th class="mono">THIS WEEK</th><th class="mono">Δ</th><th class="mono">NOTE</th></tr></thead><tbody><tr><td>Spot price</td><td class="mono">$28.09</td><td class="mono">$27.77</td><td class="mono neg">-1.1%</td><td class="dim"></td></tr><tr><td>Market cap</td><td class="mono">$6.50B</td><td class="mono">$6.43B</td><td class="mono neg">-1.1%</td><td class="dim"></td></tr><tr><td>Enterprise value</td><td class="mono">$6.67B</td><td class="mono">$6.60B</td><td class="mono neg">-1.1%</td><td class="dim"></td></tr><tr><td>Implied fair value</td><td class="mono">$24.66</td><td class="mono">$24.66</td><td class="mono dim">flat</td><td class="dim"></td></tr><tr><td>Implied upside</td><td class="mono">-12.2%</td><td class="mono">-11.2%</td><td class="mono pos">+1.0pp</td><td class="dim"></td></tr><tr><td>WACC</td><td class="mono">+10.5%</td><td class="mono">+10.5%</td><td class="mono dim">0.0pp</td><td class="dim">held</td></tr><tr><td>Terminal g</td><td class="mono">+3.0%</td><td class="mono">+3.0%</td><td class="mono dim">0.0pp</td><td class="dim">held</td></tr><tr><td>FY26E revenue (DCF)</td><td class="mono">$2.94B</td><td class="mono">$2.94B</td><td class="mono dim">flat</td><td class="dim"></td></tr></tbody></table></div>
+      <div class="wk-changelog"><div class="block-title compact">Change log — every tracked metric, this week vs last</div><table class="data-table"><thead><tr><th class="mono">METRIC</th><th class="mono">LAST WEEK</th><th class="mono">THIS WEEK</th><th class="mono">Δ</th><th class="mono">NOTE</th></tr></thead><tbody><tr><td>Spot price</td><td class="mono">$27.77</td><td class="mono">$31.59</td><td class="mono pos">+13.8%</td><td class="dim"></td></tr><tr><td>Market cap</td><td class="mono">$6.43B</td><td class="mono">$7.31B</td><td class="mono pos">+13.8%</td><td class="dim"></td></tr><tr><td>Enterprise value</td><td class="mono">$6.60B</td><td class="mono">$7.48B</td><td class="mono pos">+13.4%</td><td class="dim"></td></tr><tr><td>Implied fair value</td><td class="mono">$24.66</td><td class="mono">$24.66</td><td class="mono dim">flat</td><td class="dim"></td></tr><tr><td>Implied upside</td><td class="mono">-11.2%</td><td class="mono">-21.9%</td><td class="mono neg">-10.7pp</td><td class="dim"></td></tr><tr><td>WACC</td><td class="mono">+10.5%</td><td class="mono">+10.5%</td><td class="mono dim">0.0pp</td><td class="dim">held</td></tr><tr><td>Terminal g</td><td class="mono">+3.0%</td><td class="mono">+3.0%</td><td class="mono dim">0.0pp</td><td class="dim">held</td></tr><tr><td>FY26E revenue (DCF)</td><td class="mono">$2.94B</td><td class="mono">$2.94B</td><td class="mono dim">flat</td><td class="dim"></td></tr></tbody></table></div>
       <div class="wk-asn"><div class="block-title compact">DCF assumption changes this week</div><div class="wk-asn-empty"><strong>No assumption changes.</strong> WACC held at 10.5%, terminal growth held at 3.0%, growth path FY26–30E unchanged, EBITDA margin path unchanged. <span class="dim">(Future: Treasury 10Y refresh + peer-median refresh will surface real assumption deltas here.)</span></div></div>
-      <div class="wk-events"><div class="block-title compact">Material events — top 5 by recency × publisher tier</div><p class="wk-events-meta"><strong>Top coverage</strong> from the requested whitelist (Bloomberg / Reuters / WSJ / Barron's / Seeking Alpha), ranked by recency × publisher tier weight.</p><ul class="material-events-list"><li class="material-event"><span class="me-publisher">Barrons.com</span><div><p class="me-title"><a href="https://www.barrons.com/articles/glp-1-obesity-drugs-eli-lilly-novo-nordisk-stocks-19200dcc?siteid=yhoof2&amp;yptr=yahoo" target="_blank" rel="noopener">Here Comes the Next Wave of GLP-1s. They’ll Treat a Lot More Than Obesity.</a></p></div><span class="me-age mono">3d ago</span></li></ul></div>
+      <div class="wk-events"><div class="block-title compact">Material events — top 5 by recency × publisher tier</div><p class="wk-events-meta"><strong>Top coverage</strong> from adjacent tier-1 financial press (CNBC, MarketWatch, Forbes, Zacks, MarketBeat, etc.), ranked by recency × publisher tier weight. <em>No HIMS coverage found from the requested whitelist (Bloomberg/WSJ/Barron&#x27;s content is mostly paywalled and not in NewsAPI&#x27;s free-tier index; Reuters/Seeking Alpha had no items in the window). Showing adjacent tier-1 coverage so the section isn&#x27;t empty.</em></p><ul class="material-events-list"><li class="material-event"><span class="me-publisher">MarketBeat</span><div><p class="me-title"><a href="https://www.marketbeat.com/instant-alerts/eli-lilly-and-company-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&amp;amp;utm_medium=yahoofinance" target="_blank" rel="noopener">Eli Lilly and Company Q2 Earnings Call Highlights</a></p><p class="me-snippet">Eli Lilly and Company (NYSE:LLY) reported 48% revenue growth in the second quarter of 2026, driven primarily by continued demand for its cardiometabolic medi...</p></div><span class="me-age mono">1d ago</span></li><li class="material-event"><span class="me-publisher">MarketBeat</span><div><p class="me-title"><a href="https://www.marketbeat.com/instant-alerts/sharkninja-q2-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&amp;utm_medium=yahoofinance" target="_blank" rel="noopener">SharkNinja Q2 Earnings Call Highlights</a></p></div><span class="me-age mono">1d ago</span></li><li class="material-event"><span class="me-publisher">MarketBeat</span><div><p class="me-title"><a href="https://www.marketbeat.com/instant-alerts/eli-lilly-and-company-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&amp;utm_medium=yahoofinance" target="_blank" rel="noopener">Eli Lilly and Company Q2 Earnings Call Highlights</a></p></div><span class="me-age mono">2d ago</span></li><li class="material-event"><span class="me-publisher">MarketBeat</span><div><p class="me-title"><a href="https://www.marketbeat.com/instant-alerts/nrg-energy-q2-earnings-call-highlights-2026-08-05/?utm_source=yahoofinance&amp;amp;utm_medium=yahoofinance" target="_blank" rel="noopener">NRG Energy Q2 Earnings Call Highlights</a></p><p class="me-snippet">NRG Energy (NYSE:NRG) reported second-quarter 2026 adjusted EBITDA of $1.2 billion, up 34% from a year earlier, while outlining plans for a 1.2-gigawatt Texa...</p></div><span class="me-age mono">4d ago</span></li><li class="material-event"><span class="me-publisher">MarketBeat</span><div><p class="me-title"><a href="https://www.marketbeat.com/articles/bearish-pressure-is-building-around-these-3-stocks/?utm_source=yahoofinance&amp;amp;utm_medium=yahoofinance" target="_blank" rel="noopener">Bearish Pressure Is Building Around These 3 Stocks</a></p><p class="me-snippet">Hims &amp; Hers Health and QXO face heavy short interest amid dilution and loss concerns, while KLA has slid nearly 40% since June as AI-driven chip spending fea...</p></div><span class="me-age mono">6d ago</span></li></ul></div>
     </section>
     
       
@@ -1456,14 +1456,14 @@ a:hover { color: var(--ink-strong); }
         rollups and the reset of US compounded-GLP-1 personalization.
       </p>
 
-      <div class="wk-strip" aria-label="Week-over-week deltas"><div class="wk-strip-eyebrow mono">WEEK-OVER-WEEK · vs Jul 27, 2026</div><div class="wk-strip-tiles"><div class="wk-strip-tile"><div class="wkst-label mono">SPOT</div><div class="wkst-value mono">$27.77</div><div class="wkst-chip"><span class="wow-chip down" title="vs Jul 27"><span class="wch-glyph">▼</span>$0.32 (-1.1%)<span class="wch-vs"> vs Jul 27</span></span></div></div><div class="wk-strip-tile"><div class="wkst-label mono">MKT CAP</div><div class="wkst-value mono">$6.43B</div><div class="wkst-chip"><span class="wow-chip down" title="vs Jul 27"><span class="wch-glyph">▼</span>-1.1%<span class="wch-vs"> vs Jul 27</span></span></div></div><div class="wk-strip-tile"><div class="wkst-label mono">FAIR VALUE</div><div class="wkst-value mono">$24.66</div><div class="wkst-chip"><span class="wow-chip flat" title="flat vs Jul 27"><span class="wch-glyph">─</span>flat</span></div></div><div class="wk-strip-tile"><div class="wkst-label mono">IMPLIED UPSIDE</div><div class="wkst-value mono">-11.2%</div><div class="wkst-chip"><span class="wow-chip up" title="vs Jul 27"><span class="wch-glyph">▲</span>+1.0pp<span class="wch-vs"> vs Jul 27</span></span></div></div></div></div>
+      <div class="wk-strip" aria-label="Week-over-week deltas"><div class="wk-strip-eyebrow mono">WEEK-OVER-WEEK · vs Aug 3, 2026</div><div class="wk-strip-tiles"><div class="wk-strip-tile"><div class="wkst-label mono">SPOT</div><div class="wkst-value mono">$31.59</div><div class="wkst-chip"><span class="wow-chip up" title="vs Aug 3"><span class="wch-glyph">▲</span>+$3.82 (+13.8%)<span class="wch-vs"> vs Aug 3</span></span></div></div><div class="wk-strip-tile"><div class="wkst-label mono">MKT CAP</div><div class="wkst-value mono">$7.31B</div><div class="wkst-chip"><span class="wow-chip up" title="vs Aug 3"><span class="wch-glyph">▲</span>+13.8%<span class="wch-vs"> vs Aug 3</span></span></div></div><div class="wk-strip-tile"><div class="wkst-label mono">FAIR VALUE</div><div class="wkst-value mono">$24.66</div><div class="wkst-chip"><span class="wow-chip flat" title="flat vs Aug 3"><span class="wch-glyph">─</span>flat</span></div></div><div class="wk-strip-tile"><div class="wkst-label mono">IMPLIED UPSIDE</div><div class="wkst-value mono">-21.9%</div><div class="wkst-chip"><span class="wow-chip down" title="vs Aug 3"><span class="wch-glyph">▼</span>-10.7pp<span class="wch-vs"> vs Aug 3</span></span></div></div></div></div>
 
       <div class="hero-row">
         <div class="hero-spot">
           <div class="hsp-label mono">SPOT</div>
-          <div class="hsp-price mono">$27.77</div>
+          <div class="hsp-price mono">$31.59</div>
           <div class="hsp-sub">
-            <span class="hsp-day mono pos">+$0.73 (+2.70%)</span>
+            <span class="hsp-day mono pos">+$1.93 (+6.51%)</span>
             <span class="hsp-day-label mono">today</span>
           </div>
         </div>
@@ -1471,7 +1471,7 @@ a:hover { color: var(--ink-strong); }
           <div class="hc-row">
             <div class="hc-cell">
               <div class="hc-label mono">6M Δ</div>
-              <div class="hc-value mono pos">+5.0%</div>
+              <div class="hc-value mono pos">+63.4%</div>
               <div class="hc-delta mono">$41 → $15 → $28 round-trip</div>
             </div>
           </div>
@@ -1482,19 +1482,19 @@ a:hover { color: var(--ink-strong); }
         <div class="chart-mini-head">
           <div class="cmh-title-block">
             <div class="cmh-title">Hims &amp; Hers (HIMS) — 6-Month Share Price</div>
-            <div class="cmh-sub mono">Daily close · USD · Feb 2, 2026 → Jul 31, 2026</div>
+            <div class="cmh-sub mono">Daily close · USD · Feb 9, 2026 → Aug 7, 2026</div>
           </div>
           <div class="cmh-meta">
             <span class="cmh-range mono"><span class="cmh-tag">RANGE</span>$14.52 – $38.28</span>
-            <span class="cmh-change mono pos"><span class="cmh-tag">6M Δ</span>+5.0%</span>
+            <span class="cmh-change mono pos"><span class="cmh-tag">6M Δ</span>+63.4%</span>
           </div>
         </div>
         <canvas id="overviewPriceChart"
-                data-dates='["2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-02", "2026-04-06", "2026-04-07", "2026-04-08", "2026-04-09", "2026-04-10", "2026-04-13", "2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-29", "2026-06-30", "2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31"]'
-                data-closes='[26.44, 25.54, 24.4, 23.48, 23.02, 19.33, 17.24, 16.69, 15.8, 16.3, 16.27, 15.84, 15.82, 15.63, 15.51, 15.46, 15.82, 15.6, 14.52, 16.48, 15.82, 16.45, 15.88, 15.74, 22.16, 23.47, 25.88, 23.84, 24.77, 24.88, 24.98, 23.15, 24.16, 22.02, 22.46, 21.34, 20.84, 20.86, 19.38, 18.78, 20.76, 19.84, 19.14, 20.33, 19.5, 19.39, 19.75, 19.43, 21.15, 21.36, 24.29, 26.99, 28.82, 31.01, 29.76, 29.01, 28.15, 30.56, 29.39, 27.91, 26.33, 27.17, 27.41, 27.27, 26.33, 26.88, 25.65, 28.27, 29.14, 25.03, 24.14, 24.24, 25.05, 22.29, 22.44, 23.04, 24.01, 23.75, 23.85, 25.2, 25.38, 26.15, 27.76, 27.51, 27.51, 28.01, 26.19, 27.17, 28.98, 27.78, 28.87, 26.82, 30.17, 31.47, 31.89, 35.47, 33.54, 32.96, 32.7, 32.71, 33.94, 33.39, 34.67, 37.57, 36.8, 38.28, 36.17, 36.07, 35.45, 34.38, 34.38, 35.15, 37.17, 33.68, 32.84, 32.7, 32.73, 31.68, 32.74, 28.09, 30.24, 29.32, 25.0, 27.04, 27.77]'></canvas>
+                data-dates='["2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-02", "2026-04-06", "2026-04-07", "2026-04-08", "2026-04-09", "2026-04-10", "2026-04-13", "2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-29", "2026-06-30", "2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07"]'
+                data-closes='[19.33, 17.24, 16.69, 15.8, 16.3, 16.27, 15.84, 15.82, 15.63, 15.51, 15.46, 15.82, 15.6, 14.52, 16.48, 15.82, 16.45, 15.88, 15.74, 22.16, 23.47, 25.88, 23.84, 24.77, 24.88, 24.98, 23.15, 24.16, 22.02, 22.46, 21.34, 20.84, 20.86, 19.38, 18.78, 20.76, 19.84, 19.14, 20.33, 19.5, 19.39, 19.75, 19.43, 21.15, 21.36, 24.29, 26.99, 28.82, 31.01, 29.76, 29.01, 28.15, 30.56, 29.39, 27.91, 26.33, 27.17, 27.41, 27.27, 26.33, 26.88, 25.65, 28.27, 29.14, 25.03, 24.14, 24.24, 25.05, 22.29, 22.44, 23.04, 24.01, 23.75, 23.85, 25.2, 25.38, 26.15, 27.76, 27.51, 27.51, 28.01, 26.19, 27.17, 28.98, 27.78, 28.87, 26.82, 30.17, 31.47, 31.89, 35.47, 33.54, 32.96, 32.7, 32.71, 33.94, 33.39, 34.67, 37.57, 36.8, 38.28, 36.17, 36.07, 35.45, 34.38, 34.38, 35.15, 37.17, 33.68, 32.84, 32.7, 32.73, 31.68, 32.74, 28.09, 30.24, 29.32, 25.0, 27.04, 27.77, 30.82, 32.16, 31.65, 29.66, 31.59]'></canvas>
       </div>
 
-      <div class="kpi-strip"><div class="kpi"><div class="kpi-label mono">LAST</div><div class="kpi-value mono">$27.77</div></div><div class="kpi"><div class="kpi-label mono">MKT CAP</div><div class="kpi-value mono">$6.43B</div></div><div class="kpi"><div class="kpi-label mono">52W RANGE</div><div class="kpi-value mono">$13.74 – $65.59</div></div><div class="kpi"><div class="kpi-label mono">ADV (3M)</div><div class="kpi-value mono">19,016,964</div></div><div class="kpi"><div class="kpi-label mono">SHORT INT</div><div class="kpi-value mono">31.9%</div></div><div class="kpi"><div class="kpi-label mono">BETA</div><div class="kpi-value mono">2.34</div></div></div>
+      <div class="kpi-strip"><div class="kpi"><div class="kpi-label mono">LAST</div><div class="kpi-value mono">$31.59</div></div><div class="kpi"><div class="kpi-label mono">MKT CAP</div><div class="kpi-value mono">$7.31B</div></div><div class="kpi"><div class="kpi-label mono">52W RANGE</div><div class="kpi-value mono">$13.74 – $65.30</div></div><div class="kpi"><div class="kpi-label mono">ADV (3M)</div><div class="kpi-value mono">18,391,998</div></div><div class="kpi"><div class="kpi-label mono">SHORT INT</div><div class="kpi-value mono">31.9%</div></div><div class="kpi"><div class="kpi-label mono">BETA</div><div class="kpi-value mono">2.42</div></div></div>
 
       <div class="overview-split">
         <div class="overview-split-l">
@@ -1559,136 +1559,195 @@ a:hover { color: var(--ink-strong); }
       
     <div class="synth-block">
       <div class="synth-head">
-        <span class="synth-eyebrow mono">THIS WEEK · 2026-08-03</span>
-        <span class="synth-srclabel mono">Reuters/Bloomberg (0) · primary-whitelist · 1 articles · 10 tweets</span>
+        <span class="synth-eyebrow mono">THIS WEEK · 2026-08-10</span>
+        <span class="synth-srclabel mono">Reuters/Bloomberg (0) · secondary-adjacent · 5 articles · 10 tweets</span>
       </div>
-      <ul class="synth-bullets"><li class="synth-bullet"><span class="synth-event">Multiple accounts flagged that $HIMS printed a golden cross for the first time since 2024, with commentary tying the technical setup to a broader move back toward pre-FTC-lawsuit price levels. The stock has reportedly reclaimed levels last seen before the FTC lawsuit overhang. <a class="ref-chip" href="#src-valuation-tweet-1">tweet-1</a> <a class="ref-chip" href="#src-valuation-tweet-4">tweet-4</a> <a class="ref-chip" href="#src-valuation-tweet-5">tweet-5</a></span><span class="synth-read"><em>Valuation read —</em> A recovery to pre-lawsuit levels suggests the market is unwinding a prior legal/regulatory discount, implying multiple re-rating rather than a change in fundamentals.</span></li><li class="synth-bullet"><span class="synth-event">Barron's reported that a next wave of GLP-1 drugs is coming that will treat far more than obesity, a category central to HIMS' weight-loss offering and forward growth narrative. This expands the addressable market backdrop for the GLP-1/peptide theme HIMS is exposed to. <a class="ref-chip" href="#src-valuation-news-1">news-1</a></span><span class="synth-read"><em>Valuation read —</em> A widening GLP-1 indication set supports a larger TAM assumption underpinning HIMS' growth multiple, though the branded pipeline is driven by Lilly and Novo rather than HIMS itself.</span></li><li class="synth-bullet"><span class="synth-event">A holder disclosure surfaced showing Vanguard Capital Management now owns 5.01% (~11.2M shares), reportedly a byproduct of a January 2026 Vanguard internal reorganization that splits subsidiary holdings out from the bundled Vanguard Group reporting. The post notes Vanguard Portfolio Management also holds a large position. <a class="ref-chip" href="#src-valuation-tweet-6">tweet-6</a></span><span class="synth-read"><em>Valuation read —</em> The 5%+ stake reflects reporting mechanics rather than necessarily new demand, so it is a soft positive for institutional-ownership optics but not a fundamental valuation driver.</span></li><li class="synth-bullet"><span class="synth-event">Retail sentiment is heavily anchored on an anticipated peptides launch and upcoming earnings, with several accounts framing peptides as a 2027 catalyst and management's recent silence as a sign of pending news. Others simply expect earnings to be strong. <a class="ref-chip" href="#src-valuation-tweet-4">tweet-4</a> <a class="ref-chip" href="#src-valuation-tweet-7">tweet-7</a> <a class="ref-chip" href="#src-valuation-tweet-8">tweet-8</a> <a class="ref-chip" href="#src-valuation-tweet-9">tweet-9</a></span><span class="synth-read"><em>Valuation read —</em> Expectations for a peptide-driven earnings inflection raise the bar for the next print, creating upside optionality but also disappointment risk if catalysts slip.</span></li><li class="synth-bullet"><span class="synth-event">A dissenting technical analyst warned the golden-cross narrative is a trap, citing rejection on a channel retest and arguing that losing the 200-week moving average opens a path toward $10. The same account claims to have called a prior pullback from $37 down to $15. <a class="ref-chip" href="#src-valuation-tweet-10">tweet-10</a></span><span class="synth-read"><em>Valuation read —</em> This bear case highlights downside asymmetry if technical support fails, a reminder that the recent re-rating rests on momentum that could reverse.</span></li><li class="synth-bullet"><span class="synth-event">Lighter engagement centered on HIMS being cited as one of a small basket of high-conviction names and joking references to the company as a 'semiconductor operation,' reflecting elevated speculative retail interest. These posts underscore how much of this week's narrative is sentiment- rather than data-driven. <a class="ref-chip" href="#src-valuation-tweet-2">tweet-2</a> <a class="ref-chip" href="#src-valuation-tweet-3">tweet-3</a></span><span class="synth-read"><em>Valuation read —</em> Speculative, momentum-heavy attention can inflate the multiple beyond fundamentals, increasing volatility risk around the valuation.</span></li></ul>
-      <div class="synth-sentiment"><span class="synth-sent-label mono">SENTIMENT · MIXED-BULLISH</span><span class="synth-sent-rationale">Most high-engagement tweets celebrate the golden cross, pre-lawsuit-level reclaim, and peptide/earnings optimism, but a prominent technical bear warning targeting $10 tempers the enthusiasm.</span></div>
+      <ul class="synth-bullets"><li class="synth-bullet"><span class="synth-event">HIMS is scheduled to report Q2 2026 earnings after the close on Monday, with the event widely flagged across the retail community as the key catalyst for the week. Multiple accounts frame it as the make-or-break moment for the stock's recent recovery. <a class="ref-chip" href="#src-valuation-tweet-1">tweet-1</a> <a class="ref-chip" href="#src-valuation-tweet-4">tweet-4</a> <a class="ref-chip" href="#src-valuation-tweet-5">tweet-5</a> <a class="ref-chip" href="#src-valuation-tweet-7">tweet-7</a> <a class="ref-chip" href="#src-valuation-tweet-10">tweet-10</a></span><span class="synth-read"><em>Valuation read —</em> The print is the near-term valuation fulcrum; guidance on subscriber growth, revenue trajectory, and profitability will reset the multiple in either direction.</span></li><li class="synth-bullet"><span class="synth-event">MarketBeat named HIMS among three stocks facing building bearish pressure, citing heavy short interest alongside dilution and loss concerns. One bull tweet counters this by claiming NYSE-sourced short interest of ~61.4M shares (~30% of float) and institutional ownership of ~205M shares (92%), arguing the effective float is very small. <a class="ref-chip" href="#src-valuation-news-5">news-5</a> <a class="ref-chip" href="#src-valuation-tweet-9">tweet-9</a></span><span class="synth-read"><em>Valuation read —</em> Elevated short interest against a thin effective float raises squeeze risk into earnings, but the underlying dilution and loss concerns remain overhangs on the fundamental valuation case.</span></li><li class="synth-bullet"><span class="synth-event">Filing and import-record sleuthing revealed HIMS is sourcing its free weight-loss member Smart Scale (model 0053) via Greater Goods' IP platform manufactured by Guangdong Welland Technology, with one July shipment of 10,605 cartons / 97,485 kg. HIMS assigns the scale a $55 'merchant retail suggested price' though actual unit cost is undisclosed and likely materially lower given order volumes. <a class="ref-chip" href="#src-valuation-tweet-6">tweet-6</a></span><span class="synth-read"><em>Valuation read —</em> The scale bundling signals continued investment in weight-loss retention and hardware-enabled engagement, a cost input worth watching for its impact on gross margins and CAC in the GLP-1/cardiometabolic vertical.</span></li><li class="synth-bullet"><span class="synth-event">Eli Lilly reported 48% Q2 2026 revenue growth driven by continued demand for its cardiometabolic (GLP-1) medicines, underscoring the strength of the weight-loss category HIMS participates in. <a class="ref-chip" href="#src-valuation-news-1">news-1</a> <a class="ref-chip" href="#src-valuation-news-3">news-3</a></span><span class="synth-read"><em>Valuation read —</em> Robust category demand from a leading branded manufacturer supports the addressable-market thesis for HIMS's weight-loss offering, though it also highlights the competitive and supply dynamics HIMS must navigate.</span></li><li class="synth-bullet"><span class="synth-event">Technical commentary noted HIMS ran from ~$15 in February to ~$39 in July (+160%), retested $25 support and bounced, with a stated next target of $43 and $25 framed as a must-hold level into Monday's earnings. Separate longer-term bull cases project $86-$131 over 12-24 months while acknowledging downside risk back toward $8-$15. <a class="ref-chip" href="#src-valuation-tweet-3">tweet-3</a> <a class="ref-chip" href="#src-valuation-tweet-8">tweet-8</a></span><span class="synth-read"><em>Valuation read —</em> The wide dispersion of price targets reflects an unusually bimodal setup where earnings could validate a re-rating or trigger a sharp retracement, so risk/reward is event-dependent.</span></li></ul>
+      <div class="synth-sentiment"><span class="synth-sent-label mono">SENTIMENT · MIXED-BULLISH</span><span class="synth-sent-rationale">The most-engaged tweets skew constructive and anticipatory into earnings, citing institutional ownership, tight float, and ambitious multi-year targets, though several openly acknowledge meaningful downside if the print or the $25 support level fails.</span></div>
       
     <details class="sources-details">
       <summary>
-        <span class="src-eyebrow mono">SOURCES · 11</span>
+        <span class="src-eyebrow mono">SOURCES · 15</span>
         <span class="src-toggle mono">expand</span>
       </summary>
       <ul class="source-list">
         <li class="source-item" id="src-valuation-news-1">
           <span class="source-ref mono">news-1</span>
           <span class="source-label">
-            <strong>Barrons.com</strong> — Here Comes the Next Wave of GLP-1s. They’ll Treat a Lot More Than Obesity.
-            <span class="src-date mono"> · 2026-07-31</span>
-            <a class="src-link mono" href="https://www.barrons.com/articles/glp-1-obesity-drugs-eli-lilly-novo-nordisk-stocks-19200dcc?siteid=yhoof2&amp;yptr=yahoo" target="_blank" rel="noopener">link ↗</a>
+            <strong>MarketBeat</strong> — Eli Lilly and Company Q2 Earnings Call Highlights
+            <span class="src-date mono"> · 2026-08-08</span>
+            <a class="src-link mono" href="https://www.marketbeat.com/instant-alerts/eli-lilly-and-company-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&amp;amp;utm_medium=yahoofinance" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-valuation-news-2">
+          <span class="source-ref mono">news-2</span>
+          <span class="source-label">
+            <strong>MarketBeat</strong> — SharkNinja Q2 Earnings Call Highlights
+            <span class="src-date mono"> · 2026-08-09</span>
+            <a class="src-link mono" href="https://www.marketbeat.com/instant-alerts/sharkninja-q2-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&amp;utm_medium=yahoofinance" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-valuation-news-3">
+          <span class="source-ref mono">news-3</span>
+          <span class="source-label">
+            <strong>MarketBeat</strong> — Eli Lilly and Company Q2 Earnings Call Highlights
+            <span class="src-date mono"> · 2026-08-08</span>
+            <a class="src-link mono" href="https://www.marketbeat.com/instant-alerts/eli-lilly-and-company-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&amp;utm_medium=yahoofinance" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-valuation-news-4">
+          <span class="source-ref mono">news-4</span>
+          <span class="source-label">
+            <strong>MarketBeat</strong> — NRG Energy Q2 Earnings Call Highlights
+            <span class="src-date mono"> · 2026-08-05</span>
+            <a class="src-link mono" href="https://www.marketbeat.com/instant-alerts/nrg-energy-q2-earnings-call-highlights-2026-08-05/?utm_source=yahoofinance&amp;amp;utm_medium=yahoofinance" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-valuation-news-5">
+          <span class="source-ref mono">news-5</span>
+          <span class="source-label">
+            <strong>MarketBeat</strong> — Bearish Pressure Is Building Around These 3 Stocks
+            <span class="src-date mono"> · 2026-08-03</span>
+            <a class="src-link mono" href="https://www.marketbeat.com/articles/bearish-pressure-is-building-around-these-3-stocks/?utm_source=yahoofinance&amp;amp;utm_medium=yahoofinance" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-1">
           <span class="source-ref mono">tweet-1</span>
           <span class="source-label">
-            <strong>@TheLongInvest (X)</strong> — $HIMS HAPPY GOLDEN CROSS DAY  · 461 likes
+            <strong>@alc2022 (X)</strong> — $HIMS earnings tomorrow
+
+Enjoy your Sunday, in peace  · 740 likes
             
-            <a class="src-link mono" href="https://x.com/TheLongInvest/status/2083185392803594741" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/alc2022/status/2086403281266393280" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-2">
           <span class="source-ref mono">tweet-2</span>
           <span class="source-label">
-            <strong>@TheLongInvest (X)</strong> — $ASTS
-$ADUR
-$HIMS
-$OSCR
-$ZETA
+            <strong>@TheLongInvest (X)</strong> — Big week for the fam. 
 
-There’s 5.  · 406 likes
+$HIMS
+$ASTS
+$SE 
+$NBIS
+$RKLB 
+$JD 
+$ONDS 
+$SMCI  · 450 likes
             
-            <a class="src-link mono" href="https://x.com/TheLongInvest/status/2083872098540286070" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/TheLongInvest/status/2086099259074519112" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-3">
           <span class="source-ref mono">tweet-3</span>
           <span class="source-label">
-            <strong>@alc2022 (X)</strong> — This week I learnt that $HIMS is a semi conductor operation  · 358 likes
+            <strong>@TheProfInvestor (X)</strong> — $HIMS Lets take a moment here
+
+Feb: $15
+Jul: $39
+
+160% ✅
+
+Retested: $25 support and bounced.
+
+Next target = 43.
+
+We bought at 15,
+We told pe…  · 365 likes
             
-            <a class="src-link mono" href="https://x.com/alc2022/status/2083189901273514066" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/TheProfInvestor/status/2086146797811253663" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-4">
           <span class="source-ref mono">tweet-4</span>
           <span class="source-label">
-            <strong>@CrypticTrades_ (X)</strong> — $HIMS has just formed a GOLDEN CROSS for the first time since 2024!
+            <strong>@TheLongInvest (X)</strong> — Are you ready for after the close tomorrow?
 
-Mark my word…
-
-2027 will be the year of peptides.  · 319 likes
+$HIMS
+$ASTS  · 300 likes
             
-            <a class="src-link mono" href="https://x.com/CrypticTrades_/status/2083273954198753676" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/TheLongInvest/status/2086503764467364217" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-5">
           <span class="source-ref mono">tweet-5</span>
           <span class="source-label">
-            <strong>@himshouse (X)</strong> — 🚨 $HIMS RECLAIMS PRE-FTC LAWSUIT LEVELS
-
-(and more)  · 288 likes
+            <strong>@MikeLongTerm (X)</strong> — $HIMS shareholders on Monday after ER  · 236 likes
             
-            <a class="src-link mono" href="https://x.com/himshouse/status/2083184534623764929" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/MikeLongTerm/status/2086143463981035750" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-6">
           <span class="source-ref mono">tweet-6</span>
           <span class="source-label">
-            <strong>@himshouse (X)</strong> — 🚨 BREAKING: $HIMS NEW 5%+ STAKE
+            <strong>@himshouse (X)</strong> — $HIMS just posted its Smart Scale manufacturing &amp; device info PDF
 
-Vanguard Capital Management now owns 5.01% (~11.2M shares)
-
-At one point, Vanguard Group owned 21 million s…  · 261 likes
+Based on the filings associated with product numbers, it appears Hims com…  · 187 likes
             
-            <a class="src-link mono" href="https://x.com/himshouse/status/2083198002001297549" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/himshouse/status/2086101089342943595" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-7">
           <span class="source-ref mono">tweet-7</span>
           <span class="source-label">
-            <strong>@Investinc_Intel (X)</strong> — $HIMS ONCE THEY RELEASE PEPTIDES‼️  · 184 likes
+            <strong>@Investinc_Intel (X)</strong> — MY $HIMS EARNINGS PREDICTION!
+
+Who is ready for Monday!?
+
+(The article below breaks down how I came to these numbers)  · 186 likes
             
-            <a class="src-link mono" href="https://x.com/Investinc_Intel/status/2083996910281506920" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/Investinc_Intel/status/2086166373693002081" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-8">
           <span class="source-ref mono">tweet-8</span>
           <span class="source-label">
-            <strong>@arthritisfinger (X)</strong> — $HIMS management has been very very quiet over the past months. I expect some HUGE news very soon. 
+            <strong>@MMatters22596 (X)</strong> — $HIMS
 
-Andrew is cooking.  · 167 likes
+Loved by everyone until February 2025.
+
+Since then, the stock has seen a maximum decline of 81%.
+
+Now, almost everybody hates it.
+
+Bu…  · 174 likes
             
-            <a class="src-link mono" href="https://x.com/arthritisfinger/status/2083906419338756270" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/MMatters22596/status/2086561948972298614" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-9">
           <span class="source-ref mono">tweet-9</span>
           <span class="source-label">
-            <strong>@swishseb (X)</strong> — $HIMS earnings will be spectacular  · 136 likes
+            <strong>@MikeLongTerm (X)</strong> — $HIMS shareholders just found out Instituional onwership is LONG 205,474,933 shares or 92.11% going into Q2 ER. While short sellers been spr…  · 152 likes
             
-            <a class="src-link mono" href="https://x.com/swishseb/status/2083948210155069472" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/MikeLongTerm/status/2086478137144029565" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-10">
           <span class="source-ref mono">tweet-10</span>
           <span class="source-label">
-            <strong>@EchoAnalysis (X)</strong> — $HIMS I am warning you 👀
+            <strong>@EconomyApp (X)</strong> — 🗓️ What are you watching this week?  
 
-This is not bullish. Price is showing signs of rejection on the channel retest.
-
-Lose the 200WMA and price will he…  · 107 likes
+• Monday: $MNDY $HIMS
+• Tuesday: $SE $CRWV $ONON
+• Wednesday: $CSCO $CRBS $NBIS
+• Thursday: $NU $JD $…  · 137 likes
             
-            <a class="src-link mono" href="https://x.com/EchoAnalysis/status/2084017644110327847" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/EconomyApp/status/2086112701101879453" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         </ul>
@@ -1700,7 +1759,7 @@ Lose the 200WMA and price will he…  · 107 likes
       <div class="hero-row">
         <div class="hero-spot">
           <div class="hsp-label mono">SPOT</div>
-          <div class="hsp-price mono">$27.77</div>
+          <div class="hsp-price mono">$31.59</div>
           <div class="hsp-sub">
             <span class="hsp-day-label mono">live reference price</span>
           </div>
@@ -1710,12 +1769,12 @@ Lose the 200WMA and price will he…  · 107 likes
             <div class="hc-cell">
               <div class="hc-label mono">DCF FAIR VALUE</div>
               <div class="hc-value mono">$24.66</div>
-              <div class="hc-delta mono neg">-11.2% vs spot</div>
+              <div class="hc-delta mono neg">-21.9% vs spot</div>
             </div>
             <div class="hc-cell">
               <div class="hc-label mono">SELL-SIDE TARGET</div>
               <div class="hc-value mono">$29.23</div>
-              <div class="hc-delta mono pos">+5.3% · 13 analysts</div>
+              <div class="hc-delta mono neg">-7.5% · 13 analysts</div>
             </div>
           </div>
         </div>
@@ -1763,17 +1822,17 @@ Lose the 200WMA and price will he…  · 107 likes
           <div class="dcf-output">
             <div class="dco-label mono">IMPLIED FAIR VALUE</div>
             <div class="dco-value mono">$24.66</div>
-            <div class="dco-chip"><span class="wow-chip flat" title="flat vs Jul 27"><span class="wch-glyph">─</span>flat</span></div>
+            <div class="dco-chip"><span class="wow-chip flat" title="flat vs Aug 3"><span class="wch-glyph">─</span>flat</span></div>
           </div>
           <div class="dcf-output">
             <div class="dco-label mono">SPOT</div>
-            <div class="dco-value mono">$27.77</div>
-            <div class="dco-chip"><span class="wow-chip down" title="vs Jul 27"><span class="wch-glyph">▼</span>$0.32 (-1.1%)<span class="wch-vs"> vs Jul 27</span></span></div>
+            <div class="dco-value mono">$31.59</div>
+            <div class="dco-chip"><span class="wow-chip up" title="vs Aug 3"><span class="wch-glyph">▲</span>+$3.82 (+13.8%)<span class="wch-vs"> vs Aug 3</span></span></div>
           </div>
           <div class="dcf-output">
             <div class="dco-label mono">IMPLIED UPSIDE</div>
-            <div class="dco-value mono neg">-11.2%</div>
-            <div class="dco-chip"><span class="wow-chip up" title="vs Jul 27"><span class="wch-glyph">▲</span>+1.0pp<span class="wch-vs"> vs Jul 27</span></span></div>
+            <div class="dco-value mono neg">-21.9%</div>
+            <div class="dco-chip"><span class="wow-chip down" title="vs Aug 3"><span class="wch-glyph">▼</span>-10.7pp<span class="wch-vs"> vs Aug 3</span></span></div>
           </div>
         </div>
         <div class="sens-card">
@@ -1786,7 +1845,7 @@ Lose the 200WMA and price will he…  · 107 likes
 
       <div class="val-card synthesis-card" data-val-pane="synthesis">
         <div class="val-card-eyebrow mono">C · SYNTHESIS</div>
-        <div class="synthesis-headline">HIMS trades at a +122% premium to peer median EV/Sales NTM (2.2x vs 1.0x); base-case DCF implies $24.66 per share, -11.2% downside to spot $27.77.</div>
+        <div class="synthesis-headline">HIMS trades at a +122% premium to peer median EV/Sales NTM (2.2x vs 1.0x); base-case DCF implies $24.66 per share, -21.9% downside to spot $31.59.</div>
         <p class="synthesis-narrative">All three techniques converge on the same conclusion: HIMS is priced for execution. The DCF base case gives downside of 5.7%; the peer-multiples ratio analysis confirms the premium can only be justified by sustained 20%+ growth and successful margin ramp to 18%; and the sell-side is already there - 14 analyst mean target of $26.04 sits 8% below spot, meaning the market is currently pricing HIMS BARELY above where the consensus has it. The DCF carries the most weight here because (i) loss-making peers like TDOC, LFMD and AMWL make multiples-based comps unstable, and (ii) the sensitivity grid makes the value-driver tradeoffs explicit: at WACC <= 9% AND terminal g >= 3%, spot is justified; everywhere else it isn't. The Eucalyptus integration (closing 2H 2026) is the swing variable not captured in the explicit-period growth path - if it compounds at announced triple-digit rates, the FY27-28 growth assumptions are too low and the DCF understates intrinsic value. <a class="ref-chip" href="#src-valuation-art-7">art-7</a> <a class="ref-chip" href="#src-valuation-art-10">art-10</a></p>
       </div>
     </div>
