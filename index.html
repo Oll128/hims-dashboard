@@ -528,7 +528,10 @@ a:hover { color: var(--ink-strong); }
   border-bottom: 1px solid var(--border);
 }
 .val-table { margin-bottom: var(--space-3); }
+.peer-selection-note { font-size: var(--text-sm); color: var(--ink-muted); line-height: 1.55; margin-bottom: var(--space-4); }
+.val-table .cohort-row td { background: var(--surface-deep); color: var(--ink-muted); font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; padding-top: var(--space-2); padding-bottom: var(--space-2); border-bottom: 1px solid var(--border); }
 .val-table .median-row td { background: oklch(96% 0.014 85); border-bottom: 1px solid var(--border-strong); font-weight: 500; }
+.val-table .prof-median-row td { background: var(--sage-wash); }
 .val-table .hims-row td { background: var(--sage-wash); border-bottom: 2px solid var(--sage); font-weight: 500; }
 .peer-tk { font-size: var(--text-xs); color: var(--ink-strong); padding: 1px 5px; background: var(--surface-deep); border-radius: 3px; margin-right: var(--space-2); }
 .peer-tk.accent { background: var(--ink-strong); color: var(--sage-wash); }
@@ -882,6 +885,116 @@ a:hover { color: var(--ink-strong); }
 
 .watch-list { padding-left: var(--space-4); margin: var(--space-2) 0 var(--space-3); }
 .watch-list li { font-size: var(--text-xs); line-height: 1.55; color: var(--ink); margin-bottom: var(--space-1); }
+
+/* -- Institutional Investors section ---------------------------------------- */
+.inst-poles { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin: var(--space-4) 0 var(--space-3); }
+@media (max-width: 760px) { .inst-poles { grid-template-columns: 1fr; } }
+.inst-pole { padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--surface-elev); }
+.inst-pole.accumulating { background: var(--sage-wash); border-color: var(--sage-line); }
+.inst-pole.distributing { background: var(--clay-wash); border-color: oklch(85% 0.040 35); }
+.inst-pole .block-subtitle-sub { margin: 0 0 var(--space-1); }
+.inst-pole p { font-size: var(--text-xs); line-height: 1.55; margin: 0; color: var(--ink); }
+.inst-pole-figure { font-size: var(--text-lg); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; margin-bottom: var(--space-2); }
+.inst-pole.accumulating .inst-pole-figure { color: var(--sage-deep); }
+.inst-pole.distributing .inst-pole-figure { color: var(--clay-deep); }
+.inst-verdict { font-size: var(--text-sm); line-height: var(--leading-body); color: var(--ink); margin: 0 0 var(--space-5); }
+
+.inst-wow-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; margin: var(--space-3) 0 var(--space-4); }
+@media (max-width: 560px) { .inst-wow-strip { grid-template-columns: 1fr; } }
+.inst-wow-item { background: var(--surface-elev); padding: var(--space-3) var(--space-4); display: flex; flex-direction: column; gap: 4px; }
+.inst-wow-label { font-size: var(--text-xs); letter-spacing: 0.12em; color: var(--ink-dim); }
+.inst-wow-value { font-size: var(--text-base); color: var(--ink-strong); font-variant-numeric: tabular-nums; }
+.inst-note { font-size: var(--text-xs); line-height: 1.55; color: var(--ink-muted); margin: 0 0 var(--space-5); }
+
+.inst-filing { display: grid; grid-template-columns: 104px 1fr; gap: var(--space-3); padding: var(--space-3) var(--space-4); border: 1px solid var(--border); border-bottom: 0; background: var(--surface-elev); }
+.inst-filing:first-of-type { border-top-left-radius: var(--radius-sm); border-top-right-radius: var(--radius-sm); }
+.inst-filing:last-of-type { border-bottom: 1px solid var(--border); border-bottom-left-radius: var(--radius-sm); border-bottom-right-radius: var(--radius-sm); }
+@media (max-width: 560px) { .inst-filing { grid-template-columns: 1fr; gap: var(--space-1); } }
+.inst-filing-date { font-size: var(--text-xs); color: var(--sage-deep); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.inst-filing-head { font-size: var(--text-sm); color: var(--ink-strong); font-weight: 500; margin-bottom: 3px; }
+.inst-form { font-size: var(--text-xs); letter-spacing: 0.06em; color: var(--ink-dim); background: var(--surface-deep); padding: 2px 6px; border-radius: 3px; margin-left: 6px; vertical-align: 1px; }
+.inst-flag { font-family: var(--font-body); font-size: var(--text-xs); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--clay-deep); background: var(--clay-wash); padding: 2px 6px; border-radius: 3px; margin-left: 6px; vertical-align: 1px; }
+.inst-filing-detail { font-size: var(--text-xs); line-height: 1.5; color: var(--ink-muted); margin: 0; }
+
+/* -- FDA Peptide Review section -------------------------------------------- */
+.fda-metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-2); margin: var(--space-4) 0 var(--space-5); }
+@media (max-width: 900px) { .fda-metric-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .fda-metric-grid { grid-template-columns: 1fr; } }
+.fda-vote-banner { padding: var(--space-3) var(--space-4); background: var(--sage-wash); border: 1px solid var(--sage-line); border-radius: var(--radius-sm); font-size: var(--text-sm); line-height: 1.55; color: var(--ink); margin: var(--space-3) 0 var(--space-5); }
+.fda-agenda { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin: var(--space-3) 0 var(--space-4); }
+@media (max-width: 760px) { .fda-agenda { grid-template-columns: 1fr; } }
+.fda-day { padding: var(--space-4); background: var(--surface-elev); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.fda-day-head { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-deep); margin-bottom: var(--space-3); }
+.fda-pep-list { list-style: none; margin: 0; padding: 0; }
+.fda-pep { display: grid; grid-template-columns: minmax(88px, auto) 1fr auto; gap: var(--space-3); align-items: baseline; padding: var(--space-2) 0; border-top: 1px solid var(--border); }
+.fda-pep:first-child { border-top: 0; padding-top: 0; }
+.fda-pep-name { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--ink-strong); font-weight: 500; }
+.fda-pep-note { font-size: var(--text-xs); color: var(--ink-muted); line-height: 1.4; }
+.fda-pep-vote { font-family: var(--font-mono); font-size: var(--text-xs); white-space: nowrap; padding: 2px 9px; border-radius: 100px; }
+.fda-vote-yes { background: var(--sage-wash); color: var(--sage-deep); border: 1px solid var(--sage-line); }
+.fda-vote-pending { background: var(--surface-deep); color: var(--ink-dim); border: 1px solid var(--border); }
+.fda-vote-scheduled { background: var(--sky-wash); color: var(--sky-deep); border: 1px solid var(--sky-line); }
+.fda-bull-bear { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin: var(--space-3) 0 var(--space-4); }
+@media (max-width: 760px) { .fda-bull-bear { grid-template-columns: 1fr; } }
+.fda-pole { padding: var(--space-4); border-radius: var(--radius-sm); border: 1px solid var(--border); }
+.fda-pole.bull { background: var(--sage-wash); border-color: var(--sage-line); }
+.fda-pole.bear { background: var(--clay-wash); border-color: oklch(85% 0.040 35); }
+.fda-pole h4 { margin: 0 0 var(--space-3); }
+.fda-pole ul { margin: 0; padding-left: var(--space-4); }
+.fda-pole li { font-size: var(--text-sm); line-height: 1.5; color: var(--ink); margin-bottom: var(--space-2); }
+.fda-pole li:last-child { margin-bottom: 0; }
+.fda-readthrough { padding: var(--space-4); background: var(--surface-elev); border: 1px solid var(--border-strong); border-radius: var(--radius-sm); margin: var(--space-3) 0 var(--space-4); }
+.fda-readthrough .drt-eyebrow { color: var(--clay-deep); }
+
+/* -- peptide developments timeline (section 01) -- */
+.pt-list { list-style: none; margin: 0 0 var(--space-4); padding: 0; }
+.pt-row { display: grid; grid-template-columns: 190px 1fr; gap: var(--space-3); padding: var(--space-3) 0; border-bottom: 1px solid var(--border); }
+.pt-row:last-child { border-bottom: none; }
+.pt-meta { display: flex; flex-direction: column; gap: 4px; }
+.pt-date { font-size: var(--text-sm); font-weight: 600; color: var(--ink-strong); }
+.pt-cat { font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-dim); }
+.pt-status { font-size: var(--text-xs); letter-spacing: 0.06em; color: var(--ink-muted); }
+.pt-verified .pt-status { color: var(--sage-deep); }
+.pt-unverified .pt-status { color: oklch(48% 0.090 70); }
+.pt-disputed .pt-status { color: var(--clay-deep); }
+.pt-headline { font-family: var(--font-display); font-size: 15px; font-weight: 500; color: var(--ink-strong); margin-bottom: 4px; }
+.pt-sig { margin-right: 8px; font-size: 11px; vertical-align: 1px; }
+.pt-text { font-size: var(--text-xs); line-height: 1.55; color: var(--ink-muted); margin: 0; }
+.pt-prov { display: inline-block; margin-top: 6px; font-size: var(--text-xs); letter-spacing: 0.04em; color: var(--ink-dim); text-decoration: none; border-bottom: 1px solid var(--border-strong); }
+.pt-quiet { font-size: var(--text-xs); letter-spacing: 0.08em; color: var(--ink-dim); padding: var(--space-3); background: var(--surface-elev); border: 1px solid var(--border); border-radius: var(--radius-sm); margin: 0 0 var(--space-4); }
+@media (max-width: 760px) { .pt-row { grid-template-columns: 1fr; gap: 6px; } }
+.fda-readthrough p { font-size: var(--text-sm); line-height: var(--leading-body); color: var(--ink); margin: 0; }
+.fda-articles { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); margin: var(--space-3) 0 var(--space-4); }
+@media (max-width: 760px) { .fda-articles { grid-template-columns: 1fr; } }
+.fda-social { margin: var(--space-3) 0 var(--space-4); padding: var(--space-4); background: var(--surface-deep); border: 1px dashed var(--border-strong); border-radius: var(--radius-sm); }
+.fda-social-note { font-size: var(--text-xs); color: var(--ink-dim); line-height: 1.5; margin: 0 0 var(--space-3); }
+.fda-social-list { list-style: none; margin: 0; padding: 0; }
+.fda-social-item { padding: var(--space-3) 0; border-top: 1px solid var(--border); }
+.fda-social-item:first-child { border-top: 0; padding-top: 0; }
+.fda-social-meta { font-size: var(--text-xs); color: var(--ink-dim); margin-bottom: 4px; }
+.fda-social-meta a { color: var(--sage-deep); }
+.fda-social-text { font-size: var(--text-sm); line-height: 1.5; color: var(--ink); margin: 0; }
+.fda-corrob { display: inline-block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage-deep); background: var(--sage-wash); border: 1px solid var(--sage-line); border-radius: 100px; padding: 1px 6px; margin-left: 6px; }
+.fda-review-framework { padding: var(--space-3) var(--space-4); background: var(--sky-wash); border: 1px solid var(--sky-line); border-radius: var(--radius-sm); font-size: var(--text-sm); line-height: 1.55; color: var(--ink); margin: var(--space-3) 0 var(--space-4); }
+.fda-review { border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface-elev); margin-bottom: var(--space-2); overflow: hidden; }
+.fda-review > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto auto; gap: var(--space-3); align-items: baseline; padding: var(--space-3) var(--space-4); }
+.fda-review > summary::-webkit-details-marker { display: none; }
+.fda-review > summary:hover { background: var(--surface-deep); }
+.fda-review > summary::after { content: '\203A'; font-family: var(--font-mono); color: var(--ink-dim); transition: transform 120ms var(--ease-out); }
+.fda-review[open] > summary::after { transform: rotate(90deg); }
+.fda-review-name { font-family: var(--font-mono); font-size: var(--text-sm); font-weight: 600; color: var(--ink-strong); }
+.fda-review-full { font-size: var(--text-xs); color: var(--ink-muted); }
+.fda-review-tag { font-family: var(--font-mono); font-size: var(--text-xs); white-space: nowrap; padding: 2px 9px; border-radius: 100px; }
+.fda-review-tag.yes { background: var(--sage-wash); color: var(--sage-deep); border: 1px solid var(--sage-line); }
+.fda-review-tag.pending { background: var(--surface-deep); color: var(--ink-dim); border: 1px solid var(--border-strong); }
+.fda-review-body { padding: 0 var(--space-4) var(--space-3); border-top: 1px solid var(--border); }
+.fda-rev-row { display: grid; grid-template-columns: 128px 1fr; gap: var(--space-4); padding: var(--space-3) 0; border-top: 1px solid var(--border); }
+.fda-rev-row:first-child { border-top: 0; }
+@media (max-width: 640px) { .fda-rev-row { grid-template-columns: 1fr; gap: 2px; } .fda-review > summary { grid-template-columns: 1fr auto; } .fda-review-full { display: none; } }
+.fda-rev-k { font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-dim); padding-top: 2px; }
+.fda-rev-row p { font-size: var(--text-sm); line-height: 1.55; color: var(--ink); margin: 0; }
+.fda-rev-row.hims p { color: var(--sage-deep); }
+.fda-rev-row.hims .fda-rev-k { color: var(--sage-deep); }
 
 /* Conference calls section ----------------------------------------------- */
 .rubric-card { background: var(--surface-elev); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4); margin-bottom: var(--space-3); }
@@ -1328,21 +1441,21 @@ a:hover { color: var(--ink-strong); }
       <div class="topbar-right">
         <div class="ts-cell">
           <div class="ts-cell-label mono">LAST</div>
-          <div class="ts-cell-value mono">$33.78</div>
+          <div class="ts-cell-value mono">$29.83</div>
         </div>
         <div class="ts-cell">
           <div class="ts-cell-label mono">DAY Δ</div>
-          <div class="ts-cell-value mono up">+$1.92 <span class="ts-cell-pct">+6.03%</span></div>
+          <div class="ts-cell-value mono down">$-1.92 <span class="ts-cell-pct">-6.05%</span></div>
         </div>
         <div class="ts-cell">
           <div class="ts-cell-label mono">MKT CAP</div>
-          <div class="ts-cell-value mono">$7.88B</div>
+          <div class="ts-cell-value mono">$6.96B</div>
         </div>
         <canvas id="topbarSpark" class="ts-spark" width="96" height="32"
-                data-series='[25.38, 26.15, 27.76, 27.51, 27.51, 28.01, 26.19, 27.17, 28.98, 27.78, 28.87, 26.82, 30.17, 31.47, 31.89, 35.47, 33.54, 32.96, 32.7, 32.71, 33.94, 33.39, 34.67, 37.57, 36.8, 38.28, 36.17, 36.07, 35.45, 34.38, 34.38, 35.15, 37.17, 33.68, 32.84, 32.7, 32.73, 31.68, 32.74, 28.09, 30.24, 29.32, 25.0, 27.04, 27.77, 30.82, 32.16, 31.65, 29.66, 31.59, 31.77, 30.51, 29.97, 28.77, 28.15, 28.61, 27.39, 31.09, 31.86, 33.78]' data-direction="up"></canvas>
+                data-series='[27.51, 27.51, 28.01, 26.19, 27.17, 28.98, 27.78, 28.87, 26.82, 30.17, 31.47, 31.89, 35.47, 33.54, 32.96, 32.7, 32.71, 33.94, 33.39, 34.67, 37.57, 36.8, 38.28, 36.17, 36.07, 35.45, 34.38, 34.38, 35.15, 37.17, 33.68, 32.84, 32.7, 32.73, 31.68, 32.74, 28.09, 30.24, 29.32, 25.0, 27.04, 27.77, 30.82, 32.16, 31.65, 29.66, 31.59, 31.77, 30.51, 29.97, 28.77, 28.15, 28.61, 27.39, 31.09, 31.86, 33.78, 31.08, 31.75, 29.83]' data-direction="down"></canvas>
         <div class="ts-cell ts-asof">
           <div class="ts-cell-label mono">AS OF</div>
-          <div class="ts-cell-value mono">2026-08-24</div>
+          <div class="ts-cell-value mono">2026-08-26</div>
         </div>
       </div>
     </header>
@@ -1363,8 +1476,16 @@ a:hover { color: var(--ink-strong); }
           </span>
         </a>
         
-        <a class="nav-link" href="#section-overview" data-target="overview">
+        <a class="nav-link" href="#section-fdapeptide" data-target="fdapeptide">
           <span class="nav-num mono">01</span>
+          <span class="nav-body">
+            <span class="nav-title">FDA Peptide Review</span>
+            <span class="nav-sub">PCAC 503A hearing · 23–24 Jul</span>
+          </span>
+        </a>
+        
+        <a class="nav-link" href="#section-overview" data-target="overview">
+          <span class="nav-num mono">02</span>
           <span class="nav-body">
             <span class="nav-title">HIMS Overview</span>
             <span class="nav-sub">Snapshot · financials</span>
@@ -1372,15 +1493,23 @@ a:hover { color: var(--ink-strong); }
         </a>
         
         <a class="nav-link" href="#section-valuation" data-target="valuation">
-          <span class="nav-num mono">02</span>
+          <span class="nav-num mono">03</span>
           <span class="nav-body">
             <span class="nav-title">Valuation</span>
             <span class="nav-sub">DCF · ratio · synthesis</span>
           </span>
         </a>
         
+        <a class="nav-link" href="#section-institutional" data-target="institutional">
+          <span class="nav-num mono">04</span>
+          <span class="nav-body">
+            <span class="nav-title">Institutional Investors</span>
+            <span class="nav-sub">13F flows · &gt;5% stake filings</span>
+          </span>
+        </a>
+        
         <a class="nav-link" href="#section-revenue" data-target="revenue">
-          <span class="nav-num mono">03</span>
+          <span class="nav-num mono">05</span>
           <span class="nav-body">
             <span class="nav-title">Revenue Growth</span>
             <span class="nav-sub">Trailing four-quarter trajectory</span>
@@ -1388,7 +1517,7 @@ a:hover { color: var(--ink-strong); }
         </a>
         
         <a class="nav-link" href="#section-ma" data-target="ma">
-          <span class="nav-num mono">04</span>
+          <span class="nav-num mono">06</span>
           <span class="nav-body">
             <span class="nav-title">Recent Acquisitions</span>
             <span class="nav-sub">Q2 2024 → today timeline</span>
@@ -1396,7 +1525,7 @@ a:hover { color: var(--ink-strong); }
         </a>
         
         <a class="nav-link" href="#section-derisk" data-target="derisk">
-          <span class="nav-num mono">05</span>
+          <span class="nav-num mono">07</span>
           <span class="nav-body">
             <span class="nav-title">Bullish Catalysts</span>
             <span class="nav-sub">FDA peptides · Novo Nordisk</span>
@@ -1404,7 +1533,7 @@ a:hover { color: var(--ink-strong); }
         </a>
         
         <a class="nav-link" href="#section-calls" data-target="calls">
-          <span class="nav-num mono">06</span>
+          <span class="nav-num mono">08</span>
           <span class="nav-body">
             <span class="nav-title">Conference Calls</span>
             <span class="nav-sub">Tone shift across last 4</span>
@@ -1425,45 +1554,318 @@ a:hover { color: var(--ink-strong); }
       
     <section class="pane active" id="section-weekly" data-section="weekly">
       
-      <div class="section-eyebrow mono">00 · WEEKLY UPDATE · WEEK OF AUG 24, 2026</div>
-      <h2 class="section-title">Comparison vs. Aug 17, 2026 snapshot</h2>
-      <p class="wk-headline-narrative">Spot moved +20.0% to $33.78. Fair value essentially held at $24.47. Implied upside now -27.6% (-14.5pp WoW). DCF assumptions unchanged (WACC held at 10.5%, terminal g held at 3.0%).</p>
+      <div class="section-eyebrow mono">00 · WEEKLY UPDATE · WEEK OF AUG 26, 2026</div>
+      <h2 class="section-title">Comparison vs. Aug 24, 2026 snapshot</h2>
+      <p class="wk-headline-narrative">Spot moved -11.7% to $29.83. Fair value essentially held at $24.47. Implied upside now -18.0% (+9.6pp WoW). DCF assumptions unchanged (WACC held at 10.5%, terminal g held at 3.0%).</p>
     
-      <div class="wk-grid"><button type="button" class="wk-tile" data-tile-key="spot" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Spot", "value": "$33.78", "summary": "Spot rose 20.0% to $33.78.", "math": "Market-driven: this is the yfinance close on the run date. Market cap moves 1:1 with spot since shares outstanding is held flat between weekly runs.", "drivers": ["Broad market context (S&P / sector \u2014 not currently tracked; future work).", "HIMS-specific news flow \u2014 see linked material events below.", "Sentiment / positioning around recent earnings, GLP-1 narrative, partner announcements."], "linked_events": [{"publisher": "StockStory", "title": "2 Unpopular Stocks That Deserve a Second Chance and 1 We Ignore", "url": "https://finance.yahoo.com/markets/stocks/articles/2-unpopular-stocks-deserve-second-064936765.html", "age_days": 0}, {"publisher": "CNBC", "title": "Hims & Hers CEO says FTC lawsuit misunderstands how the company works", "url": "https://www.cnbc.com/2026/08/18/hims-hers-ceo-andrew-dudum-ftc-lawsuit-glp-1s-ai.html", "age_days": 5}, {"publisher": "Barchart.com", "title": "Unusual Options Activity Points to a $1.08 Million Dividend Capture in This 1 Stock", "url": "https://www.barchart.com/story/news/3856610/unusual-options-activity-points-to-a-1-08-million-dividend-capture-in-this-1-stock", "age_days": 9}, {"publisher": "Investor&#39;s Business Daily", "title": "Is Hims The Next Big Name In Peptides? Shares Recover From Earnings Dive.", "url": "https://www.investors.com/news/technology/hims-stock-hims-hers-health-earnings-q2-2026/", "age_days": 12}, {"publisher": "MarketBeat", "title": "Clover Health Eyes 2026 GAAP Profit as AI Platform Fuels Medicare Advantage Growth", "url": "https://www.marketbeat.com/instant-alerts/clover-health-eyes-2026-gaap-profit-as-ai-platform-fuels-medicare-advantage-growth-2026-08-11/?utm_source=yahoofinance&amp;utm_medium=yahoofinance", "age_days": 12}]}'><div class="wk-tile-label mono">SPOT</div><div class="wk-tile-value mono">$33.78</div><div class="wk-tile-chip"><span class="wow-chip up" title="vs Aug 17"><span class="wch-glyph">▲</span>+$5.63 (+20.0%)<span class="wch-vs"> vs Aug 17</span></span></div></button><button type="button" class="wk-tile" data-tile-key="fair_value" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Fair value", "value": "$24.47", "summary": "Fair value essentially held at $24.47 (delta +0.00%). This is the expected behaviour: DCF inputs were carried forward.", "math": "Fair value = (\u03a3 PV-FCFFs + PV-Terminal \u2212 net debt) / shares outstanding. Inputs held this week: WACC held at 10.5%; terminal g held at 3.0%; revenue growth path unchanged; EBITDA margin path unchanged. The small residual delta comes from shares-outstanding rederivation (market_cap / spot): prior 233.3M \u2192 current 233.3M shares.", "drivers": ["DCF auto-update of assumptions (Treasury 10Y, beta, peer median refresh) \u2014 not yet wired; would surface here.", "Eucalyptus integration milestones \u2014 would shift FY27-28 growth path when material.", "FDA Cat-1 peptides regulatory developments \u2014 would shift margin assumption when material."], "linked_events": []}'><div class="wk-tile-label mono">FAIR VALUE</div><div class="wk-tile-value mono">$24.47</div><div class="wk-tile-chip"><span class="wow-chip flat" title="flat vs Aug 17"><span class="wch-glyph">─</span>flat</span></div></button><button type="button" class="wk-tile" data-tile-key="implied_upside" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Implied upside", "value": "-27.6%", "summary": "Implied upside is now -27.6% (widened by 14.5pp WoW vs prior -13.1%).", "math": "Arithmetic: implied_upside = (fair_value \u2212 spot) / spot. With fair value held and spot down, the downside narrowed mechanically \u2014 no change to the analyst view.", "drivers": ["Function of the two metrics above. Watch spot for direction, fair value for the analyst-driven floor."], "linked_events": [{"publisher": "StockStory", "title": "2 Unpopular Stocks That Deserve a Second Chance and 1 We Ignore", "url": "https://finance.yahoo.com/markets/stocks/articles/2-unpopular-stocks-deserve-second-064936765.html", "age_days": 0}, {"publisher": "CNBC", "title": "Hims & Hers CEO says FTC lawsuit misunderstands how the company works", "url": "https://www.cnbc.com/2026/08/18/hims-hers-ceo-andrew-dudum-ftc-lawsuit-glp-1s-ai.html", "age_days": 5}, {"publisher": "Barchart.com", "title": "Unusual Options Activity Points to a $1.08 Million Dividend Capture in This 1 Stock", "url": "https://www.barchart.com/story/news/3856610/unusual-options-activity-points-to-a-1-08-million-dividend-capture-in-this-1-stock", "age_days": 9}, {"publisher": "Investor&#39;s Business Daily", "title": "Is Hims The Next Big Name In Peptides? Shares Recover From Earnings Dive.", "url": "https://www.investors.com/news/technology/hims-stock-hims-hers-health-earnings-q2-2026/", "age_days": 12}, {"publisher": "MarketBeat", "title": "Clover Health Eyes 2026 GAAP Profit as AI Platform Fuels Medicare Advantage Growth", "url": "https://www.marketbeat.com/instant-alerts/clover-health-eyes-2026-gaap-profit-as-ai-platform-fuels-medicare-advantage-growth-2026-08-11/?utm_source=yahoofinance&amp;utm_medium=yahoofinance", "age_days": 12}]}'><div class="wk-tile-label mono">IMPLIED UPSIDE</div><div class="wk-tile-value mono">-27.6%</div><div class="wk-tile-chip"><span class="wow-chip down" title="vs Aug 17"><span class="wch-glyph">▼</span>-14.5pp<span class="wch-vs"> vs Aug 17</span></span></div></button><button type="button" class="wk-tile" data-tile-key="market_cap" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Market cap", "value": "$7.88B", "summary": "Market cap moved +20.0% to $7,881M.", "math": "Market cap = spot \u00d7 shares outstanding. Tracks spot 1:1 since the weekly job holds shares constant.", "drivers": ["Same as spot \u2014 see linked material events."], "linked_events": [{"publisher": "StockStory", "title": "2 Unpopular Stocks That Deserve a Second Chance and 1 We Ignore", "url": "https://finance.yahoo.com/markets/stocks/articles/2-unpopular-stocks-deserve-second-064936765.html", "age_days": 0}, {"publisher": "CNBC", "title": "Hims & Hers CEO says FTC lawsuit misunderstands how the company works", "url": "https://www.cnbc.com/2026/08/18/hims-hers-ceo-andrew-dudum-ftc-lawsuit-glp-1s-ai.html", "age_days": 5}, {"publisher": "Barchart.com", "title": "Unusual Options Activity Points to a $1.08 Million Dividend Capture in This 1 Stock", "url": "https://www.barchart.com/story/news/3856610/unusual-options-activity-points-to-a-1-08-million-dividend-capture-in-this-1-stock", "age_days": 9}, {"publisher": "Investor&#39;s Business Daily", "title": "Is Hims The Next Big Name In Peptides? Shares Recover From Earnings Dive.", "url": "https://www.investors.com/news/technology/hims-stock-hims-hers-health-earnings-q2-2026/", "age_days": 12}, {"publisher": "MarketBeat", "title": "Clover Health Eyes 2026 GAAP Profit as AI Platform Fuels Medicare Advantage Growth", "url": "https://www.marketbeat.com/instant-alerts/clover-health-eyes-2026-gaap-profit-as-ai-platform-fuels-medicare-advantage-growth-2026-08-11/?utm_source=yahoofinance&amp;utm_medium=yahoofinance", "age_days": 12}]}'><div class="wk-tile-label mono">MARKET CAP</div><div class="wk-tile-value mono">$7.88B</div><div class="wk-tile-chip"><span class="wow-chip up" title="vs Aug 17"><span class="wch-glyph">▲</span>+20.0%<span class="wch-vs"> vs Aug 17</span></span></div></button><button type="button" class="wk-tile" data-tile-key="wacc" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "WACC", "value": "+10.5%", "summary": "WACC held at 10.5% (textbook bottom-up build would yield ~16.8%; overridden to 10.5% reflecting that high beta is partly idiosyncratic regulatory risk, sell-side practice of unlevering long-horizon DCFs).", "math": "WACC enters the DCF through the discount factor: PV-FCFF_t = FCFF_t / (1 + WACC)^t. A +100bp WACC move would compress PV-Terminal heavily because Terminal is ~81% of EV here.", "drivers": ["10Y Treasury yield refresh \u2014 not yet auto-pulled. Source: FRED DGS10. (Future tool.)", "HIMS beta refresh from yfinance \u2014 not yet auto-pulled.", "ERP refresh (Damodaran annual) \u2014 manual cadence."], "linked_events": []}'><div class="wk-tile-label mono">WACC</div><div class="wk-tile-value mono">+10.5%</div><div class="wk-tile-chip"><span class="wow-chip flat" title="held vs Aug 17"><span class="wch-glyph">─</span>held</span></div></button><button type="button" class="wk-tile" data-tile-key="terminal_g" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Terminal g", "value": "+3.0%", "summary": "Terminal growth held at 3.0%. Anchored to long-run nominal GDP-like rate.", "math": "Terminal value = FCFF_T+1 / (WACC \u2212 g). With WACC=10.5%, every 1pp of g adds materially to TV; TV is ~81% of EV so the sensitivity is high.", "drivers": ["Long-run structural view \u2014 moves rarely (sub-annual cadence).", "Would shift on a thesis-level change (e.g. saturation evidence in DTC weight-loss)."], "linked_events": []}'><div class="wk-tile-label mono">TERMINAL G</div><div class="wk-tile-value mono">+3.0%</div><div class="wk-tile-chip"><span class="wow-chip flat" title="held vs Aug 17"><span class="wch-glyph">─</span>held</span></div></button></div>
+      <div class="wk-grid"><button type="button" class="wk-tile" data-tile-key="spot" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Spot", "value": "$29.83", "summary": "Spot fell 11.7% to $29.83.", "math": "Market-driven: this is the yfinance close on the run date. Market cap moves 1:1 with spot since shares outstanding is held flat between weekly runs.", "drivers": ["Broad market context (S&P / sector \u2014 not currently tracked; future work).", "HIMS-specific news flow \u2014 see linked material events below.", "Sentiment / positioning around recent earnings, GLP-1 narrative, partner announcements."], "linked_events": [{"publisher": "Barrons.com", "title": "How GLP-1 Sales Could Play Out for Hims & Hers", "url": "https://www.barrons.com/articles/hims-hers-stock-glp-1-obesity-drugs-8c2b9569?siteid=yhoof2&yptr=yahoo", "age_days": 1}]}'><div class="wk-tile-label mono">SPOT</div><div class="wk-tile-value mono">$29.83</div><div class="wk-tile-chip"><span class="wow-chip down" title="vs Aug 24"><span class="wch-glyph">▼</span>$3.95 (-11.7%)<span class="wch-vs"> vs Aug 24</span></span></div></button><button type="button" class="wk-tile" data-tile-key="fair_value" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Fair value", "value": "$24.47", "summary": "Fair value essentially held at $24.47 (delta +0.00%). This is the expected behaviour: DCF inputs were carried forward.", "math": "Fair value = (\u03a3 PV-FCFFs + PV-Terminal \u2212 net debt) / shares outstanding. Inputs held this week: WACC held at 10.5%; terminal g held at 3.0%; revenue growth path unchanged; EBITDA margin path unchanged. The small residual delta comes from shares-outstanding rederivation (market_cap / spot): prior 233.3M \u2192 current 233.3M shares.", "drivers": ["DCF auto-update of assumptions (Treasury 10Y, beta, peer median refresh) \u2014 not yet wired; would surface here.", "Eucalyptus integration milestones \u2014 would shift FY27-28 growth path when material.", "FDA Cat-1 peptides regulatory developments \u2014 would shift margin assumption when material."], "linked_events": []}'><div class="wk-tile-label mono">FAIR VALUE</div><div class="wk-tile-value mono">$24.47</div><div class="wk-tile-chip"><span class="wow-chip flat" title="flat vs Aug 24"><span class="wch-glyph">─</span>flat</span></div></button><button type="button" class="wk-tile" data-tile-key="implied_upside" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Implied upside", "value": "-18.0%", "summary": "Implied upside is now -18.0% (compressed by 9.6pp WoW vs prior -27.6%).", "math": "Arithmetic: implied_upside = (fair_value \u2212 spot) / spot. With fair value held and spot down, the downside narrowed mechanically \u2014 no change to the analyst view.", "drivers": ["Function of the two metrics above. Watch spot for direction, fair value for the analyst-driven floor."], "linked_events": [{"publisher": "Barrons.com", "title": "How GLP-1 Sales Could Play Out for Hims & Hers", "url": "https://www.barrons.com/articles/hims-hers-stock-glp-1-obesity-drugs-8c2b9569?siteid=yhoof2&yptr=yahoo", "age_days": 1}]}'><div class="wk-tile-label mono">IMPLIED UPSIDE</div><div class="wk-tile-value mono">-18.0%</div><div class="wk-tile-chip"><span class="wow-chip up" title="vs Aug 24"><span class="wch-glyph">▲</span>+9.6pp<span class="wch-vs"> vs Aug 24</span></span></div></button><button type="button" class="wk-tile" data-tile-key="market_cap" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Market cap", "value": "$6.96B", "summary": "Market cap moved -11.7% to $6,960M.", "math": "Market cap = spot \u00d7 shares outstanding. Tracks spot 1:1 since the weekly job holds shares constant.", "drivers": ["Same as spot \u2014 see linked material events."], "linked_events": [{"publisher": "Barrons.com", "title": "How GLP-1 Sales Could Play Out for Hims & Hers", "url": "https://www.barrons.com/articles/hims-hers-stock-glp-1-obesity-drugs-8c2b9569?siteid=yhoof2&yptr=yahoo", "age_days": 1}]}'><div class="wk-tile-label mono">MARKET CAP</div><div class="wk-tile-value mono">$6.96B</div><div class="wk-tile-chip"><span class="wow-chip down" title="vs Aug 24"><span class="wch-glyph">▼</span>-11.7%<span class="wch-vs"> vs Aug 24</span></span></div></button><button type="button" class="wk-tile" data-tile-key="wacc" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "WACC", "value": "+10.5%", "summary": "WACC held at 10.5% (textbook bottom-up build would yield ~16.8%; overridden to 10.5% reflecting that high beta is partly idiosyncratic regulatory risk, sell-side practice of unlevering long-horizon DCFs).", "math": "WACC enters the DCF through the discount factor: PV-FCFF_t = FCFF_t / (1 + WACC)^t. A +100bp WACC move would compress PV-Terminal heavily because Terminal is ~81% of EV here.", "drivers": ["10Y Treasury yield refresh \u2014 not yet auto-pulled. Source: FRED DGS10. (Future tool.)", "HIMS beta refresh from yfinance \u2014 not yet auto-pulled.", "ERP refresh (Damodaran annual) \u2014 manual cadence."], "linked_events": []}'><div class="wk-tile-label mono">WACC</div><div class="wk-tile-value mono">+10.5%</div><div class="wk-tile-chip"><span class="wow-chip flat" title="held vs Aug 24"><span class="wch-glyph">─</span>held</span></div></button><button type="button" class="wk-tile" data-tile-key="terminal_g" aria-expanded="false" aria-controls="wk-reveal-panel" data-reasoning='{"label": "Terminal g", "value": "+3.0%", "summary": "Terminal growth held at 3.0%. Anchored to long-run nominal GDP-like rate.", "math": "Terminal value = FCFF_T+1 / (WACC \u2212 g). With WACC=10.5%, every 1pp of g adds materially to TV; TV is ~81% of EV so the sensitivity is high.", "drivers": ["Long-run structural view \u2014 moves rarely (sub-annual cadence).", "Would shift on a thesis-level change (e.g. saturation evidence in DTC weight-loss)."], "linked_events": []}'><div class="wk-tile-label mono">TERMINAL G</div><div class="wk-tile-value mono">+3.0%</div><div class="wk-tile-chip"><span class="wow-chip flat" title="held vs Aug 24"><span class="wch-glyph">─</span>held</span></div></button></div>
       <div class="wk-reveal" id="wk-reveal-panel" data-empty="true" aria-live="polite">Click a tile above to see why this metric moved — math relationship, contextual drivers, and linked material events.</div>
       
         <div class="wk-history">
-          <div class="block-title compact">Fair value &amp; spot — history of snapshots <span class="bt-sub mono">15 weekly points (and growing)</span></div>
+          <div class="block-title compact">Fair value &amp; spot — history of snapshots <span class="bt-sub mono">16 weekly points (and growing)</span></div>
           <div class="wk-chart-card">
             <canvas id="weeklyHistoryChart"
-                    data-fairvalue='[{"date": "2026-05-08", "value": 24.71}, {"date": "2026-05-29", "value": 24.66}, {"date": "2026-06-15", "value": 24.66}, {"date": "2026-06-22", "value": 24.66}, {"date": "2026-06-29", "value": 24.66}, {"date": "2026-07-06", "value": 24.66}, {"date": "2026-07-13", "value": 24.66}, {"date": "2026-07-20", "value": 24.66}, {"date": "2026-07-27", "value": 24.66}, {"date": "2026-08-03", "value": 24.66}, {"date": "2026-08-10", "value": 24.66}, {"date": "2026-08-17", "value": 24.47}, {"date": "2026-08-24", "value": 24.47}]'
-                    data-spot='[{"date": "2026-04-16", "value": 26.99}, {"date": "2026-05-07", "value": 25.65}, {"date": "2026-05-08", "value": 28.27}, {"date": "2026-05-29", "value": 26.15}, {"date": "2026-06-15", "value": 26.82}, {"date": "2026-06-22", "value": 35.47}, {"date": "2026-06-29", "value": 33.39}, {"date": "2026-07-06", "value": 36.8}, {"date": "2026-07-13", "value": 34.38}, {"date": "2026-07-20", "value": 32.84}, {"date": "2026-07-27", "value": 28.09}, {"date": "2026-08-03", "value": 27.77}, {"date": "2026-08-10", "value": 31.59}, {"date": "2026-08-17", "value": 28.15}, {"date": "2026-08-24", "value": 33.78}]'></canvas>
+                    data-fairvalue='[{"date": "2026-05-08", "value": 24.71}, {"date": "2026-05-29", "value": 24.66}, {"date": "2026-06-15", "value": 24.66}, {"date": "2026-06-22", "value": 24.66}, {"date": "2026-06-29", "value": 24.66}, {"date": "2026-07-06", "value": 24.66}, {"date": "2026-07-13", "value": 24.66}, {"date": "2026-07-20", "value": 24.66}, {"date": "2026-07-27", "value": 24.66}, {"date": "2026-08-03", "value": 24.66}, {"date": "2026-08-10", "value": 24.66}, {"date": "2026-08-17", "value": 24.47}, {"date": "2026-08-24", "value": 24.47}, {"date": "2026-08-26", "value": 24.47}]'
+                    data-spot='[{"date": "2026-04-16", "value": 26.99}, {"date": "2026-05-07", "value": 25.65}, {"date": "2026-05-08", "value": 28.27}, {"date": "2026-05-29", "value": 26.15}, {"date": "2026-06-15", "value": 26.82}, {"date": "2026-06-22", "value": 35.47}, {"date": "2026-06-29", "value": 33.39}, {"date": "2026-07-06", "value": 36.8}, {"date": "2026-07-13", "value": 34.38}, {"date": "2026-07-20", "value": 32.84}, {"date": "2026-07-27", "value": 28.09}, {"date": "2026-08-03", "value": 27.77}, {"date": "2026-08-10", "value": 31.59}, {"date": "2026-08-17", "value": 28.15}, {"date": "2026-08-24", "value": 33.78}, {"date": "2026-08-26", "value": 29.83}]'></canvas>
           </div>
-          <p class="wk-history-note">Only 15 snapshots exist today (this is the demo). Each subsequent weekly run adds one fair-value point and one spot point automatically.</p>
+          <p class="wk-history-note">Only 16 snapshots exist today (this is the demo). Each subsequent weekly run adds one fair-value point and one spot point automatically.</p>
         </div>
         
-      <div class="wk-changelog"><div class="block-title compact">Change log — every tracked metric, this week vs last</div><table class="data-table"><thead><tr><th class="mono">METRIC</th><th class="mono">LAST WEEK</th><th class="mono">THIS WEEK</th><th class="mono">Δ</th><th class="mono">NOTE</th></tr></thead><tbody><tr><td>Spot price</td><td class="mono">$28.15</td><td class="mono">$33.78</td><td class="mono pos">+20.0%</td><td class="dim"></td></tr><tr><td>Market cap</td><td class="mono">$6.57B</td><td class="mono">$7.88B</td><td class="mono pos">+20.0%</td><td class="dim"></td></tr><tr><td>Enterprise value</td><td class="mono">$6.74B</td><td class="mono">$8.05B</td><td class="mono pos">+19.5%</td><td class="dim"></td></tr><tr><td>Implied fair value</td><td class="mono">$24.47</td><td class="mono">$24.47</td><td class="mono dim">flat</td><td class="dim"></td></tr><tr><td>Implied upside</td><td class="mono">-13.1%</td><td class="mono">-27.6%</td><td class="mono neg">-14.5pp</td><td class="dim"></td></tr><tr><td>WACC</td><td class="mono">+10.5%</td><td class="mono">+10.5%</td><td class="mono dim">0.0pp</td><td class="dim">held</td></tr><tr><td>Terminal g</td><td class="mono">+3.0%</td><td class="mono">+3.0%</td><td class="mono dim">0.0pp</td><td class="dim">held</td></tr><tr><td>FY26E revenue (DCF)</td><td class="mono">$2.94B</td><td class="mono">$2.94B</td><td class="mono dim">flat</td><td class="dim"></td></tr></tbody></table></div>
+      <div class="wk-changelog"><div class="block-title compact">Change log — every tracked metric, this week vs last</div><table class="data-table"><thead><tr><th class="mono">METRIC</th><th class="mono">LAST WEEK</th><th class="mono">THIS WEEK</th><th class="mono">Δ</th><th class="mono">NOTE</th></tr></thead><tbody><tr><td>Spot price</td><td class="mono">$33.78</td><td class="mono">$29.83</td><td class="mono neg">-11.7%</td><td class="dim"></td></tr><tr><td>Market cap</td><td class="mono">$7.88B</td><td class="mono">$6.96B</td><td class="mono neg">-11.7%</td><td class="dim"></td></tr><tr><td>Enterprise value</td><td class="mono">$8.05B</td><td class="mono">$7.13B</td><td class="mono neg">-11.4%</td><td class="dim"></td></tr><tr><td>Implied fair value</td><td class="mono">$24.47</td><td class="mono">$24.47</td><td class="mono dim">flat</td><td class="dim"></td></tr><tr><td>Implied upside</td><td class="mono">-27.6%</td><td class="mono">-18.0%</td><td class="mono pos">+9.6pp</td><td class="dim"></td></tr><tr><td>WACC</td><td class="mono">+10.5%</td><td class="mono">+10.5%</td><td class="mono dim">0.0pp</td><td class="dim">held</td></tr><tr><td>Terminal g</td><td class="mono">+3.0%</td><td class="mono">+3.0%</td><td class="mono dim">0.0pp</td><td class="dim">held</td></tr><tr><td>FY26E revenue (DCF)</td><td class="mono">$2.94B</td><td class="mono">$2.94B</td><td class="mono dim">flat</td><td class="dim"></td></tr></tbody></table></div>
       <div class="wk-asn"><div class="block-title compact">DCF assumption changes this week</div><div class="wk-asn-empty"><strong>No assumption changes.</strong> WACC held at 10.5%, terminal growth held at 3.0%, growth path FY26–30E unchanged, EBITDA margin path unchanged. <span class="dim">(Future: Treasury 10Y refresh + peer-median refresh will surface real assumption deltas here.)</span></div></div>
-      <div class="wk-events"><div class="block-title compact">Material events — top 5 by recency × publisher tier</div><p class="wk-events-meta"><strong>Top coverage</strong> from adjacent tier-1 financial press (CNBC, MarketWatch, Forbes, Zacks, MarketBeat, etc.), ranked by recency × publisher tier weight. <em>No HIMS coverage found from the requested whitelist (Bloomberg/WSJ/Barron&#x27;s content is mostly paywalled and not in NewsAPI&#x27;s free-tier index; Reuters/Seeking Alpha had no items in the window). Showing adjacent tier-1 coverage so the section isn&#x27;t empty.</em></p><ul class="material-events-list"><li class="material-event"><span class="me-publisher">StockStory</span><div><p class="me-title"><a href="https://finance.yahoo.com/markets/stocks/articles/2-unpopular-stocks-deserve-second-064936765.html" target="_blank" rel="noopener">2 Unpopular Stocks That Deserve a Second Chance and 1 We Ignore</a></p></div><span class="me-age mono">0d ago</span></li><li class="material-event"><span class="me-publisher">CNBC</span><div><p class="me-title"><a href="https://www.cnbc.com/2026/08/18/hims-hers-ceo-andrew-dudum-ftc-lawsuit-glp-1s-ai.html" target="_blank" rel="noopener">Hims &amp; Hers CEO says FTC lawsuit misunderstands how the company works</a></p><p class="me-snippet">Hims &amp; Hers CEO Andrew Dudum spoke to CNBC about the FTC&#x27;s lawsuit against the company, compounded GLP-1 drugs and AI.</p></div><span class="me-age mono">5d ago</span></li><li class="material-event"><span class="me-publisher">Barchart.com</span><div><p class="me-title"><a href="https://www.barchart.com/story/news/3856610/unusual-options-activity-points-to-a-1-08-million-dividend-capture-in-this-1-stock" target="_blank" rel="noopener">Unusual Options Activity Points to a $1.08 Million Dividend Capture in This 1 Stock</a></p><p class="me-snippet">Amid muted unusual options activity yesterday, TPG stood out: heavy trading in deep-in-the-money calls and collapsing open interest suggest an institutional...</p></div><span class="me-age mono">9d ago</span></li><li class="material-event"><span class="me-publisher">Investor&#x27;s Business Daily</span><div><p class="me-title"><a href="https://www.investors.com/news/technology/hims-stock-hims-hers-health-earnings-q2-2026/" target="_blank" rel="noopener">Is Hims The Next Big Name In Peptides? Shares Recover From Earnings Dive.</a></p><p class="me-snippet">Hims stock inched lower Tuesday, recovering from a late-Monday dive.</p></div><span class="me-age mono">12d ago</span></li><li class="material-event"><span class="me-publisher">MarketBeat</span><div><p class="me-title"><a href="https://www.marketbeat.com/instant-alerts/clover-health-eyes-2026-gaap-profit-as-ai-platform-fuels-medicare-advantage-growth-2026-08-11/?utm_source=yahoofinance&amp;amp;utm_medium=yahoofinance" target="_blank" rel="noopener">Clover Health Eyes 2026 GAAP Profit as AI Platform Fuels Medicare Advantage Growth</a></p><p class="me-snippet">Clover Health Investments (NASDAQ:CLOV) is positioning its Medicare Advantage model around earlier identification and treatment of chronic conditions, Interi...</p></div><span class="me-age mono">12d ago</span></li></ul></div>
+      <div class="wk-events"><div class="block-title compact">Material events — top 5 by recency × publisher tier</div><p class="wk-events-meta"><strong>Top coverage</strong> from the requested whitelist (Bloomberg / Reuters / WSJ / Barron's / Seeking Alpha), ranked by recency × publisher tier weight.</p><ul class="material-events-list"><li class="material-event"><span class="me-publisher">Barrons.com</span><div><p class="me-title"><a href="https://www.barrons.com/articles/hims-hers-stock-glp-1-obesity-drugs-8c2b9569?siteid=yhoof2&amp;yptr=yahoo" target="_blank" rel="noopener">How GLP-1 Sales Could Play Out for Hims &amp; Hers</a></p></div><span class="me-age mono">1d ago</span></li></ul></div>
+    </section>
+    
+      
+    <section class="pane" id="section-fdapeptide" data-section="fdapeptide">
+      <div class="section-eyebrow mono">01 · FDA PEPTIDE REVIEW</div>
+      <h2 class="section-title">FDA peptide review — a live regulatory catalyst</h2>
+      <p class="section-lede">The PCAC review is the clearest near-term regulatory catalyst for Hims & Hers since the March 2026 Novo Nordisk partnership. A favourable outcome would hand HIMS a vertically-integrated path into a new multi-billion-dollar compounded-therapy category; an unfavourable final FDA decision would strand a thesis the market has already started to pay for.</p>
+
+      <div class="fda-metric-grid"><div class="dr-metric"><div class="drm-label mono">Hearing</div><div class="drm-value mono">23–24 July 2026</div><div class="drm-context">Pharmacy Compounding Advisory Committee · FDA</div></div><div class="dr-metric"><div class="drm-label mono">Under review</div><div class="drm-value mono">7 peptides</div><div class="drm-context">for the Section 503A bulk compounding list</div></div><div class="dr-metric"><div class="drm-label mono">BPC-157 vote</div><div class="drm-value mono">YES — 8–6 with 1 abstention</div><div class="drm-context">first day-one adcomm recommendation</div></div><div class="dr-metric"><div class="drm-label mono">Status</div><div class="drm-value mono">Non-binding</div><div class="drm-context">the FDA retains the final decision</div></div></div>
+      <div class="fda-vote-banner">Across both days the committee recommended six of the seven peptides for the Section 503A bulk drug substances list — BPC-157, KPV, TB-500, MOTS-c, Epitalon and Semax — rejecting only Emideltide (DSIP) <a class="ref-chip" href="#src-fdapeptide-mdvotes">mdvotes</a>. The margins were narrow throughout (BPC-157, KPV and TB-500 each 8–6–1; Epitalon 7–4–1; Semax 8–5–1; Emideltide rejected 7–6–1), and every YES overrides the FDA's own scientists, who had advised against all seven <a class="ref-chip" href="#src-fdapeptide-mdvotes">mdvotes</a> <a class="ref-chip" href="#src-fdapeptide-orrick">orrick</a>.</div>
+
+      <h3 class="block-title">The event</h3>
+      <p class="block-lede">Whether seven peptides should be added to the Section 503A Bulk Drug Substances List — the list of raw substances that licensed pharmacists and physicians may legally use to compound medications for individual patients.</p>
+      <p class="block-lede">Non-binding. The PCAC recommends; the FDA retains final authority over whether each peptide can be compounded, and any rulemaking could take up to a year.</p>
+      
+    <div class="fda-agenda">
+      <div class="fda-day">
+        <div class="fda-day-head mono">Day 1 · 23 Jul — voted</div>
+        <ul class="fda-pep-list"><li class="fda-pep"><span class="fda-pep-name">BPC-157</span><span class="fda-pep-note">Promoted for gut and tissue healing / injury recovery</span><span class="fda-pep-vote fda-vote-yes">YES — 8–6 with 1 abstention</span></li><li class="fda-pep"><span class="fda-pep-name">KPV</span><span class="fda-pep-note">Anti-inflammatory tripeptide</span><span class="fda-pep-vote fda-vote-yes">YES — 8–6 with 1 abstention</span></li><li class="fda-pep"><span class="fda-pep-name">TB-500</span><span class="fda-pep-note">Tissue repair / recovery</span><span class="fda-pep-vote fda-vote-yes">YES — 8–6 with 1 abstention</span></li><li class="fda-pep"><span class="fda-pep-name">MOTS-c</span><span class="fda-pep-note">Mitochondrial-derived, metabolic</span><span class="fda-pep-vote fda-vote-yes">YES</span></li></ul>
+      </div>
+      <div class="fda-day">
+        <div class="fda-day-head mono">Day 2 · 24 Jul — scheduled</div>
+        <ul class="fda-pep-list"><li class="fda-pep"><span class="fda-pep-name">Emideltide (DSIP)</span><span class="fda-pep-note">Delta sleep-inducing peptide</span><span class="fda-pep-vote fda-vote-pending">NO — rejected 7–6 with 1 abstention</span></li><li class="fda-pep"><span class="fda-pep-name">Semax</span><span class="fda-pep-note">Nootropic / cognitive</span><span class="fda-pep-vote fda-vote-yes">YES — 8–5 with 1 abstention</span></li><li class="fda-pep"><span class="fda-pep-name">Epitalon</span><span class="fda-pep-note">Longevity / telomere-linked claims</span><span class="fda-pep-vote fda-vote-yes">YES — 7–4 with 1 abstention</span></li></ul>
+      </div>
+    </div>
+    
+
+      <h3 class="block-title">Day-one deep dive — what each vote decided</h3><div class="fda-review-framework">The committee judged each peptide against the FDA's four statutory 503A factors — (1) physical & chemical characterization, (2) historical use in compounding, (3) evidence of effectiveness, and (4) safety. The FDA's own scientists, in written briefing documents, recommended against all seven, citing inconsistent characterization, thin or absent human clinical data, and unresolved safety questions — so every 'yes' vote is the committee overriding its own staff <a class="ref-chip" href="#src-fdapeptide-orrick">orrick</a> <a class="ref-chip" href="#src-fdapeptide-time">time</a>.</div><details class="fda-review" open><summary><span class="fda-review-name mono">BPC-157</span><span class="fda-review-full">Body Protection Compound-157 · synthetic 15–amino-acid peptide</span><span class="fda-review-tag yes">RECOMMENDED · 8–6–1</span></summary><div class="fda-review-body"><div class="fda-rev-row"><span class="fda-rev-k mono">What it is</span><p>A synthetic 15–amino-acid peptide derived from a protective protein found in gastric juice, promoted for gut, tendon and soft-tissue healing and injury recovery. It is the flagship substance of the review and the one most material to HIMS.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">Under review</span><p>Whether BPC-157 satisfies the four 503A factors — characterization, historical compounding use, evidence of effectiveness, and safety <a class="ref-chip" href="#src-fdapeptide-orrick">orrick</a>.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">FDA staff</span><p>Recommended against. Briefing documents pointed to only a single small human trial (46 patients, an enema formulation studied for ulcerative colitis), FAERS adverse-event reports, and the availability of FDA-approved alternatives for the same indication <a class="ref-chip" href="#src-fdapeptide-time">time</a> <a class="ref-chip" href="#src-fdapeptide-orrick">orrick</a>.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">The case for</span><p>Proponents leaned on real-world use over trial data: testimony cited more than 16 million compounded doses with only 7 complaints and 'no clear attributable adverse safety signal' (Dr Alex Tatem), while the Alliance for Pharmacy Compounding urged approval 'with guardrails.' HIMS' own Chief Medical Officer testified the company intends to offer peptide therapy if allowed <a class="ref-chip" href="#src-fdapeptide-reuters">reuters</a>.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">The case against</span><p>Critics called the evidence anecdotal and demand-driven: 'I'm concerned that we're responding to a market-induced demand rather than a decision based in solid science' (Dr Elizabeth Rebello, MD Anderson). Others warned that easy compounding erodes the incentive to pursue full FDA approval <a class="ref-chip" href="#src-fdapeptide-time">time</a>.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">Result</span><p>Recommended for inclusion — 8 YES, 6 NO, 1 abstention — the first and most consequential vote of the day. HIMS shares jumped more than 10% on the outcome <a class="ref-chip" href="#src-fdapeptide-stat">stat</a> <a class="ref-chip" href="#src-fdapeptide-abc">abc</a> <a class="ref-chip" href="#src-fdapeptide-time">time</a>.</p></div><div class="fda-rev-row hims"><span class="fda-rev-k mono">HIMS read</span><p>The single most important result for HIMS: the flagship peptide cleared the committee, materially de-risking the whole category. But this is a recommendation only — a binding FDA rule is still 12–24 months of rulemaking away <a class="ref-chip" href="#src-fdapeptide-orrick">orrick</a>.</p></div></div></details><details class="fda-review"><summary><span class="fda-review-name mono">KPV</span><span class="fda-review-full">Lysine–Proline–Valine · α-MSH tripeptide fragment</span><span class="fda-review-tag yes">RECOMMENDED · 8–6–1</span></summary><div class="fda-review-body"><div class="fda-rev-row"><span class="fda-rev-k mono">What it is</span><p>A three–amino-acid anti-inflammatory peptide, a fragment of the α-MSH hormone, promoted for inflammatory and gastrointestinal conditions.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">Under review</span><p>The same four 503A factors. FDA staff found no human clinical data for KPV at all <a class="ref-chip" href="#src-fdapeptide-orrick">orrick</a> <a class="ref-chip" href="#src-fdapeptide-time">time</a>.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">FDA staff</span><p>Recommended against — absence of any human evidence of effectiveness.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">Result</span><p>Recommended for inclusion — the panel voted yes (tally not publicly broken out), the second favourable vote of the day <a class="ref-chip" href="#src-fdapeptide-stat">stat</a>.</p></div><div class="fda-rev-row hims"><span class="fda-rev-k mono">HIMS read</span><p>A second YES reinforces the direction of travel, though KPV is a smaller commercial prize than BPC-157.</p></div></div></details><details class="fda-review"><summary><span class="fda-review-name mono">TB-500</span><span class="fda-review-full">Thymosin β-4 fragment</span><span class="fda-review-tag yes">RECOMMENDED · 8–6–1</span></summary><div class="fda-review-body"><div class="fda-rev-row"><span class="fda-rev-k mono">What it is</span><p>A peptide fragment of thymosin β-4 marketed for tissue repair, recovery and healing — widely viewed as the second most commercially important peptide in the review after BPC-157.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">Under review</span><p>The four 503A factors, with two specific red flags flagged by staff: no human clinical data, and World Anti-Doping Agency (WADA)-prohibited status <a class="ref-chip" href="#src-fdapeptide-orrick">orrick</a>.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">FDA staff</span><p>Recommended against. Industry testimony countered that 'over 250,000 dispensed units' already circulate outside any pharmacy-quality framework (Noom CMO), framing legal compounding as a safety improvement rather than a new risk <a class="ref-chip" href="#src-fdapeptide-reuters">reuters</a>.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">Result</span><p>Recommended for inclusion — 8 YES, 6 NO, 1 abstention, matching the BPC-157 margin <a class="ref-chip" href="#src-fdapeptide-mdvotes">mdvotes</a>.</p></div><div class="fda-rev-row hims"><span class="fda-rev-k mono">HIMS read</span><p>A YES would extend the bull case to a second high-volume peptide; the WADA-prohibited status is a reputational wrinkle worth monitoring.</p></div></div></details><details class="fda-review"><summary><span class="fda-review-name mono">MOTS-c</span><span class="fda-review-full">Mitochondrial-derived peptide</span><span class="fda-review-tag yes">RECOMMENDED · YES</span></summary><div class="fda-review-body"><div class="fda-rev-row"><span class="fda-rev-k mono">What it is</span><p>A mitochondrial-derived peptide promoted for metabolic and longevity benefits.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">Under review</span><p>The four 503A factors. Like TB-500, MOTS-c has no human clinical data and is WADA-prohibited <a class="ref-chip" href="#src-fdapeptide-orrick">orrick</a>.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">FDA staff</span><p>Recommended against — no human evidence of effectiveness; anti-doping status.</p></div><div class="fda-rev-row"><span class="fda-rev-k mono">Result</span><p>Recommended for inclusion in the afternoon session <a class="ref-chip" href="#src-fdapeptide-mdvotes">mdvotes</a>.</p></div><div class="fda-rev-row hims"><span class="fda-rev-k mono">HIMS read</span><p>Lower near-term commercial relevance for HIMS than BPC-157 or TB-500.</p></div></div></details>
+
+      <h3 class="block-title">Developments since the vote</h3><ul class="pt-list"><li class="pt-row pt-unverified"><div class="pt-meta"><span class="pt-date mono">2026-08-25</span><span class="pt-cat mono">analyst political</span><span class="pt-status mono">UNVERIFIED · X ONLY</span></div><div class="pt-body"><div class="pt-headline"><span class="pt-sig" style="color: oklch(38% 0.085 175);">▲</span>Report: RFK Jr. pushing to move peptides to Category 1 by November, more in 2027</div><p class="pt-text">A guest cited senior peptide-industry contacts saying the administration may issue rulemaking to move peptides to Category 1 by November, with a further batch of six peptides potentially advancing by May <a class="ref-chip" href="#src-fdapeptide-bijan-peptides">bijan-peptides</a>. No tier-1 publisher, Federal Register notice, or SEC filing in the evidence corroborates this account <a class="ref-chip" href="#src-fdapeptide-bijan-peptides">bijan-peptides</a>.</p><a class="pt-prov mono" href="https://x.com/Investinc_Intel/status/2092249381000888731" target="_blank" rel="noopener">first surfaced on X · @Investinc_Intel</a></div></li><li class="pt-row pt-unverified"><div class="pt-meta"><span class="pt-date mono">2026-08-13</span><span class="pt-cat mono">regulatory</span><span class="pt-status mono">UNVERIFIED · X ONLY</span></div><div class="pt-body"><div class="pt-headline"><span class="pt-sig" style="color: oklch(38% 0.085 175);">▲</span>Rumor: FDA may move BPC-157, TB-500 to 503A bulks list by end of October</div><p class="pt-text">X accounts circulated a rumor that the FDA is looking to move peptides including BPC-157 and TB-500 to the 503A bulks list (Category 1) before end of October <a class="ref-chip" href="#src-fdapeptide-himshouse-rumor">himshouse-rumor</a>. No Federal Register notice or tier-1 source corroborates the timeline <a class="ref-chip" href="#src-fdapeptide-himshouse-rumor">himshouse-rumor</a>.</p><a class="pt-prov mono" href="https://x.com/himshouse/status/2087894415742316868" target="_blank" rel="noopener">first surfaced on X · @himshouse</a></div></li><li class="pt-row pt-verified"><div class="pt-meta"><span class="pt-date mono">2026-08-12</span><span class="pt-cat mono">regulatory</span><span class="pt-status mono">VERIFIED</span></div><div class="pt-body"><div class="pt-headline"><span class="pt-sig" style="color: oklch(38% 0.085 175);">▲</span>Hims plans to sell sermorelin, glutathione and NAD+ peptides before year-end</div><p class="pt-text">Reporting confirms Hims & Hers plans to sell longevity peptides sermorelin, glutathione, and NAD+ before year-end <a class="ref-chip" href="#src-fdapeptide-md-hims-peptides">md-hims-peptides</a>. Clinical evidence for the marketed uses remains limited <a class="ref-chip" href="#src-fdapeptide-md-hims-peptides">md-hims-peptides</a>.</p><a class="pt-prov mono" href="https://x.com/himshouse/status/2086925121822892426" target="_blank" rel="noopener">first surfaced on X · @himshouse</a></div></li><li class="pt-row pt-verified"><div class="pt-meta"><span class="pt-date mono">2026-08-10</span><span class="pt-cat mono">regulatory</span><span class="pt-status mono">VERIFIED</span></div><div class="pt-body"><div class="pt-headline"><span class="pt-sig" style="color: oklch(38% 0.085 175);">▲</span>Hims signs deal worth up to $30M for peptide API manufacturing know-how</div><p class="pt-text">Per the Q2 10-Q, Hims entered a one-time July 2026 agreement to obtain expertise and technology to independently manufacture certain peptide APIs, for aggregate cash payments of up to $30.0M contingent on milestones <a class="ref-chip" href="#src-fdapeptide-hims-10q">hims-10q</a>. The payments are expected over the next 12 months <a class="ref-chip" href="#src-fdapeptide-hims-10q">hims-10q</a>.</p><a class="pt-prov mono" href="https://x.com/himshouse/status/2086916514603749449" target="_blank" rel="noopener">first surfaced on X · @himshouse</a></div></li><li class="pt-row pt-unverified"><div class="pt-meta"><span class="pt-date mono">2026-07-27</span><span class="pt-cat mono">analyst political</span><span class="pt-status mono">UNVERIFIED · X ONLY</span></div><div class="pt-body"><div class="pt-headline"><span class="pt-sig" style="color: oklch(38% 0.085 175);">▲</span>Canaccord reiterates HIMS $40 target, Buy, citing peptide vote</div><p class="pt-text">An X post reported Canaccord reiterated a $40 price target and Buy rating on HIMS, viewing the PCAC peptide vote as a positive that could unlock a significant TAM <a class="ref-chip" href="#src-fdapeptide-himshouse-canaccord">himshouse-canaccord</a>. No tier-1 or reputable publisher in the evidence corroborates the note <a class="ref-chip" href="#src-fdapeptide-himshouse-canaccord">himshouse-canaccord</a>.</p><a class="pt-prov mono" href="https://x.com/himshouse/status/2081686469844849068" target="_blank" rel="noopener">first surfaced on X · @himshouse</a></div></li><li class="pt-row pt-verified"><div class="pt-meta"><span class="pt-date mono">2026-07-26</span><span class="pt-cat mono">regulatory</span><span class="pt-status mono">VERIFIED</span></div><div class="pt-body"><div class="pt-headline"><span class="pt-sig" style="color: oklch(38% 0.085 175);">▲</span>FDA PCAC panel backs six of seven peptides; emideltide rejected</div><p class="pt-text">The FDA's Pharmacy Compounding Advisory Committee ended its review recommending six of seven peptides for the 503A bulk list, rejecting emideltide in a 6-7 vote <a class="ref-chip" href="#src-fdapeptide-md-sixofseven">md-sixofseven</a>. The recommendation now advances to the FDA for formal consideration <a class="ref-chip" href="#src-fdapeptide-hims-statement-pub">hims-statement-pub</a>.</p><a class="pt-prov mono" href="https://x.com/himshouse/status/2080744484459925708" target="_blank" rel="noopener">first surfaced on X · @himshouse</a></div></li><li class="pt-row pt-verified"><div class="pt-meta"><span class="pt-date mono">2026-07-24</span><span class="pt-cat mono">analyst political</span><span class="pt-status mono">VERIFIED</span></div><div class="pt-body"><div class="pt-headline"><span class="pt-sig" style="color: oklch(38% 0.085 175);">▲</span>RFK Jr.-convened FDA panel reviews previously-banned peptides</div><p class="pt-text">An unconventional FDA panel convened under HHS Secretary Kennedy is assessing the safety and efficacy of previously-banned peptides, potentially opening a multibillion-dollar market <a class="ref-chip" href="#src-fdapeptide-bi-panel">bi-panel</a>. Hims publicly credited Secretary Kennedy and President Trump for allowing the peptide review to proceed <a class="ref-chip" href="#src-fdapeptide-bi-panel">bi-panel</a>.</p><a class="pt-prov mono" href="https://x.com/himshouse/status/2080746918960095327" target="_blank" rel="noopener">first surfaced on X · @himshouse</a></div></li></ul>
+
+      <h3 class="block-title">Why it matters for HIMS</h3>
+      
+    <div class="fda-bull-bear">
+      <div class="fda-pole bull">
+        <h4 class="block-subtitle-sub">Bull case</h4>
+        <ul><li>A new, non-GLP-1 category worth an estimated $2.2bn (Leerink) to $3.3bn (Needham) in annual demand, diversifying HIMS beyond weight-loss and extending growth beyond 2027 <a class="ref-chip" href="#src-fdapeptide-reuters">reuters</a> <a class="ref-chip" href="#src-fdapeptide-leerink">leerink</a>.</li><li>HIMS is already vertically integrated for it — it owns a compounding-pharmacy business and bought additional manufacturing capacity in 2025 — and Leerink's Michael Cherny models HIMS capturing ~20% of the peptide market (~$440m) <a class="ref-chip" href="#src-fdapeptide-reuters">reuters</a> <a class="ref-chip" href="#src-fdapeptide-leerink">leerink</a>.</li><li>Day-one adcomm YES votes on BPC-157 (8–6–1) and KPV materially de-risk the regulatory path <a class="ref-chip" href="#src-fdapeptide-stat">stat</a> <a class="ref-chip" href="#src-fdapeptide-endpoints">endpoints</a> <a class="ref-chip" href="#src-fdapeptide-abc">abc</a>.</li><li>Unusual political tailwind: HHS Secretary RFK Jr. publicly backs peptide access and is reported to be willing to weigh in — even overrule staff — in the FDA's decision <a class="ref-chip" href="#src-fdapeptide-reuters">reuters</a> <a class="ref-chip" href="#src-fdapeptide-cnbc">cnbc</a>.</li></ul>
+      </div>
+      <div class="fda-pole bear">
+        <h4 class="block-subtitle-sub">Bear case</h4>
+        <ul><li>The vote is non-binding and the FDA's own scientists recommended against adding these peptides, citing limited human evidence and unresolved concerns on formulation, immune response, contamination and product quality <a class="ref-chip" href="#src-fdapeptide-forbes">forbes</a> <a class="ref-chip" href="#src-fdapeptide-reuters">reuters</a>.</li><li>"Popularity is not the same as evidence": most of the seven peptides rest on animal and lab data, not large human trials, and several advisory-committee members were reported to have ties to the peptide industry <a class="ref-chip" href="#src-fdapeptide-forbes">forbes</a>.</li><li>Industry opposition (PhRMA) and a rulemaking process that could run up to a year mean any revenue is distant and uncertain <a class="ref-chip" href="#src-fdapeptide-reuters">reuters</a>.</li><li>The stock has more than doubled in five months and Leerink keeps a Market Perform rating with a $25 target — below where HIMS now trades — implying much of the peptide optionality may already be priced in <a class="ref-chip" href="#src-fdapeptide-leerink">leerink</a> <a class="ref-chip" href="#src-fdapeptide-reuters">reuters</a>.</li></ul>
+      </div>
+    </div>
+    
+      <div class="fda-readthrough"><div class="drt-eyebrow mono">VALUATION READ-THROUGH</div><p>The peptide thesis for HIMS continues to rest on unverified political signals — chiefly claims that HHS leadership will drive peptides toward Category 1 status — rather than any binding Federal Register action or corroborated wire reporting <a class="ref-chip" href="#src-fdapeptide-bijan-peptides">bijan-peptides</a>. Until a docket posting or final rule materializes, the regulatory catalyst remains speculative, which is material given HIMS trades at $29.83 for a $6.96B market cap against a modeled fair value of $24.47 (-18.0% implied). Investors should treat the November/May timelines as X-sourced rumor, not confirmed regulatory milestones.</p></div>
+
+      <h3 class="block-title">In the news</h3>
+      <div class="fda-articles"><div class="dr-article"><div class="dra-meta mono">STAT News · tier 1 · 2026-07-23</div><a class="dra-title" href="https://www.statnews.com/2026/07/23/fda-panel-okays-peptides-compound-pharmacies-bpc-157-kpv/" target="_blank" rel="noopener">In win for RFK Jr., FDA advisory panel narrowly votes to allow compounding of unapproved peptides</a><p class="me-snippet">The Pharmacy Compounding Advisory Committee narrowly recommended allowing compounding pharmacies to prepare BPC-157 and KPV, handing a win to HHS Secretary Robert F. Kennedy Jr., who has championed peptide access.</p><blockquote class="dra-quote">A narrow vote to allow compounding of unapproved peptides — the FDA still has the final say.</blockquote><span class="ref-chip-static mono">stat</span></div><div class="dr-article"><div class="dra-meta mono">Endpoints News · tier 1 · 2026-07-23</div><a class="dra-title" href="https://endpoints.news/fda-adcomm-votes-in-favor-of-lifting-restrictions-on-popular-wellness-peptide-bpc-157/" target="_blank" rel="noopener">FDA adcomm votes in favor of lifting restrictions on popular wellness peptide BPC-157</a><p class="me-snippet">The advisory committee voted to recommend BPC-157 for the 503A bulk list despite FDA staff&#x27;s written recommendation against it, setting up a closely-watched final agency decision.</p><blockquote class="dra-quote">The committee voted in favor despite FDA staff recommending against it.</blockquote><span class="ref-chip-static mono">endpoints</span></div><div class="dr-article"><div class="dra-meta mono">Reuters · tier 1 · 2026-07-23</div><a class="dra-title" href="https://whbl.com/2026/07/23/analysis-hims-hers-stands-to-gain-if-the-fda-loosens-restrictions-on-peptides/" target="_blank" rel="noopener">Analysis: Hims &amp; Hers stands to gain if the FDA loosens restrictions on peptides</a><p class="me-snippet">Hims &amp; Hers could gain access to a multi-billion-dollar market for peptides used in pain management, muscle recovery and aesthetics. Needham pegs the opportunity at $3.3bn and Leerink at $2.2bn; Hims already owns a compounding pharmacy and bought manufacturing capacity in 2025.</p><blockquote class="dra-quote">If guidance changes, our clinical and compliance teams will assess what that means for our platform, and we will adjust accordingly. — Hims spokesperson</blockquote><span class="ref-chip-static mono">reuters</span></div><div class="dr-article"><div class="dra-meta mono">Investing.com / TipRanks · tier 2 · 2026-07-22</div><a class="dra-title" href="https://www.tipranks.com/news/hims-hers-stock-forecast-leerink-analyst-sees-long-term-peptide-upside-but-keeps-neutral-rating" target="_blank" rel="noopener">Leerink sees long-term peptide upside for Hims &amp; Hers but keeps Neutral rating</a><p class="me-snippet">Leerink&#x27;s Michael Cherny estimates the peptide market at $2.2bn and calls peptides a potential next major product category for HIMS beyond 2027, while reiterating a Market Perform rating and $25 price target. FDA staff recommended against adding the peptides.</p><blockquote class="dra-quote">Peptides could become the next major product category for Hims &amp; Hers, supporting growth beyond 2027 — Market Perform, $25 target.</blockquote><span class="ref-chip-static mono">leerink</span></div><div class="dr-article"><div class="dra-meta mono">Forbes · tier 2 · 2026-07-21</div><a class="dra-title" href="https://www.forbes.com/sites/omerawan/2026/07/21/fdas-review-of-peptides-signals-a-growing-public-health-challenge--separating-science-from-hype/" target="_blank" rel="noopener">FDA&#x27;s Review Of Peptides Signals A Growing Public Health Challenge — Separating Science From Hype</a><p class="me-snippet">Physician Omer Awan argues the seven peptides rely primarily on animal and lab studies, that FDA scientists recommended against compounding them, and that several committee members reported ties to the peptide industry.</p><blockquote class="dra-quote">Popularity is not the same as evidence.</blockquote><span class="ref-chip-static mono">forbes</span></div><div class="dr-article"><div class="dra-meta mono">CNBC · tier 2 · 2026-04-16</div><a class="dra-title" href="https://www.cnbc.com/2026/04/16/rfk-jr-peptides-hims-hers-glp-1.html" target="_blank" rel="noopener">RFK Jr.&#x27;s peptide policy could boost Hims &amp; Hers as its GLP-1 business evolves</a><p class="me-snippet">RFK Jr.&#x27;s support for peptides could open a new front for Hims &amp; Hers as it transitions its compounded-GLP-1 business toward branded partnerships.</p><blockquote class="dra-quote">A supportive HHS posture on peptides could open a new category for telehealth platforms like Hims &amp; Hers.</blockquote><span class="ref-chip-static mono">cnbc</span></div><div class="dr-article"><div class="dra-meta mono">Seeking Alpha · tier 1 · 2026-07-22</div><a class="dra-title" href="https://seekingalpha.com/article/4891184-fda-peptide-review-a-big-moment-for-hims-and-hers" target="_blank" rel="noopener">FDA Peptide Review, A Big Moment For Hims &amp; Hers Stock</a><p class="me-snippet">Frames the PCAC review as a pivotal event for HIMS, weighing the size of the peptide opportunity against the regulatory and evidentiary risks.</p><blockquote class="dra-quote">A big moment for Hims &amp; Hers stock — the peptide review is a genuine, event-driven catalyst.</blockquote><span class="ref-chip-static mono">seekingalpha</span></div><div class="dr-article"><div class="dra-meta mono">NPR · tier 1 · 2026-07-23</div><a class="dra-title" href="https://www.npr.org/2026/07/23/nx-s1-5903202/fda-peptides-restrictions" target="_blank" rel="noopener">Advisers to the FDA will vote to ease regulation of popular peptides</a><p class="me-snippet">NPR explains the PCAC process, the evidence gap, and why easing restrictions on compounded peptides is contentious among clinicians and regulators.</p><blockquote class="dra-quote">The panel&#x27;s recommendation is a step, not a decision — the FDA still rules on whether these peptides can be compounded.</blockquote><span class="ref-chip-static mono">npr</span></div><div class="dr-article"><div class="dra-meta mono">ABC News · tier 1 · 2026-07-23</div><a class="dra-title" href="https://abcnews.com/Health/fda-advisory-committee-votes-add-popular-peptide-bpc/story?id=134913891" target="_blank" rel="noopener">FDA advisory committee votes to add popular peptide BPC-157 to drug compounding list</a><p class="me-snippet">The committee voted 8-6 with one abstention in favor of adding BPC-157 to the compounding list — the first of seven peptides under review — though the vote is non-binding.</p><blockquote class="dra-quote">The committee voted 8-6 with one abstention; the move still needs sign-off from the FDA.</blockquote><span class="ref-chip-static mono">abc</span></div><div class="dr-article"><div class="dra-meta mono">TIME · tier 1 · 2026-07-23</div><a class="dra-title" href="https://time.com/article/2026/07/23/fda-committee-peptides/" target="_blank" rel="noopener">An FDA Committee Just Voted in Favor of Peptides — Despite the Agency&#x27;s Opposition</a><p class="me-snippet">TIME reports the panel recommended BPC-157 and KPV over FDA staff objections, notes that several voting members advise telehealth firms that would benefit (including Hims &amp; Hers), and quotes dissenting experts on the thin evidence base.</p><blockquote class="dra-quote">I&#x27;m concerned that we&#x27;re responding to a market-induced demand rather than a decision based in solid science. — Dr. Elizabeth Rebello, MD Anderson</blockquote><span class="ref-chip-static mono">time</span></div><div class="dr-article"><div class="dra-meta mono">Orrick (legal analysis) · tier 2 · 2026-07-20</div><a class="dra-title" href="https://www.orrick.com/en/Insights/2026/07/FDA-Peptide-Compounding-Vote-What-to-Watch-at-the-July-PCAC-Meeting" target="_blank" rel="noopener">FDA Peptide Compounding Vote: What to Watch at the July PCAC Meeting</a><p class="me-snippet">Sets out the four-factor 503A legal standard the committee applies, summarises the FDA staff briefing&#x27;s uniform rejection of the seven peptides, and explains that a favourable vote still requires 12–24 months of rulemaking before compounding is legal.</p><blockquote class="dra-quote">A PCAC recommendation for inclusion is not binding — the agency must still publish proposed rulemaking, take comment, and issue a final rule.</blockquote><span class="ref-chip-static mono">orrick</span></div><div class="dr-article"><div class="dra-meta mono">BioPharma Dive · tier 1 · 2026-07-20</div><a class="dra-title" href="https://www.biopharmadive.com/news/compounders-glp1-issues-for-big-pharma-gallup/825627/" target="_blank" rel="noopener">Compounders maintain a firm grip on the GLP-1 market</a><p class="me-snippet">Trade-press analysis of how compounding pharmacies retain demand for GLP-1s even after shortages ended — useful context for how a peptide compounding pathway could scale.</p><blockquote class="dra-quote">Compounders continue to hold meaningful share of the GLP-1 market despite resolved shortages.</blockquote><span class="ref-chip-static mono">biopharma</span></div><div class="dr-article"><div class="dra-meta mono">Stanford Medicine · tier 1 · 2026-07-17</div><a class="dra-title" href="https://med.stanford.edu/news/insights/2026/07/glp1s-compounded-why-doctors-worry-about-safety.html" target="_blank" rel="noopener">Compounded GLP-1s: Why doctors worry and the FDA is cracking down</a><p class="me-snippet">Stanford clinicians outline the safety concerns — dosing errors, contamination, lack of oversight — that frame the regulatory debate over compounded therapies.</p><blockquote class="dra-quote">Compounded products don&#x27;t carry the same FDA quality and efficacy review as approved drugs.</blockquote><span class="ref-chip-static mono">stanford</span></div><div class="dr-article"><div class="dra-meta mono">FDA (primary docket) · tier 1 · 2026-07-01</div><a class="dra-title" href="https://www.fda.gov/advisory-committees/advisory-committee-calendar/july-23-24-2026-meeting-pharmacy-compounding-advisory-committee-07232026" target="_blank" rel="noopener">July 23-24, 2026: Meeting of the Pharmacy Compounding Advisory Committee</a><p class="me-snippet">Official FDA meeting notice and agenda: the PCAC will discuss whether specified bulk drug substances (peptides) should be included on the 503A list, day one covering BPC-157, KPV, TB-500 and MOTS-c.</p><blockquote class="dra-quote">The committee will discuss bulk drug substances nominated for inclusion on the 503A Bulk Drug Substances List.</blockquote><span class="ref-chip-static mono">fda</span></div></div>
+
+      
+    <h3 class="block-title">Social signal — live from the hearing</h3>
+    <div class="fda-social">
+      <p class="fda-social-note">On-the-ground signal from @HimsHouse, an account that live-tracked the hearing. Unverified social posts — shown for colour and speed, subordinate to the cited press above; corroborated items are cross-referenced.</p>
+      <ul class="fda-social-list"><li class="fda-social-item"><div class="fda-social-meta mono">HimsHouse <a href="https://x.com/himshouse/status/2080332223182434516" target="_blank" rel="noopener">@himshouse</a> · 2026-07-23T16:40Z<span class="fda-corrob">corroborated</span></div><p class="fda-social-text">FDA PEPTIDE PANEL VOTES &#x27;YES&#x27; ON BPC-157 — 8 YES, 6 NO, 1 ABSTAIN. $HIMS</p></li><li class="fda-social-item"><div class="fda-social-meta mono">HimsHouse <a href="https://x.com/himshouse/status/2080299316699111601" target="_blank" rel="noopener">@himshouse</a> · 2026-07-23T14:29Z</div><p class="fda-social-text">HIMS Chief Medical Officer Anant Vinjamoori at the FDA peptides meeting: “My company intends to offer peptide therapy if allowed. We intend to do so with guardrails because we think that is in the best interest of patients.”</p></li><li class="fda-social-item"><div class="fda-social-meta mono">HimsHouse <a href="https://x.com/himshouse/status/2080289023965200814" target="_blank" rel="noopener">@himshouse</a> · 2026-07-23T13:48Z</div><p class="fda-social-text">Dr. Alex Tatem (testimony): “We’ve aggregated data on more than 16 million doses of BPC-157… only 7 complaints were identified. Across substantial real-world use, no clear attributable adverse safety signal.”</p></li><li class="fda-social-item"><div class="fda-social-meta mono">HimsHouse <a href="https://x.com/himshouse/status/2080265578946646456" target="_blank" rel="noopener">@himshouse</a> · 2026-07-23T12:15Z</div><p class="fda-social-text">CITI RAISES $HIMS PRICE TARGET TO $35 FROM $28 — HOLD RATING</p></li><li class="fda-social-item"><div class="fda-social-meta mono">HimsHouse <a href="https://x.com/himshouse/status/2080313333974958529" target="_blank" rel="noopener">@himshouse</a> · 2026-07-23T15:25Z</div><p class="fda-social-text">Noom CMO Dr. Jeffrey Egler at the FDA meeting: “There is a large, active market for BPC-157 today and it exists almost entirely outside of pharmacy oversight. That&#x27;s not a hypothetical risk.” (The &#x27;approve it to make it safer&#x27; argument.)</p></li><li class="fda-social-item"><div class="fda-social-meta mono">HimsHouse <a href="https://x.com/himshouse/status/2080355569739706719" target="_blank" rel="noopener">@himshouse</a> · 2026-07-23T18:13Z</div><p class="fda-social-text">Martin Shkreli shorts $HIMS, calls peptides “fake medicine.” (Bear view.)</p></li></ul>
+    </div>
+    
+
+      
+    <details class="sources-details">
+      <summary>
+        <span class="src-eyebrow mono">SOURCES · 23</span>
+        <span class="src-toggle mono">expand</span>
+      </summary>
+      <ul class="source-list">
+        <li class="source-item" id="src-fdapeptide-stat">
+          <span class="source-ref mono">stat</span>
+          <span class="source-label">
+            <strong>STAT News</strong> — In win for RFK Jr., FDA advisory panel narrowly votes to allow compounding of unapproved peptides
+            <span class="src-date mono"> · 2026-07-23</span>
+            <a class="src-link mono" href="https://www.statnews.com/2026/07/23/fda-panel-okays-peptides-compound-pharmacies-bpc-157-kpv/" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-endpoints">
+          <span class="source-ref mono">endpoints</span>
+          <span class="source-label">
+            <strong>Endpoints News</strong> — FDA adcomm votes in favor of lifting restrictions on popular wellness peptide BPC-157
+            <span class="src-date mono"> · 2026-07-23</span>
+            <a class="src-link mono" href="https://endpoints.news/fda-adcomm-votes-in-favor-of-lifting-restrictions-on-popular-wellness-peptide-bpc-157/" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-reuters">
+          <span class="source-ref mono">reuters</span>
+          <span class="source-label">
+            <strong>Reuters</strong> — Analysis: Hims &amp; Hers stands to gain if the FDA loosens restrictions on peptides
+            <span class="src-date mono"> · 2026-07-23</span>
+            <a class="src-link mono" href="https://whbl.com/2026/07/23/analysis-hims-hers-stands-to-gain-if-the-fda-loosens-restrictions-on-peptides/" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-leerink">
+          <span class="source-ref mono">leerink</span>
+          <span class="source-label">
+            <strong>Investing.com / TipRanks</strong> — Leerink sees long-term peptide upside for Hims &amp; Hers but keeps Neutral rating
+            <span class="src-date mono"> · 2026-07-22</span>
+            <a class="src-link mono" href="https://www.tipranks.com/news/hims-hers-stock-forecast-leerink-analyst-sees-long-term-peptide-upside-but-keeps-neutral-rating" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-forbes">
+          <span class="source-ref mono">forbes</span>
+          <span class="source-label">
+            <strong>Forbes</strong> — FDA&#x27;s Review Of Peptides Signals A Growing Public Health Challenge
+            <span class="src-date mono"> · 2026-07-21</span>
+            <a class="src-link mono" href="https://www.forbes.com/sites/omerawan/2026/07/21/fdas-review-of-peptides-signals-a-growing-public-health-challenge--separating-science-from-hype/" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-cnbc">
+          <span class="source-ref mono">cnbc</span>
+          <span class="source-label">
+            <strong>CNBC</strong> — RFK Jr.&#x27;s peptide policy could boost Hims &amp; Hers as its GLP-1 business evolves
+            <span class="src-date mono"> · 2026-04-16</span>
+            <a class="src-link mono" href="https://www.cnbc.com/2026/04/16/rfk-jr-peptides-hims-hers-glp-1.html" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-seekingalpha">
+          <span class="source-ref mono">seekingalpha</span>
+          <span class="source-label">
+            <strong>Seeking Alpha</strong> — FDA Peptide Review, A Big Moment For Hims &amp; Hers Stock
+            <span class="src-date mono"> · 2026-07-22</span>
+            <a class="src-link mono" href="https://seekingalpha.com/article/4891184-fda-peptide-review-a-big-moment-for-hims-and-hers" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-npr">
+          <span class="source-ref mono">npr</span>
+          <span class="source-label">
+            <strong>NPR</strong> — Advisers to the FDA will vote to ease regulation of popular peptides
+            <span class="src-date mono"> · 2026-07-23</span>
+            <a class="src-link mono" href="https://www.npr.org/2026/07/23/nx-s1-5903202/fda-peptides-restrictions" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-abc">
+          <span class="source-ref mono">abc</span>
+          <span class="source-label">
+            <strong>ABC News</strong> — FDA advisory committee votes to add popular peptide BPC-157 to drug compounding list
+            <span class="src-date mono"> · 2026-07-23</span>
+            <a class="src-link mono" href="https://abcnews.com/Health/fda-advisory-committee-votes-add-popular-peptide-bpc/story?id=134913891" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-biopharma">
+          <span class="source-ref mono">biopharma</span>
+          <span class="source-label">
+            <strong>BioPharma Dive</strong> — Compounders maintain a firm grip on the GLP-1 market
+            <span class="src-date mono"> · 2026-07-20</span>
+            <a class="src-link mono" href="https://www.biopharmadive.com/news/compounders-glp1-issues-for-big-pharma-gallup/825627/" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-stanford">
+          <span class="source-ref mono">stanford</span>
+          <span class="source-label">
+            <strong>Stanford Medicine</strong> — Compounded GLP-1s: Why doctors worry and the FDA is cracking down
+            <span class="src-date mono"> · 2026-07-17</span>
+            <a class="src-link mono" href="https://med.stanford.edu/news/insights/2026/07/glp1s-compounded-why-doctors-worry-about-safety.html" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-fda">
+          <span class="source-ref mono">fda</span>
+          <span class="source-label">
+            <strong>FDA (primary docket)</strong> — July 23-24, 2026: Meeting of the Pharmacy Compounding Advisory Committee
+            <span class="src-date mono"> · 2026-07-01</span>
+            <a class="src-link mono" href="https://www.fda.gov/advisory-committees/advisory-committee-calendar/july-23-24-2026-meeting-pharmacy-compounding-advisory-committee-07232026" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-time">
+          <span class="source-ref mono">time</span>
+          <span class="source-label">
+            <strong>TIME</strong> — An FDA Committee Just Voted in Favor of Peptides — Despite the Agency&#x27;s Opposition
+            <span class="src-date mono"> · 2026-07-23</span>
+            <a class="src-link mono" href="https://time.com/article/2026/07/23/fda-committee-peptides/" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-orrick">
+          <span class="source-ref mono">orrick</span>
+          <span class="source-label">
+            <strong>Orrick (legal analysis)</strong> — FDA Peptide Compounding Vote: What to Watch at the July PCAC Meeting
+            <span class="src-date mono"> · 2026-07-20</span>
+            <a class="src-link mono" href="https://www.orrick.com/en/Insights/2026/07/FDA-Peptide-Compounding-Vote-What-to-Watch-at-the-July-PCAC-Meeting" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-mdvotes">
+          <span class="source-ref mono">mdvotes</span>
+          <span class="source-label">
+            <strong>Medical Daily</strong> — FDA Panel Ends Peptide Review Backing Six of Seven, with Emideltide Rejected
+            <span class="src-date mono"> · 2026-07-26</span>
+            <a class="src-link mono" href="https://www.medicaldaily.com/fda-peptide-panel-final-votes-emideltide-rejected-503a-476379" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-bijan-peptides">
+          <span class="source-ref mono">bijan-peptides</span>
+          <span class="source-label">
+            <strong>X</strong> — Guest interview clip: RFK Jr. &#x27;like a bulldog&#x27; on moving peptides to Category 1
+            <span class="src-date mono"> · 2026-08-25</span>
+            <a class="src-link mono" href="https://x.com/Investinc_Intel/status/2092249381000888731" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-himshouse-rumor">
+          <span class="source-ref mono">himshouse-rumor</span>
+          <span class="source-label">
+            <strong>X (Hims House)</strong> — RUMOR: FDA looking to move peptides to Category 1 before end of October
+            <span class="src-date mono"> · 2026-08-13</span>
+            <a class="src-link mono" href="https://x.com/himshouse/status/2087894415742316868" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-md-hims-peptides">
+          <span class="source-ref mono">md-hims-peptides</span>
+          <span class="source-label">
+            <strong>Medical Daily</strong> — A Major Telehealth Company Will Sell Longevity Peptides That Clinical Evidence Has Not Yet Backed
+            <span class="src-date mono"> · 2026-08-12</span>
+            <a class="src-link mono" href="https://www.medicaldaily.com/hims-hers-peptides-sermorelin-glutathione-nad-evidence-gap-477224" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-hims-10q">
+          <span class="source-ref mono">hims-10q</span>
+          <span class="source-label">
+            <strong>SEC EDGAR</strong> — HIMS 10-Q filed 2026-08-10
+            <span class="src-date mono"> · 2026-08-10</span>
+            <a class="src-link mono" href="https://www.sec.gov/Archives/edgar/data/1773751/000177375126000163/hims-20260630.htm" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-himshouse-canaccord">
+          <span class="source-ref mono">himshouse-canaccord</span>
+          <span class="source-label">
+            <strong>X (Hims House)</strong> — Canaccord reiterates HIMS $40 price target - Buy
+            <span class="src-date mono"> · 2026-07-27</span>
+            <a class="src-link mono" href="https://x.com/himshouse/status/2081686469844849068" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-md-sixofseven">
+          <span class="source-ref mono">md-sixofseven</span>
+          <span class="source-label">
+            <strong>Medical Daily</strong> — FDA Panel Ends Peptide Review Backing Six of Seven, with Emideltide Rejected in a 6 to 7 Vote
+            <span class="src-date mono"> · 2026-07-26</span>
+            <a class="src-link mono" href="https://www.medicaldaily.com/fda-peptide-panel-final-votes-emideltide-rejected-503a-476379" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-hims-statement-pub">
+          <span class="source-ref mono">hims-statement-pub</span>
+          <span class="source-label">
+            <strong>Fox News</strong> — Millions could gain easier access to popular peptides after FDA panel vote
+            <span class="src-date mono"> · 2026-07-28</span>
+            <a class="src-link mono" href="https://www.foxnews.com/health/millions-gain-easier-access-popular-peptides-after-fda-panel-vote" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-fdapeptide-bi-panel">
+          <span class="source-ref mono">bi-panel</span>
+          <span class="source-label">
+            <strong>Business Insider</strong> — Inside the unconventional FDA panel that could reshape the peptide industry
+            <span class="src-date mono"> · 2026-07-24</span>
+            <a class="src-link mono" href="https://www.businessinsider.com/rfk-convenes-unusual-fda-panel-to-assess-peptide-safety-issues-2026-7#article" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        </ul>
+    </details>
+    
     </section>
     
       
     <section class="pane" id="section-overview" data-section="overview">
-      <div class="section-eyebrow mono">01 · OVERVIEW · NYSE: HIMS</div>
+      <div class="section-eyebrow mono">02 · OVERVIEW · NYSE: HIMS</div>
       <h2 class="section-title">Hims &amp; Hers Health — equity snapshot</h2>
       <p class="section-lede">
         $2.3B revenue base on subscription healthcare. Repositioning around international
         rollups and the reset of US compounded-GLP-1 personalization.
       </p>
 
-      <div class="wk-strip" aria-label="Week-over-week deltas"><div class="wk-strip-eyebrow mono">WEEK-OVER-WEEK · vs Aug 17, 2026</div><div class="wk-strip-tiles"><div class="wk-strip-tile"><div class="wkst-label mono">SPOT</div><div class="wkst-value mono">$33.78</div><div class="wkst-chip"><span class="wow-chip up" title="vs Aug 17"><span class="wch-glyph">▲</span>+$5.63 (+20.0%)<span class="wch-vs"> vs Aug 17</span></span></div></div><div class="wk-strip-tile"><div class="wkst-label mono">MKT CAP</div><div class="wkst-value mono">$7.88B</div><div class="wkst-chip"><span class="wow-chip up" title="vs Aug 17"><span class="wch-glyph">▲</span>+20.0%<span class="wch-vs"> vs Aug 17</span></span></div></div><div class="wk-strip-tile"><div class="wkst-label mono">FAIR VALUE</div><div class="wkst-value mono">$24.47</div><div class="wkst-chip"><span class="wow-chip flat" title="flat vs Aug 17"><span class="wch-glyph">─</span>flat</span></div></div><div class="wk-strip-tile"><div class="wkst-label mono">IMPLIED UPSIDE</div><div class="wkst-value mono">-27.6%</div><div class="wkst-chip"><span class="wow-chip down" title="vs Aug 17"><span class="wch-glyph">▼</span>-14.5pp<span class="wch-vs"> vs Aug 17</span></span></div></div></div></div>
+      <div class="wk-strip" aria-label="Week-over-week deltas"><div class="wk-strip-eyebrow mono">WEEK-OVER-WEEK · vs Aug 24, 2026</div><div class="wk-strip-tiles"><div class="wk-strip-tile"><div class="wkst-label mono">SPOT</div><div class="wkst-value mono">$29.83</div><div class="wkst-chip"><span class="wow-chip down" title="vs Aug 24"><span class="wch-glyph">▼</span>$3.95 (-11.7%)<span class="wch-vs"> vs Aug 24</span></span></div></div><div class="wk-strip-tile"><div class="wkst-label mono">MKT CAP</div><div class="wkst-value mono">$6.96B</div><div class="wkst-chip"><span class="wow-chip down" title="vs Aug 24"><span class="wch-glyph">▼</span>-11.7%<span class="wch-vs"> vs Aug 24</span></span></div></div><div class="wk-strip-tile"><div class="wkst-label mono">FAIR VALUE</div><div class="wkst-value mono">$24.47</div><div class="wkst-chip"><span class="wow-chip flat" title="flat vs Aug 24"><span class="wch-glyph">─</span>flat</span></div></div><div class="wk-strip-tile"><div class="wkst-label mono">IMPLIED UPSIDE</div><div class="wkst-value mono">-18.0%</div><div class="wkst-chip"><span class="wow-chip up" title="vs Aug 24"><span class="wch-glyph">▲</span>+9.6pp<span class="wch-vs"> vs Aug 24</span></span></div></div></div></div>
 
       <div class="hero-row">
         <div class="hero-spot">
           <div class="hsp-label mono">SPOT</div>
-          <div class="hsp-price mono">$33.78</div>
+          <div class="hsp-price mono">$29.83</div>
           <div class="hsp-sub">
-            <span class="hsp-day mono pos">+$1.92 (+6.03%)</span>
+            <span class="hsp-day mono neg">$-1.92 (-6.05%)</span>
             <span class="hsp-day-label mono">today</span>
           </div>
         </div>
@@ -1471,7 +1873,7 @@ a:hover { color: var(--ink-strong); }
           <div class="hc-row">
             <div class="hc-cell">
               <div class="hc-label mono">6M Δ</div>
-              <div class="hc-value mono pos">+117.8%</div>
+              <div class="hc-value mono pos">+105.4%</div>
               <div class="hc-delta mono">$41 → $15 → $28 round-trip</div>
             </div>
           </div>
@@ -1482,19 +1884,19 @@ a:hover { color: var(--ink-strong); }
         <div class="chart-mini-head">
           <div class="cmh-title-block">
             <div class="cmh-title">Hims &amp; Hers (HIMS) — 6-Month Share Price</div>
-            <div class="cmh-sub mono">Daily close · USD · Feb 23, 2026 → Aug 21, 2026</div>
+            <div class="cmh-sub mono">Daily close · USD · Feb 27, 2026 → Aug 26, 2026</div>
           </div>
           <div class="cmh-meta">
             <span class="cmh-range mono"><span class="cmh-tag">RANGE</span>$14.52 – $38.28</span>
-            <span class="cmh-change mono pos"><span class="cmh-tag">6M Δ</span>+117.8%</span>
+            <span class="cmh-change mono pos"><span class="cmh-tag">6M Δ</span>+105.4%</span>
           </div>
         </div>
         <canvas id="overviewPriceChart"
-                data-dates='["2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-02", "2026-04-06", "2026-04-07", "2026-04-08", "2026-04-09", "2026-04-10", "2026-04-13", "2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-29", "2026-06-30", "2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21"]'
-                data-closes='[15.51, 15.46, 15.82, 15.6, 14.52, 16.48, 15.82, 16.45, 15.88, 15.74, 22.16, 23.47, 25.88, 23.84, 24.77, 24.88, 24.98, 23.15, 24.16, 22.02, 22.46, 21.34, 20.84, 20.86, 19.38, 18.78, 20.76, 19.84, 19.14, 20.33, 19.5, 19.39, 19.75, 19.43, 21.15, 21.36, 24.29, 26.99, 28.82, 31.01, 29.76, 29.01, 28.15, 30.56, 29.39, 27.91, 26.33, 27.17, 27.41, 27.27, 26.33, 26.88, 25.65, 28.27, 29.14, 25.03, 24.14, 24.24, 25.05, 22.29, 22.44, 23.04, 24.01, 23.75, 23.85, 25.2, 25.38, 26.15, 27.76, 27.51, 27.51, 28.01, 26.19, 27.17, 28.98, 27.78, 28.87, 26.82, 30.17, 31.47, 31.89, 35.47, 33.54, 32.96, 32.7, 32.71, 33.94, 33.39, 34.67, 37.57, 36.8, 38.28, 36.17, 36.07, 35.45, 34.38, 34.38, 35.15, 37.17, 33.68, 32.84, 32.7, 32.73, 31.68, 32.74, 28.09, 30.24, 29.32, 25.0, 27.04, 27.77, 30.82, 32.16, 31.65, 29.66, 31.59, 31.77, 30.51, 29.97, 28.77, 28.15, 28.61, 27.39, 31.09, 31.86, 33.78]'></canvas>
+                data-dates='["2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-02", "2026-04-06", "2026-04-07", "2026-04-08", "2026-04-09", "2026-04-10", "2026-04-13", "2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-29", "2026-06-30", "2026-07-01", "2026-07-02", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26"]'
+                data-closes='[14.52, 16.48, 15.82, 16.45, 15.88, 15.74, 22.16, 23.47, 25.88, 23.84, 24.77, 24.88, 24.98, 23.15, 24.16, 22.02, 22.46, 21.34, 20.84, 20.86, 19.38, 18.78, 20.76, 19.84, 19.14, 20.33, 19.5, 19.39, 19.75, 19.43, 21.15, 21.36, 24.29, 26.99, 28.82, 31.01, 29.76, 29.01, 28.15, 30.56, 29.39, 27.91, 26.33, 27.17, 27.41, 27.27, 26.33, 26.88, 25.65, 28.27, 29.14, 25.03, 24.14, 24.24, 25.05, 22.29, 22.44, 23.04, 24.01, 23.75, 23.85, 25.2, 25.38, 26.15, 27.76, 27.51, 27.51, 28.01, 26.19, 27.17, 28.98, 27.78, 28.87, 26.82, 30.17, 31.47, 31.89, 35.47, 33.54, 32.96, 32.7, 32.71, 33.94, 33.39, 34.67, 37.57, 36.8, 38.28, 36.17, 36.07, 35.45, 34.38, 34.38, 35.15, 37.17, 33.68, 32.84, 32.7, 32.73, 31.68, 32.74, 28.09, 30.24, 29.32, 25.0, 27.04, 27.77, 30.82, 32.16, 31.65, 29.66, 31.59, 31.77, 30.51, 29.97, 28.77, 28.15, 28.61, 27.39, 31.09, 31.86, 33.78, 31.08, 31.75, 29.83]'></canvas>
       </div>
 
-      <div class="kpi-strip"><div class="kpi"><div class="kpi-label mono">LAST</div><div class="kpi-value mono">$33.78</div></div><div class="kpi"><div class="kpi-label mono">MKT CAP</div><div class="kpi-value mono">$7.88B</div></div><div class="kpi"><div class="kpi-label mono">52W RANGE</div><div class="kpi-value mono">$13.74 – $65.30</div></div><div class="kpi"><div class="kpi-label mono">ADV (3M)</div><div class="kpi-value mono">16,222,943</div></div><div class="kpi"><div class="kpi-label mono">SHORT INT</div><div class="kpi-value mono">32.1%</div></div><div class="kpi"><div class="kpi-label mono">BETA</div><div class="kpi-value mono">2.42</div></div></div>
+      <div class="kpi-strip"><div class="kpi"><div class="kpi-label mono">LAST</div><div class="kpi-value mono">$29.83</div></div><div class="kpi"><div class="kpi-label mono">MKT CAP</div><div class="kpi-value mono">$6.96B</div></div><div class="kpi"><div class="kpi-label mono">52W RANGE</div><div class="kpi-value mono">$13.74 – $65.30</div></div><div class="kpi"><div class="kpi-label mono">ADV (3M)</div><div class="kpi-value mono">16,075,217</div></div><div class="kpi"><div class="kpi-label mono">SHORT INT</div><div class="kpi-value mono">30.2%</div></div><div class="kpi"><div class="kpi-label mono">BETA</div><div class="kpi-value mono">2.42</div></div></div>
 
       <div class="overview-split">
         <div class="overview-split-l">
@@ -1549,7 +1951,7 @@ a:hover { color: var(--ink-strong); }
     
       
     <section class="pane" id="section-valuation" data-section="valuation">
-      <div class="section-eyebrow mono">02 · VALUATION · NYSE: HIMS</div>
+      <div class="section-eyebrow mono">03 · VALUATION · NYSE: HIMS</div>
       <h2 class="section-title">Valuation — what HIMS is worth</h2>
       <p class="section-lede">
         Three independent techniques — ratio analysis, a discounted cash-flow model, and a
@@ -1559,192 +1961,128 @@ a:hover { color: var(--ink-strong); }
       
     <div class="synth-block">
       <div class="synth-head">
-        <span class="synth-eyebrow mono">THIS WEEK · 2026-08-24</span>
-        <span class="synth-srclabel mono">Reuters/Bloomberg (0) · secondary-adjacent · 5 articles · 10 tweets</span>
+        <span class="synth-eyebrow mono">THIS WEEK · 2026-08-26</span>
+        <span class="synth-srclabel mono">Reuters/Bloomberg (0) · primary-whitelist · 1 articles · 10 tweets</span>
       </div>
-      <ul class="synth-bullets"><li class="synth-bullet"><span class="synth-event">CEO Andrew Dudum publicly responded to the FTC lawsuit against Hims & Hers, telling CNBC that the agency's action misunderstands how the company operates, while addressing compounded GLP-1 drugs and AI. The commentary signals management is actively defending its business model amid regulatory scrutiny. <a class="ref-chip" href="#src-valuation-news-2">news-2</a> <a class="ref-chip" href="#src-valuation-tweet-7">tweet-7</a></span><span class="synth-read"><em>Valuation read —</em> The FTC overhang is a key discount to the multiple, and management's pushback frames the legal risk as contestable rather than existential, though the outcome remains a binary swing factor for the thesis.</span></li><li class="synth-bullet"><span class="synth-event">Hims stock recovered after a late-Monday earnings-driven dive, with IBD framing the company as a potential emerging player in peptides. Shares stabilized despite the initial post-Q2 selloff. <a class="ref-chip" href="#src-valuation-news-4">news-4</a> <a class="ref-chip" href="#src-valuation-tweet-4">tweet-4</a></span><span class="synth-read"><em>Valuation read —</em> The rapid recovery from the earnings dip suggests the market is willing to re-rate HIMS on new growth optionality (peptides) rather than penalize the print, supporting a growth-premium valuation.</span></li><li class="synth-bullet"><span class="synth-event">Multiple technical and sentiment commentators flagged a strong momentum reversal, with HIMS reportedly up over 22% in five days, entering a Stage 2 uptrend for the first time in nearly a year and roughly doubling off its lows. One post noted the stock swung from down 55%+ YTD to positive YTD. <a class="ref-chip" href="#src-valuation-tweet-5">tweet-5</a> <a class="ref-chip" href="#src-valuation-tweet-6">tweet-6</a> <a class="ref-chip" href="#src-valuation-tweet-7">tweet-7</a> <a class="ref-chip" href="#src-valuation-tweet-4">tweet-4</a></span><span class="synth-read"><em>Valuation read —</em> The sharp momentum shift and return to positive YTD reflect expanding investor confidence and multiple re-rating, though price-driven enthusiasm raises the risk that valuation is running ahead of fundamentals.</span></li><li class="synth-bullet"><span class="synth-event">HIMS appeared on a StockStory screen framing certain out-of-favor names as deserving a second chance, positioning it within the contrarian recovery narrative circulating this week. <a class="ref-chip" href="#src-valuation-news-1">news-1</a> <a class="ref-chip" href="#src-valuation-tweet-4">tweet-4</a></span><span class="synth-read"><em>Valuation read —</em> Inclusion in 'unpopular stocks deserving a second chance' coverage reinforces a mean-reversion thesis where depressed sentiment created a valuation entry point now being unwound.</span></li><li class="synth-bullet"><span class="synth-event">Traders debated near-term price targets, with one calling for a move to the $41 area and another mapping a bull case above the ~$39 prior peak against a bearish break of ~$21.53 that could open $15 to $8, assigning that downside scenario a 40% probability. <a class="ref-chip" href="#src-valuation-tweet-2">tweet-2</a> <a class="ref-chip" href="#src-valuation-tweet-10">tweet-10</a></span><span class="synth-read"><em>Valuation read —</em> The wide bull-bear price dispersion underscores that HIMS remains a high-volatility, event-driven name where the valuation range is unusually skewed by legal and execution outcomes.</span></li></ul>
-      <div class="synth-sentiment"><span class="synth-sent-label mono">SENTIMENT · MIXED-BULLISH</span><span class="synth-sent-rationale">Most high-engagement tweets celebrate the momentum reversal, doubling off the lows and return to positive YTD, though at least one prominent post still assigns a 40% probability to a downside break, tempering the enthusiasm.</span></div>
+      <ul class="synth-bullets"><li class="synth-bullet"><span class="synth-event">Truist raised its HIMS price target to $32 from $27 (Hold rating), citing credit card data suggesting stronger-than-expected retention of compounded GLP-1 customers. Truist now expects the majority of HIMS's 2026 U.S. GLP-1 revenue to come from compounded products, reversing its prior view that branded GLP-1s would dominate. <a class="ref-chip" href="#src-valuation-news-1">news-1</a> <a class="ref-chip" href="#src-valuation-tweet-7">tweet-7</a> <a class="ref-chip" href="#src-valuation-tweet-8">tweet-8</a></span><span class="synth-read"><em>Valuation read —</em> A higher PT anchored to improved compounded GLP-1 retention supports a more durable recurring-revenue narrative, modestly lifting the bull case even under a Hold rating.</span></li><li class="synth-bullet"><span class="synth-event">Truist estimates HIMS generated ~$802M of GLP-1 revenue in 2025 (+50% y/y) and projects ~$1.2B of U.S. GLP-1 revenue in 2026 ($625M compounded, $578M branded), against ~$3.16B total FY26 revenue, implying U.S. GLP-1 is roughly 38% of company revenue. <a class="ref-chip" href="#src-valuation-news-1">news-1</a> <a class="ref-chip" href="#src-valuation-tweet-8">tweet-8</a></span><span class="synth-read"><em>Valuation read —</em> GLP-1 concentration at ~38% of revenue makes the compounded-vs-branded mix a central valuation swing factor, tying the multiple to the sustainability of that segment.</span></li><li class="synth-bullet"><span class="synth-event">HIMS shares fell roughly 8-9% after reports that Visa removed the company from its platform over excessive chargebacks on weight-loss subscriptions. Multiple accounts flagged that the ~$700M market-cap loss appears disproportionate to a reportedly small (~$75K) charge. <a class="ref-chip" href="#src-valuation-tweet-1">tweet-1</a> <a class="ref-chip" href="#src-valuation-tweet-3">tweet-3</a> <a class="ref-chip" href="#src-valuation-tweet-6">tweet-6</a></span><span class="synth-read"><em>Valuation read —</em> The selloff signals fragile sentiment and headline sensitivity, with bulls arguing the market cap reaction is detached from the stated financial impact.</span></li><li class="synth-bullet"><span class="synth-event">Commentary highlighted relative-valuation contrasts, noting Oura is reportedly targeting a $16B+ IPO valuation on ~$2B of projected 2026 revenue while HIMS trades near a ~$7B valuation on an estimated $3.3-3.5B of 2026 revenue (including Eucalyptus). <a class="ref-chip" href="#src-valuation-tweet-10">tweet-10</a></span><span class="synth-read"><em>Valuation read —</em> The comparison frames HIMS as inexpensive on a revenue-multiple basis versus private-market peers, feeding the 'cheap' thesis if growth holds.</span></li><li class="synth-bullet"><span class="synth-event">Several holders characterized HIMS as 'extremely cheap' and 'selling for peanuts,' framing the subscription health model as a large long-term opportunity, while acknowledging that 5-10% daily swings are normal for the stock. <a class="ref-chip" href="#src-valuation-tweet-2">tweet-2</a> <a class="ref-chip" href="#src-valuation-tweet-4">tweet-4</a> <a class="ref-chip" href="#src-valuation-tweet-5">tweet-5</a></span><span class="synth-read"><em>Valuation read —</em> Persistent bull conviction on undervaluation and TAM supports multiple expansion potential, but high volatility keeps the risk premium elevated.</span></li><li class="synth-bullet"><span class="synth-event">A cautionary voice warned that retail hype around HIMS (cited near $65) tends to peak at the worst possible entry point, reflecting concern about late-cycle crowding in the name. <a class="ref-chip" href="#src-valuation-tweet-9">tweet-9</a></span><span class="synth-read"><em>Valuation read —</em> Signals that sentiment-driven inflows may already be priced in, arguing for caution on entry multiples despite the bullish chorus.</span></li></ul>
+      <div class="synth-sentiment"><span class="synth-sent-label mono">SENTIMENT · MIXED-BULLISH</span><span class="synth-sent-rationale">Bulls dominate with repeated &#x27;extremely cheap&#x27; and favorable relative-valuation takes alongside a Truist PT raise, but the Visa-driven selloff and warnings about late retail hype temper the tone.</span></div>
       
     <details class="sources-details">
       <summary>
-        <span class="src-eyebrow mono">SOURCES · 15</span>
+        <span class="src-eyebrow mono">SOURCES · 11</span>
         <span class="src-toggle mono">expand</span>
       </summary>
       <ul class="source-list">
         <li class="source-item" id="src-valuation-news-1">
           <span class="source-ref mono">news-1</span>
           <span class="source-label">
-            <strong>StockStory</strong> — 2 Unpopular Stocks That Deserve a Second Chance and 1 We Ignore
-            <span class="src-date mono"> · 2026-08-24</span>
-            <a class="src-link mono" href="https://finance.yahoo.com/markets/stocks/articles/2-unpopular-stocks-deserve-second-064936765.html" target="_blank" rel="noopener">link ↗</a>
-          </span>
-        </li>
-        
-        <li class="source-item" id="src-valuation-news-2">
-          <span class="source-ref mono">news-2</span>
-          <span class="source-label">
-            <strong>CNBC</strong> — Hims &amp; Hers CEO says FTC lawsuit misunderstands how the company works
-            <span class="src-date mono"> · 2026-08-18</span>
-            <a class="src-link mono" href="https://www.cnbc.com/2026/08/18/hims-hers-ceo-andrew-dudum-ftc-lawsuit-glp-1s-ai.html" target="_blank" rel="noopener">link ↗</a>
-          </span>
-        </li>
-        
-        <li class="source-item" id="src-valuation-news-3">
-          <span class="source-ref mono">news-3</span>
-          <span class="source-label">
-            <strong>Barchart.com</strong> — Unusual Options Activity Points to a $1.08 Million Dividend Capture in This 1 Stock
-            <span class="src-date mono"> · 2026-08-14</span>
-            <a class="src-link mono" href="https://www.barchart.com/story/news/3856610/unusual-options-activity-points-to-a-1-08-million-dividend-capture-in-this-1-stock" target="_blank" rel="noopener">link ↗</a>
-          </span>
-        </li>
-        
-        <li class="source-item" id="src-valuation-news-4">
-          <span class="source-ref mono">news-4</span>
-          <span class="source-label">
-            <strong>Investor&#x27;s Business Daily</strong> — Is Hims The Next Big Name In Peptides? Shares Recover From Earnings Dive.
-            <span class="src-date mono"> · 2026-08-11</span>
-            <a class="src-link mono" href="https://www.investors.com/news/technology/hims-stock-hims-hers-health-earnings-q2-2026/" target="_blank" rel="noopener">link ↗</a>
-          </span>
-        </li>
-        
-        <li class="source-item" id="src-valuation-news-5">
-          <span class="source-ref mono">news-5</span>
-          <span class="source-label">
-            <strong>MarketBeat</strong> — Clover Health Eyes 2026 GAAP Profit as AI Platform Fuels Medicare Advantage Growth
-            <span class="src-date mono"> · 2026-08-11</span>
-            <a class="src-link mono" href="https://www.marketbeat.com/instant-alerts/clover-health-eyes-2026-gaap-profit-as-ai-platform-fuels-medicare-advantage-growth-2026-08-11/?utm_source=yahoofinance&amp;amp;utm_medium=yahoofinance" target="_blank" rel="noopener">link ↗</a>
+            <strong>Barrons.com</strong> — How GLP-1 Sales Could Play Out for Hims &amp; Hers
+            <span class="src-date mono"> · 2026-08-25</span>
+            <a class="src-link mono" href="https://www.barrons.com/articles/hims-hers-stock-glp-1-obesity-drugs-8c2b9569?siteid=yhoof2&amp;yptr=yahoo" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-1">
           <span class="source-ref mono">tweet-1</span>
           <span class="source-label">
-            <strong>@TheLongInvest (X)</strong> — I have done this with
+            <strong>@optionscjp (X)</strong> — $HIMS fell 8% today after Visa kicked them off their platform for getting too many chargebacks on their weight loss subscriptions
 
-$HIMS
-$PLTR
-$ZETA
-$OSCR
-$UNH
-$ETH
-$BTC
-$ADUR
-$ASTS
-$NBIS
-
-And now I’m saying the same for:
-
-$SE
-$NVO
-$BABA
-$GRRR
-$GRA…  · 585 likes
+Interesti…  · 566 likes
             
-            <a class="src-link mono" href="https://x.com/TheLongInvest/status/2090939659371069744" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/optionscjp/status/2091984096390238235" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-2">
           <span class="source-ref mono">tweet-2</span>
           <span class="source-label">
-            <strong>@Mr_Derivatives (X)</strong> — Is $HIMS ready to go to $41&#x27;s here? 
-
-I think so.  · 533 likes
+            <strong>@TheLongInvest (X)</strong> — $HIMS long term holders know that 5-10% swings each day is perfectly normal.  · 377 likes
             
-            <a class="src-link mono" href="https://x.com/Mr_Derivatives/status/2090920999596515724" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/TheLongInvest/status/2092276974563492351" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-3">
           <span class="source-ref mono">tweet-3</span>
           <span class="source-label">
-            <strong>@TheLongInvest (X)</strong> — People posting $HIMS going to $10 have gone very quiet
-
-And $ETH to $1000
-
-$BTC to $40,000
-
-You need to understand what support confirmation…  · 471 likes
+            <strong>@himshouse (X)</strong> — Is $HIMS down 9% (~$700M in market cap) because it faces a $75K charge from Visa?  · 305 likes
             
-            <a class="src-link mono" href="https://x.com/TheLongInvest/status/2090936372076961980" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/himshouse/status/2091941837015515348" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-4">
           <span class="source-ref mono">tweet-4</span>
           <span class="source-label">
-            <strong>@alc2022 (X)</strong> — $HIMS and $DUOL have essentially doubled from the lows
+            <strong>@alc2022 (X)</strong> — The biggest business in the world will be one that optimizes your health for a monthly subscription fee
 
-Congratulations if you leaned into the pessimism  · 399 likes
+That’s $HIMS and it’s selling for p…  · 280 likes
             
-            <a class="src-link mono" href="https://x.com/alc2022/status/2090863004048904649" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/alc2022/status/2092685550780109004" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-5">
           <span class="source-ref mono">tweet-5</span>
           <span class="source-label">
-            <strong>@TheLongInvest (X)</strong> — $HIMS +22.5% in 5 days  · 378 likes
+            <strong>@alc2022 (X)</strong> — $HIMS is extremely cheap  · 286 likes
             
-            <a class="src-link mono" href="https://x.com/TheLongInvest/status/2090840979033002104" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/alc2022/status/2092591518095646741" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-6">
           <span class="source-ref mono">tweet-6</span>
           <span class="source-label">
-            <strong>@TrendSpider (X)</strong> — Back in Stage 2 for the first time in nearly a year 👀 $HIMS 
-https://t.co/FYCJXwBYml  · 353 likes
+            <strong>@dmeinvestor (X)</strong> — $HIMS investors watching a $7B company lose $700M in market cap after news of a $75K Visa charge. https://t.co/pmjLw3euz1  · 283 likes
             
-            <a class="src-link mono" href="https://x.com/TrendSpider/status/2090846397486768417" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/dmeinvestor/status/2091966057984483393" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-7">
           <span class="source-ref mono">tweet-7</span>
           <span class="source-label">
-            <strong>@MitchMartan98 (X)</strong> — $HIMS might be staging the greatest comeback since Jordan in 95’
+            <strong>@himshouse (X)</strong> — 🚨 BREAKING: TRUIST RAISES $HIMS PRICE TARGET TO $32 FROM $27 - HOLD RATING
 
-It was down 55%+ YTD on February 27% and is up over 120%+ since the lows a…  · 231 likes
+Truist says credit card data suggests stronger retention of comp…  · 200 likes
             
-            <a class="src-link mono" href="https://x.com/MitchMartan98/status/2091197003514437819" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/himshouse/status/2091910741259338190" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-8">
           <span class="source-ref mono">tweet-8</span>
           <span class="source-label">
-            <strong>@AlphaOwlTrading (X)</strong> — $HIMS is already telling us who the next leader in healthcare will be...  · 222 likes
+            <strong>@himshouse (X)</strong> — 🚨 BREAKING: TRUIST EXPECTS MAJORITY OF $HIMS U.S. GLP-1 REVENUE IN 2026 TO BE FROM COMPOUNDED GLP-1s
+
+PREVIOUSLY, TRUIST EXPECTED BRANDED GL…  · 187 likes
             
-            <a class="src-link mono" href="https://x.com/AlphaOwlTrading/status/2090917789502468575" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/himshouse/status/2092382409975046588" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-9">
           <span class="source-ref mono">tweet-9</span>
           <span class="source-label">
-            <strong>@HolySmokas (X)</strong> — These 5 stocks are flying today! 
-1. $HOOD 
-2. $HIMS 
-3. $EL 
-4. $CAKE 
-5. $PLTR 
-Question for you all! Which of these 5 stocks will go up t…  · 145 likes
+            <strong>@TheOneLanceB (X)</strong> — My default answer if anyone asks me about a stock pick:
+
+“If you’re asking me about this now, it means you’re too late.”
+
+I get asked about …  · 133 likes
             
-            <a class="src-link mono" href="https://x.com/HolySmokas/status/2090855703573672396" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/TheOneLanceB/status/2092643240369598884" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         
         <li class="source-item" id="src-valuation-tweet-10">
           <span class="source-ref mono">tweet-10</span>
           <span class="source-label">
-            <strong>@MMatters22596 (X)</strong> — $HIMS
+            <strong>@DrTomsLens (X)</strong> — This is very interesting. Oura is reportedly targeting an IPO at a $16B+ valuation on ~$2B of projected 2026 revenue.
 
-I already told you at the beginning of this month:
-
-This stock still offers massive upside potential at current levels—but the risk r…  · 209 likes
+$HIMS is currently va…  · 130 likes
             
-            <a class="src-link mono" href="https://x.com/MMatters22596/status/2091104259949428963" target="_blank" rel="noopener">link ↗</a>
+            <a class="src-link mono" href="https://x.com/DrTomsLens/status/2092508383488168407" target="_blank" rel="noopener">link ↗</a>
           </span>
         </li>
         </ul>
@@ -1756,7 +2094,7 @@ This stock still offers massive upside potential at current levels—but the ris
       <div class="hero-row">
         <div class="hero-spot">
           <div class="hsp-label mono">SPOT</div>
-          <div class="hsp-price mono">$33.78</div>
+          <div class="hsp-price mono">$29.83</div>
           <div class="hsp-sub">
             <span class="hsp-day-label mono">live reference price</span>
           </div>
@@ -1766,12 +2104,12 @@ This stock still offers massive upside potential at current levels—but the ris
             <div class="hc-cell">
               <div class="hc-label mono">DCF FAIR VALUE</div>
               <div class="hc-value mono">$24.47</div>
-              <div class="hc-delta mono neg">-27.6% vs spot</div>
+              <div class="hc-delta mono neg">-18.0% vs spot</div>
             </div>
             <div class="hc-cell">
               <div class="hc-label mono">SELL-SIDE TARGET</div>
-              <div class="hc-value mono">$30.85</div>
-              <div class="hc-delta mono neg">-8.7% · 13 analysts</div>
+              <div class="hc-value mono">$31.23</div>
+              <div class="hc-delta mono pos">+4.7% · 13 analysts</div>
             </div>
           </div>
         </div>
@@ -1788,7 +2126,8 @@ This stock still offers massive upside potential at current levels—but the ris
 
       <div class="val-card active" data-val-pane="ratio">
         <div class="val-card-eyebrow mono">A · MULTIPLES vs PEERS (NTM)</div>
-        <table class="val-table"><thead><tr><th class="mono">PEER</th><th class="mono">P/E NTM</th><th class="mono">EV/SALES</th><th class="mono">EV/EBITDA</th><th class="mono">P/FCF</th></tr></thead><tbody><tr><td><span class="peer-tk mono">TDOC</span> <span class="peer-name">Teladoc Health</span></td><td class="mono">—</td><td class="mono">0.5x</td><td class="mono">33.6x</td><td class="mono">4.7x</td></tr><tr><td><span class="peer-tk mono">LFMD</span> <span class="peer-name">LifeMD</span></td><td class="mono">—</td><td class="mono">1.0x</td><td class="mono">—</td><td class="mono">36.2x</td></tr><tr><td><span class="peer-tk mono">GDRX</span> <span class="peer-name">GoodRx Holdings</span></td><td class="mono">27.4x</td><td class="mono">1.2x</td><td class="mono">11.3x</td><td class="mono">5.9x</td></tr><tr><td><span class="peer-tk mono">AMWL</span> <span class="peer-name">American Well</span></td><td class="mono">—</td><td class="mono">—</td><td class="mono">—</td><td class="mono">—</td></tr><tr><td><span class="peer-tk mono">CVS</span> <span class="peer-name">CVS Health</span></td><td class="mono">11.5x</td><td class="mono">0.3x</td><td class="mono">11.8x</td><td class="mono">15.6x</td></tr><tr><td><span class="peer-tk mono">DOCS</span> <span class="peer-name">Doximity</span></td><td class="mono">16.8x</td><td class="mono">6.9x</td><td class="mono">16.6x</td><td class="mono">15.2x</td></tr><tr class="median-row"><td><span class="peer-name strong">Peer median</span></td><td class="mono">16.8x</td><td class="mono">1.0x</td><td class="mono">14.2x</td><td class="mono">15.2x</td></tr><tr class="hims-row"><td><span class="peer-tk mono accent">HIMS</span> <span class="peer-name">Hims &amp; Hers</span></td><td class="mono">20.5x<span class="vs neg mono"> (+22%)</span></td><td class="mono">2.2x<span class="vs neg mono"> (+122%)</span></td><td class="mono">38.1x<span class="vs neg mono"> (+169%)</span></td><td class="mono">83.3x<span class="vs neg mono"> (+447%)</span></td></tr></tbody></table>
+        
+        <table class="val-table"><thead><tr><th class="mono">PEER</th><th class="mono">P/E NTM</th><th class="mono">PEG NTM</th><th class="mono">EV/SALES</th><th class="mono">EV/EBITDA</th><th class="mono">P/FCF</th></tr></thead><tbody><tr class="cohort-row"><td colspan="6"></td></tr><tr><td><span class="peer-tk mono">TDOC</span> <span class="peer-name">Teladoc Health</span></td><td class="mono">—</td><td class="mono">—</td><td class="mono">0.5x</td><td class="mono">33.6x</td><td class="mono">4.7x</td></tr><tr><td><span class="peer-tk mono">LFMD</span> <span class="peer-name">LifeMD</span></td><td class="mono">—</td><td class="mono">—</td><td class="mono">1.0x</td><td class="mono">—</td><td class="mono">36.2x</td></tr><tr><td><span class="peer-tk mono">GDRX</span> <span class="peer-name">GoodRx Holdings</span></td><td class="mono">27.4x</td><td class="mono">—</td><td class="mono">1.2x</td><td class="mono">11.3x</td><td class="mono">5.9x</td></tr><tr><td><span class="peer-tk mono">AMWL</span> <span class="peer-name">American Well</span></td><td class="mono">—</td><td class="mono">—</td><td class="mono">—</td><td class="mono">—</td><td class="mono">—</td></tr><tr><td><span class="peer-tk mono">CVS</span> <span class="peer-name">CVS Health</span></td><td class="mono">11.5x</td><td class="mono">—</td><td class="mono">0.3x</td><td class="mono">11.8x</td><td class="mono">15.6x</td></tr><tr><td><span class="peer-tk mono">DOCS</span> <span class="peer-name">Doximity</span></td><td class="mono">16.8x</td><td class="mono">—</td><td class="mono">6.9x</td><td class="mono">16.6x</td><td class="mono">15.2x</td></tr><tr class="median-row"><td><span class="peer-name strong">Peer median (blended)</span></td><td class="mono">16.8x</td><td class="mono">—</td><td class="mono">1.0x</td><td class="mono">14.2x</td><td class="mono">15.2x</td></tr><tr class="hims-row"><td><span class="peer-tk mono accent">HIMS</span> <span class="peer-name">Hims &amp; Hers</span></td><td class="mono">20.5x<span class="vs neg mono"> (+22%)</span></td><td class="mono">—<span class="vs  mono"></span></td><td class="mono">2.2x<span class="vs neg mono"> (+122%)</span></td><td class="mono">38.1x<span class="vs neg mono"> (+169%)</span></td><td class="mono">83.3x<span class="vs neg mono"> (+447%)</span></td></tr></tbody></table>
         <p class="val-synthesis">HIMS trades at +122% premium to peer median EV/Sales NTM and +169% on EV/EBITDA, which is defensible only on the growth/margin-expansion thesis (28% YoY revenue growth, mgmt guiding 18% LT EBITDA margin); on forward P/E however the premium compresses to just +22% versus a 16.8x peer median, showing the market is willing to pay for next year's earnings but not for the multi-year ramp. The P/FCF premium of 447% flags that current FCF generation is the weakest leg of the bull case. <a class="ref-chip" href="#src-valuation-art-3">art-3</a> <a class="ref-chip" href="#src-valuation-art-6">art-6</a> <a class="ref-chip" href="#src-valuation-art-7">art-7</a></p>
       </div>
 
@@ -1819,17 +2158,17 @@ This stock still offers massive upside potential at current levels—but the ris
           <div class="dcf-output">
             <div class="dco-label mono">IMPLIED FAIR VALUE</div>
             <div class="dco-value mono">$24.47</div>
-            <div class="dco-chip"><span class="wow-chip flat" title="flat vs Aug 17"><span class="wch-glyph">─</span>flat</span></div>
+            <div class="dco-chip"><span class="wow-chip flat" title="flat vs Aug 24"><span class="wch-glyph">─</span>flat</span></div>
           </div>
           <div class="dcf-output">
             <div class="dco-label mono">SPOT</div>
-            <div class="dco-value mono">$33.78</div>
-            <div class="dco-chip"><span class="wow-chip up" title="vs Aug 17"><span class="wch-glyph">▲</span>+$5.63 (+20.0%)<span class="wch-vs"> vs Aug 17</span></span></div>
+            <div class="dco-value mono">$29.83</div>
+            <div class="dco-chip"><span class="wow-chip down" title="vs Aug 24"><span class="wch-glyph">▼</span>$3.95 (-11.7%)<span class="wch-vs"> vs Aug 24</span></span></div>
           </div>
           <div class="dcf-output">
             <div class="dco-label mono">IMPLIED UPSIDE</div>
-            <div class="dco-value mono neg">-27.6%</div>
-            <div class="dco-chip"><span class="wow-chip down" title="vs Aug 17"><span class="wch-glyph">▼</span>-14.5pp<span class="wch-vs"> vs Aug 17</span></span></div>
+            <div class="dco-value mono neg">-18.0%</div>
+            <div class="dco-chip"><span class="wow-chip up" title="vs Aug 24"><span class="wch-glyph">▲</span>+9.6pp<span class="wch-vs"> vs Aug 24</span></span></div>
           </div>
         </div>
         <div class="sens-card">
@@ -1842,7 +2181,7 @@ This stock still offers massive upside potential at current levels—but the ris
 
       <div class="val-card synthesis-card" data-val-pane="synthesis">
         <div class="val-card-eyebrow mono">C · SYNTHESIS</div>
-        <div class="synthesis-headline">HIMS trades at a +122% premium to peer median EV/Sales NTM (2.2x vs 1.0x); base-case DCF implies $24.47 per share, -27.6% downside to spot $33.78.</div>
+        <div class="synthesis-headline">HIMS trades at a +122% premium to peer median EV/Sales NTM (2.2x vs 1.0x); base-case DCF implies $24.47 per share, -18.0% downside to spot $29.83.</div>
         <p class="synthesis-narrative">All three techniques converge on the same conclusion: HIMS is priced for execution. The DCF base case gives downside of 5.7%; the peer-multiples ratio analysis confirms the premium can only be justified by sustained 20%+ growth and successful margin ramp to 18%; and the sell-side is already there - 14 analyst mean target of $26.04 sits 8% below spot, meaning the market is currently pricing HIMS BARELY above where the consensus has it. The DCF carries the most weight here because (i) loss-making peers like TDOC, LFMD and AMWL make multiples-based comps unstable, and (ii) the sensitivity grid makes the value-driver tradeoffs explicit: at WACC <= 9% AND terminal g >= 3%, spot is justified; everywhere else it isn't. The Eucalyptus integration (closing 2H 2026) is the swing variable not captured in the explicit-period growth path - if it compounds at announced triple-digit rates, the FY27-28 growth assumptions are too low and the DCF understates intrinsic value. <a class="ref-chip" href="#src-valuation-art-7">art-7</a> <a class="ref-chip" href="#src-valuation-art-10">art-10</a></p>
       </div>
     </div>
@@ -1950,8 +2289,432 @@ This stock still offers massive upside potential at current levels—but the ris
     </section>
     
       
+    <section class="pane" id="section-institutional" data-section="institutional">
+      
+      <div class="section-eyebrow mono">04 · INSTITUTIONAL INVESTORS</div>
+      <h2 class="section-title">Who owns HIMS, and who is adding or trimming</h2>
+    
+      <p class="section-lede">
+        Institutions hold 78.7% of shares
+        outstanding across 596 filers
+        <span class="ref-chip-static mono">nasdaq-13f</span>. Large accumulation or
+        distribution is a directional signal worth reading — but note the clock:
+        <strong>13F holdings are reported quarterly and filed up to 45 days after quarter
+        end</strong>, so the flows below are the last completed reporting period, not the
+        last week of trading. The week-over-week block tracks filings arriving and being
+        revised. The 13D/13G filings at the foot of the page are the timely signal: those
+        land within days of a &gt;5% stake changing.
+      </p>
+
+      <div class="kpi-strip"><div class="kpi"><div class="kpi-label mono">INSTITUTIONAL</div><div class="kpi-value mono">78.7%</div></div><div class="kpi"><div class="kpi-label mono">SHARES HELD</div><div class="kpi-value mono">176.9M</div></div><div class="kpi"><div class="kpi-label mono">HOLDERS</div><div class="kpi-value mono">596</div></div><div class="kpi"><div class="kpi-label mono">NET CHANGE</div><div class="kpi-value mono">-4.2M</div></div><div class="kpi"><div class="kpi-label mono">NEW POSITIONS</div><div class="kpi-value mono">146</div></div><div class="kpi"><div class="kpi-label mono">SOLD OUT</div><div class="kpi-value mono">74</div></div></div>
+
+      <h3 class="block-title">Accumulation vs distribution</h3>
+      
+      <div class="inst-poles">
+        <div class="inst-pole accumulating">
+          <h5 class="block-subtitle-sub">Accumulating</h5>
+          <div class="inst-pole-figure mono">45.8M</div>
+          <p>
+            <strong>329</strong> holders increased
+            (38.5M shares) and
+            <strong>146</strong> opened new positions
+            (7.3M shares).
+          </p>
+        </div>
+        <div class="inst-pole distributing">
+          <h5 class="block-subtitle-sub">Distributing</h5>
+          <div class="inst-pole-figure mono">50.0M</div>
+          <p>
+            <strong>210</strong> holders decreased
+            (33.0M shares) and
+            <strong>74</strong> sold out entirely
+            (17.0M shares).
+          </p>
+        </div>
+      </div>
+      <p class="inst-verdict">
+        Across the most recent reporting period the balance is
+        <strong>net distribution of 4.2M shares</strong>. Breadth and weight
+        disagree: 475 institutions bought
+        against 284 selling, so the sellers are moving materially larger blocks — read the share column, not the holder count.
+        Held-flat positions (105.5M shares)
+        are excluded from both poles.
+      </p>
+    
+
+      <h3 class="block-title">Changes since last week</h3>
+      
+          <div class="inst-wow-strip">
+            <div class="inst-wow-item">
+              <span class="inst-wow-label mono">OWNERSHIP</span>
+              <span class="inst-wow-value mono">+0.01pp</span>
+            </div>
+            <div class="inst-wow-item">
+              <span class="inst-wow-label mono">SHARES HELD</span>
+              <span class="inst-wow-value mono">+9K</span>
+            </div>
+            <div class="inst-wow-item">
+              <span class="inst-wow-label mono">HOLDER COUNT</span>
+              <span class="inst-wow-value mono">-1</span>
+            </div>
+          </div>
+          <p class="inst-note">No reported position changed among the tracked holders this week.</p>
+          <p class="inst-note">
+            Entered the top 25: none.
+            Left the top 25: none.
+            A holder leaving this list has been displaced by market value — it is
+            not necessarily an exit.
+          </p>
+        
+
+      <h3 class="block-title">Top 25 holders by value</h3>
+      <p class="block-lede">
+        The <em>as of</em> column is the holder&rsquo;s own filing vintage, and they differ —
+        a filer still reporting an older quarter has not moved recently, it simply has
+        not filed yet. Read change figures against that date, not against today.
+      </p>
+      
+      <table class="data-table">
+        <thead><tr>
+          <th>Holder</th><th>As of</th><th>Shares held</th>
+          <th>Change</th><th>Change %</th><th>Value</th>
+        </tr></thead>
+        <tbody><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/blackrock-inc-1287173" target="_blank" rel="noopener">Blackrock, Inc.</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">28,703,514</td>
+          <td class="mono pos">+2,366,356</td>
+          <td class="mono pos">+9.0%</td>
+          <td class="mono">$911M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/vanguard-group-inc-61322" target="_blank" rel="noopener">Vanguard Group Inc</a></td>
+          <td class="mono dim">Q4 25</td>
+          <td class="mono">20,925,666</td>
+          <td class="mono pos">+1,407,651</td>
+          <td class="mono pos">+7.2%</td>
+          <td class="mono">$664M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/vanguard-portfolio-management-llc-1366704" target="_blank" rel="noopener">Vanguard Portfolio Management Llc</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">10,559,314</td>
+          <td class="mono pos">+375,501</td>
+          <td class="mono pos">+3.7%</td>
+          <td class="mono">$335M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/vanguard-capital-management-llc-1383464" target="_blank" rel="noopener">Vanguard Capital Management Llc</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">9,541,384</td>
+          <td class="mono pos">+201,673</td>
+          <td class="mono pos">+2.2%</td>
+          <td class="mono">$303M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/state-street-corp-6697" target="_blank" rel="noopener">State Street Corp</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">8,145,699</td>
+          <td class="mono pos">+685,676</td>
+          <td class="mono pos">+9.2%</td>
+          <td class="mono">$259M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/morgan-stanley-5929" target="_blank" rel="noopener">Morgan Stanley</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">7,152,498</td>
+          <td class="mono neg">-1,736,590</td>
+          <td class="mono neg">-19.5%</td>
+          <td class="mono">$227M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/divisadero-street-capital-management-lp-1201886" target="_blank" rel="noopener">Divisadero Street Capital Management, Lp</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">6,009,505</td>
+          <td class="mono pos">+5,539,672</td>
+          <td class="mono pos">+1179.1%</td>
+          <td class="mono">$191M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/geode-capital-management-llc-396991" target="_blank" rel="noopener">Geode Capital Management, Llc</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">5,681,832</td>
+          <td class="mono pos">+483,053</td>
+          <td class="mono pos">+9.3%</td>
+          <td class="mono">$180M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/goldman-sachs-group-inc-11158" target="_blank" rel="noopener">Goldman Sachs Group Inc</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">5,173,865</td>
+          <td class="mono pos">+2,719,170</td>
+          <td class="mono pos">+110.8%</td>
+          <td class="mono">$164M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/jpmorgan-chase--co-8702" target="_blank" rel="noopener">Jpmorgan Chase &amp; Co</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">4,766,781</td>
+          <td class="mono neg">-474,035</td>
+          <td class="mono neg">-9.0%</td>
+          <td class="mono">$151M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/fmr-llc-12407" target="_blank" rel="noopener">Fmr Llc</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">4,323,292</td>
+          <td class="mono pos">+4,230,022</td>
+          <td class="mono pos">+4535.2%</td>
+          <td class="mono">$137M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/marshall-wace-llp-665654" target="_blank" rel="noopener">Marshall Wace, Llp</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">4,217,767</td>
+          <td class="mono pos">+3,493,540</td>
+          <td class="mono pos">+482.4%</td>
+          <td class="mono">$134M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/ubs-group-ag-940594" target="_blank" rel="noopener">Ubs Group Ag</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">2,660,810</td>
+          <td class="mono neg">-1,490,828</td>
+          <td class="mono neg">-35.9%</td>
+          <td class="mono">$84M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/northern-trust-corp-10923" target="_blank" rel="noopener">Northern Trust Corp</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">2,594,277</td>
+          <td class="mono pos">+158,248</td>
+          <td class="mono pos">+6.5%</td>
+          <td class="mono">$82M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/charles-schwab-investment-management-inc-63069" target="_blank" rel="noopener">Charles Schwab Investment Management Inc</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">2,453,787</td>
+          <td class="mono pos">+95,073</td>
+          <td class="mono pos">+4.0%</td>
+          <td class="mono">$78M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/state-of-michigan-retirement-system-40340" target="_blank" rel="noopener">State Of Michigan Retirement System</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">2,346,282</td>
+          <td class="mono pos">+7,682</td>
+          <td class="mono pos">+0.3%</td>
+          <td class="mono">$74M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/bank-of-america-corp-de-15519" target="_blank" rel="noopener">Bank Of America Corp /De/</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">2,312,272</td>
+          <td class="mono neg">-2,045,400</td>
+          <td class="mono neg">-46.9%</td>
+          <td class="mono">$73M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/principal-financial-group-inc-80236" target="_blank" rel="noopener">Principal Financial Group Inc</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">1,667,073</td>
+          <td class="mono pos">+384,807</td>
+          <td class="mono pos">+30.0%</td>
+          <td class="mono">$53M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/vanguard-fiduciary-trust-co-49733" target="_blank" rel="noopener">Vanguard Fiduciary Trust Co</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">1,522,249</td>
+          <td class="mono pos">+72,864</td>
+          <td class="mono pos">+5.0%</td>
+          <td class="mono">$48M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/bank-of-new-york-mellon-corp-736081" target="_blank" rel="noopener">Bank Of New York Mellon Corp</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">1,333,146</td>
+          <td class="mono neg">-7,300</td>
+          <td class="mono neg">-0.5%</td>
+          <td class="mono">$42M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/schroder-investment-management-group-63439" target="_blank" rel="noopener">Schroder Investment Management Group</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">1,129,781</td>
+          <td class="mono pos">+397,015</td>
+          <td class="mono pos">+54.2%</td>
+          <td class="mono">$36M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/franklin-resources-inc-8481" target="_blank" rel="noopener">Franklin Resources Inc</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">1,032,639</td>
+          <td class="mono pos">+909,670</td>
+          <td class="mono pos">+739.8%</td>
+          <td class="mono">$33M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/jane-street-group-llc-934867" target="_blank" rel="noopener">Jane Street Group, Llc</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">1,000,484</td>
+          <td class="mono pos">+760,314</td>
+          <td class="mono pos">+316.6%</td>
+          <td class="mono">$32M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/clear-street-group-inc-1176140" target="_blank" rel="noopener">Clear Street Group Inc.</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">989,913</td>
+          <td class="mono neg">-320,186</td>
+          <td class="mono neg">-24.4%</td>
+          <td class="mono">$31M</td>
+        </tr><tr>
+          <td><a href="https://www.nasdaq.com/market-activity/institutional-portfolio/marex-group-ltd-1290809" target="_blank" rel="noopener">Marex Group Ltd</a></td>
+          <td class="mono dim">Q2 26</td>
+          <td class="mono">973,771</td>
+          <td class="mono neg">-365,043</td>
+          <td class="mono neg">-27.3%</td>
+          <td class="mono">$31M</td>
+        </tr></tbody>
+      </table>
+
+      <h3 class="block-title">&gt;5% stake filings · last 180 days</h3>
+      <p class="block-lede">
+        SCHEDULE 13D/13G filings are required within days of crossing or materially
+        changing a &gt;5% position. A 13G/A reporting 0% can mean a genuine exit or a
+        reorganisation between affiliated filing entities — cross-read against the
+        holder table above before drawing a conclusion.
+      </p>
+      
+        <div class="inst-filing">
+          <div class="inst-filing-date mono">31-07-2026</div>
+          <div class="inst-filing-body">
+            <div class="inst-filing-head">
+              Vanguard Capital Management
+              <span class="inst-form mono">SCHEDULE 13G</span>
+            </div>
+            <p class="inst-filing-detail">11,188,807 shares · 5.01% of class
+              <span class="ref-chip-static mono">edgar-2026-07-31-schedule13g</span>
+            </p>
+          </div>
+        </div>
+        <div class="inst-filing">
+          <div class="inst-filing-date mono">28-07-2026</div>
+          <div class="inst-filing-body">
+            <div class="inst-filing-head">
+              BlackRock, Inc.
+              <span class="inst-form mono">SCHEDULE 13G/A</span>
+            </div>
+            <p class="inst-filing-detail">26,496,218 shares · 11.90% of class
+              <span class="ref-chip-static mono">edgar-2026-07-28-schedule13ga</span>
+            </p>
+          </div>
+        </div>
+        <div class="inst-filing">
+          <div class="inst-filing-date mono">15-05-2026</div>
+          <div class="inst-filing-body">
+            <div class="inst-filing-head">
+              G1 Execution Services, LLC
+              <span class="inst-form mono">SCHEDULE 13G</span>
+            </div>
+            <p class="inst-filing-detail">6.50% of class
+              <span class="ref-chip-static mono">edgar-2026-05-15-schedule13g</span>
+            </p>
+          </div>
+        </div>
+        <div class="inst-filing">
+          <div class="inst-filing-date mono">14-05-2026</div>
+          <div class="inst-filing-body">
+            <div class="inst-filing-head">
+              Capital World Investors
+              <span class="inst-form mono">SCHEDULE 13G/A</span> <span class="inst-flag">position closed</span>
+            </div>
+            <p class="inst-filing-detail">2 shares · 0.00% of class
+              <span class="ref-chip-static mono">edgar-2026-05-14-schedule13ga</span>
+            </p>
+          </div>
+        </div>
+        <div class="inst-filing">
+          <div class="inst-filing-date mono">27-03-2026</div>
+          <div class="inst-filing-body">
+            <div class="inst-filing-head">
+              The Vanguard Group
+              <span class="inst-form mono">SCHEDULE 13G/A</span> <span class="inst-flag">position closed</span>
+            </div>
+            <p class="inst-filing-detail">0 shares · 0.00% of class
+              <span class="ref-chip-static mono">edgar-2026-03-27-schedule13ga</span>
+            </p>
+          </div>
+        </div>
+        <div class="inst-filing">
+          <div class="inst-filing-date mono">05-03-2026</div>
+          <div class="inst-filing-body">
+            <div class="inst-filing-head">
+              JPMORGAN CHASE &amp; CO.
+              <span class="inst-form mono">SCHEDULE 13G/A</span>
+            </div>
+            <p class="inst-filing-detail">3,881,790 shares · 1.70% of class
+              <span class="ref-chip-static mono">edgar-2026-03-05-schedule13ga</span>
+            </p>
+          </div>
+        </div>
+
+      
+    <details class="sources-details">
+      <summary>
+        <span class="src-eyebrow mono">SOURCES · 7</span>
+        <span class="src-toggle mono">expand</span>
+      </summary>
+      <ul class="source-list">
+        <li class="source-item" id="src-institutional-edgar-2026-07-31-schedule13g">
+          <span class="source-ref mono">edgar-2026-07-31-schedule13g</span>
+          <span class="source-label">
+            <strong>SEC EDGAR</strong> — SCHEDULE 13G — Vanguard Capital Management
+            <span class="src-date mono"> · 2026-07-31</span>
+            <a class="src-link mono" href="https://www.sec.gov/Archives/edgar/data/1773751/000210011926001380/xslSCHEDULE_13G_X02/primary_doc.xml" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-institutional-edgar-2026-07-28-schedule13ga">
+          <span class="source-ref mono">edgar-2026-07-28-schedule13ga</span>
+          <span class="source-label">
+            <strong>SEC EDGAR</strong> — SCHEDULE 13G/A — BlackRock, Inc.
+            <span class="src-date mono"> · 2026-07-28</span>
+            <a class="src-link mono" href="https://www.sec.gov/Archives/edgar/data/1773751/000201238326002590/xslSCHEDULE_13G_X02/primary_doc.xml" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-institutional-edgar-2026-05-15-schedule13g">
+          <span class="source-ref mono">edgar-2026-05-15-schedule13g</span>
+          <span class="source-label">
+            <strong>SEC EDGAR</strong> — SCHEDULE 13G — G1 Execution Services, LLC
+            <span class="src-date mono"> · 2026-05-15</span>
+            <a class="src-link mono" href="https://www.sec.gov/Archives/edgar/data/1773751/000144658026000065/xslSCHEDULE_13G_X02/primary_doc.xml" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-institutional-edgar-2026-05-14-schedule13ga">
+          <span class="source-ref mono">edgar-2026-05-14-schedule13ga</span>
+          <span class="source-label">
+            <strong>SEC EDGAR</strong> — SCHEDULE 13G/A — Capital World Investors
+            <span class="src-date mono"> · 2026-05-14</span>
+            <a class="src-link mono" href="https://www.sec.gov/Archives/edgar/data/1773751/000142284926000096/xslSCHEDULE_13G_X02/primary_doc.xml" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-institutional-edgar-2026-03-27-schedule13ga">
+          <span class="source-ref mono">edgar-2026-03-27-schedule13ga</span>
+          <span class="source-label">
+            <strong>SEC EDGAR</strong> — SCHEDULE 13G/A — The Vanguard Group
+            <span class="src-date mono"> · 2026-03-27</span>
+            <a class="src-link mono" href="https://www.sec.gov/Archives/edgar/data/1773751/000010290926001458/xslSCHEDULE_13G_X02/primary_doc.xml" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-institutional-edgar-2026-03-05-schedule13ga">
+          <span class="source-ref mono">edgar-2026-03-05-schedule13ga</span>
+          <span class="source-label">
+            <strong>SEC EDGAR</strong> — SCHEDULE 13G/A — JPMORGAN CHASE &amp; CO.
+            <span class="src-date mono"> · 2026-03-05</span>
+            <a class="src-link mono" href="https://www.sec.gov/Archives/edgar/data/1773751/000001961726000088/xslSCHEDULE_13G_X01/primary_doc.xml" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        
+        <li class="source-item" id="src-institutional-nasdaq-13f">
+          <span class="source-ref mono">nasdaq-13f</span>
+          <span class="source-label">
+            <strong>Nasdaq</strong> — HIMS institutional holdings (13F aggregation)
+            <span class="src-date mono"> · 2026-08-26</span>
+            <a class="src-link mono" href="https://www.nasdaq.com/market-activity/stocks/hims/institutional-holdings" target="_blank" rel="noopener">link ↗</a>
+          </span>
+        </li>
+        </ul>
+    </details>
+    
+    </section>
+    
+      
     <section class="pane" id="section-revenue" data-section="revenue">
-      <div class="section-eyebrow mono">03 · REVENUE GROWTH</div>
+      <div class="section-eyebrow mono">05 · REVENUE GROWTH</div>
       <h2 class="section-title">Quarterly revenue trajectory</h2>
       <p class="section-lede">
         $545M → $608M across the trailing four quarters; $2.37B
@@ -1964,9 +2727,10 @@ This stock still offers massive upside potential at current levels—but the ris
                 data-labels='["Q2 2025", "Q3 2025", "Q4 2025", "Q1 2026"]'
                 data-revenue='[544.8, 599.0, 617.8, 608.1]'
                 data-yoy='[73.0, 49.0, 28.0, 4.0]'
+                data-yoy-colors='["oklch(38% 0.085 175)", "oklch(42% 0.060 130)", "oklch(40% 0.080 70)", "oklch(42% 0.130 35)"]'
                 height="260"></canvas>
         <p class="rev-yoy-caption mono">
-          YoY % shown above each bar — color shifts <span class="sage-swatch">sage</span> → <span class="clay-swatch">clay</span> as the compounded-GLP-1 comp laps.
+          YoY % shown above each bar — graded <span class="sage-swatch">sage</span> → <span class="clay-swatch">clay</span> by growth level as the comp laps.
         </p>
       </div>
 
@@ -2093,7 +2857,7 @@ This stock still offers massive upside potential at current levels—but the ris
     
       
     <section class="pane" id="section-ma" data-section="ma">
-      <div class="section-eyebrow mono">04 · M&amp;A</div>
+      <div class="section-eyebrow mono">06 · M&amp;A</div>
       <h2 class="section-title">Recent acquisitions — Q2 2024 → today</h2>
       <p class="section-lede">
         Hims has run an aggressive cross-border rollup over the past 18 months —
@@ -2601,7 +3365,7 @@ This stock still offers massive upside potential at current levels—but the ris
     
       
     <section class="pane" id="section-derisk" data-section="derisk">
-      <div class="section-eyebrow mono">05 · BULLISH CATALYSTS</div>
+      <div class="section-eyebrow mono">07 · BULLISH CATALYSTS</div>
       <h2 class="section-title">Catalysts strengthening the bull case</h2>
       <p class="section-lede">
         Two recent developments that have moved decisively in HIMS' favour:
@@ -3192,7 +3956,7 @@ This stock still offers massive upside potential at current levels—but the ris
     
       
     <section class="pane" id="section-calls" data-section="calls">
-      <div class="section-eyebrow mono">06 · CONFERENCE CALLS</div>
+      <div class="section-eyebrow mono">08 · CONFERENCE CALLS</div>
       <h2 class="section-title">Tone shift across the last four calls</h2>
       <p class="section-lede">
         Six recurring themes scored on a 5-point rubric (Defensive →
@@ -3326,7 +4090,7 @@ This stock still offers massive upside potential at current levels—but the ris
   });
 
   // Init from hash (or default)
-  const SECTIONS = ['weekly','overview','valuation','revenue','ma','derisk','calls'];
+  const SECTIONS = ['weekly','fdapeptide','overview','valuation','institutional','revenue','ma','derisk','calls'];
   const DEFAULT = (document.querySelector('.pane.active') || {}).dataset
                   ? (document.querySelector('.pane.active').dataset.section || 'weekly')
                   : 'weekly';
@@ -3538,13 +4302,15 @@ This stock still offers massive upside potential at current levels—but the ris
   }
 
   // Revenue quarterly chart — bars only with floating YoY % labels above each bar.
-  // Color graduates sage (Q1, peak comp) -> ink -> clay (Q4, decelerated) to visually
-  // narrate the deceleration without a noisy second line.
+  // Label colors are graded by growth *level* (sage = hypergrowth, clay = stalled) and
+  // are supplied by the renderer via data-yoy-colors so the chart and the KPI table
+  // below it always tell the same story — including when the window re-accelerates.
   const rc = document.getElementById('revenueQuarterlyChart');
   if (rc) {
     const labels = JSON.parse(rc.dataset.labels || '[]');
     const rev = JSON.parse(rc.dataset.revenue || '[]');
     const yoy = JSON.parse(rc.dataset.yoy || '[]');
+    const yoyColors = JSON.parse(rc.dataset.yoyColors || '[]');
 
     const yoyLabelPlugin = {
       id: 'yoyLabel',
@@ -3552,12 +4318,7 @@ This stock still offers massive upside potential at current levels—but the ris
         const { ctx, data } = chart;
         const meta = chart.getDatasetMeta(0);
         if (!meta || !meta.data) return;
-        const palette = [
-          'oklch(38% 0.085 175)',  // Q1 — sage-deep
-          'oklch(42% 0.060 130)',  // Q2 — sage->ink transition
-          'oklch(40% 0.080 70)',   // Q3 — ink->clay transition
-          'oklch(42% 0.130 35)',   // Q4 — clay-deep
-        ];
+        const palette = yoyColors.length ? yoyColors : ['oklch(42% 0.130 35)'];
         ctx.save();
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
